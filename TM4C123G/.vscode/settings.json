@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "*.s": "arm",
+        "__config": "cpp",
+        "__verbose_abort": "cpp",
+        "cctype": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "initializer_list": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "xstddef": "cpp",
+        "xtr1common": "cpp"
+    }
+}

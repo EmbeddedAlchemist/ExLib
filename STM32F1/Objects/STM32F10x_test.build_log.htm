@@ -1,0 +1,234 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 汪汪队 记大过, -, LIC=FYKYW-QAUJP-56WQ2-9PSDP-97MGF-B3RIE
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\CHALLENGER\Documents\KeXieData\Library\ExLib\STM32F1\STM32F10x_test.uvprojx
+Project File Date:  06/22/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'ExLib'
+compiling stm32f10x_cec.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_dac.c...
+compiling misc.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_wwdg.c...
+compiling system_stm32f10x.c...
+compiling stm32f10x_tim.c...
+assembling startup_stm32f10x_md.s...
+User/main.cpp(1): warning: In file included from...
+./ExLib/Include\ExLib.hpp(4): warning: In file included from...
+./ExLib/Include/ExLib_GPIO.hpp(3): warning: In file included from...
+./ExLib/Include/ExLib_Printable.hpp(3): warning: In file included from...
+./ExLib/Include/ExLib_PrintStream.hpp(159): error: missing default argument on parameter 'width'
+    std::size_t printFloat(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                           ^
+./ExLib/Include/ExLib_PrintStream.hpp(162): error: missing default argument on parameter 'width'
+    std::size_t printFloatSci(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                              ^
+./ExLib/Include/ExLib_PrintStream.hpp(165): error: missing default argument on parameter 'width'
+    std::size_t printFloatAuto(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                               ^
+./ExLib/Include/ExLib_PrintStream.hpp(189): error: expected ';' after return statement
+    inline std::size_t print(Integer integer, std::uint8_t base = 10) { return printInteger((integer, base)) }
+                                                                                                            ^
+                                                                                                            ;
+./ExLib/Include/ExLib_PrintStream.hpp(189): warning: left operand of comma operator has no effect [-Wunused-value]
+    inline std::size_t print(Integer integer, std::uint8_t base = 10) { return printInteger((integer, base)) }
+                                                                                             ^~~~~~~
+./ExLib/Include/ExLib_PrintStream.hpp(202): note: in instantiation of function template specialization 'ExLib::PrintStream::print<int, false>' requested here
+        print(number);
+        ^
+User/main.cpp(13): note: in instantiation of function template specialization 'ExLib::PrintStream::operator<<<int, false>' requested here
+    *((PrintStream *)nullptr) << 1;
+                              ^
+1 warning and 4 errors generated.
+compiling main.cpp...
+compiling ExLib_Main.cpp...
+ExLib/Source/ExLib_PrintStream.cpp(1): warning: In file included from...
+./ExLib/Include/ExLib_PrintStream.hpp(159): error: missing default argument on parameter 'width'
+    std::size_t printFloat(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                           ^
+./ExLib/Include/ExLib_PrintStream.hpp(162): error: missing default argument on parameter 'width'
+    std::size_t printFloatSci(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                              ^
+./ExLib/Include/ExLib_PrintStream.hpp(165): error: missing default argument on parameter 'width'
+    std::size_t printFloatAuto(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                               ^
+./ExLib/Include/ExLib_PrintStream.hpp(189): error: expected ';' after return statement
+    inline std::size_t print(Integer integer, std::uint8_t base = 10) { return printInteger((integer, base)) }
+                                                                                                            ^
+                                                                                                            ;
+ExLib/Source/ExLib_PrintStream.cpp(117): warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if (align = Align::Left) {
+            ~~~~~~^~~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(117): note: place parentheses around the assignment to silence this warning
+        if (align = Align::Left) {
+                  ^
+            (                  )
+ExLib/Source/ExLib_PrintStream.cpp(117): note: use '==' to turn this assignment into an equality comparison
+        if (align = Align::Left) {
+                  ^
+                  ==
+ExLib/Source/ExLib_PrintStream.cpp(117): error: value of type 'Align' is not contextually convertible to 'bool'
+        if (align = Align::Left) {
+            ^~~~~~~~~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(123): warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        } else if (align = Align::Right) {
+                   ~~~~~~^~~~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(123): note: place parentheses around the assignment to silence this warning
+        } else if (align = Align::Right) {
+                         ^
+                   (                   )
+ExLib/Source/ExLib_PrintStream.cpp(123): note: use '==' to turn this assignment into an equality comparison
+        } else if (align = Align::Right) {
+                         ^
+                         ==
+ExLib/Source/ExLib_PrintStream.cpp(123): error: value of type 'Align' is not contextually convertible to 'bool'
+        } else if (align = Align::Right) {
+                   ^~~~~~~~~~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(372): warning: enumeration values 'Unknown' and 'CountingPointer' not handled in switch [-Wswitch]
+    switch (opinion.type) {
+            ^~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(493): warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+                    *va_arg(args, int *) = len;
+                    ^~~~~~~~~~~~~~~~~~~~
+ExLib/Source/ExLib_PrintStream.cpp(493): note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(410): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<unsigned int>' requested here
+            return printInteger((std::uintptr_t)va_arg(opinion.args, void *), 16, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                   ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(421): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<unsigned long>' requested here
+                    return printInteger(va_arg(opinion.args, unsigned long), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(423): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<unsigned long long>' requested here
+                    return printInteger(va_arg(opinion.args, unsigned long long), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(427): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<int>' requested here
+                    return printInteger(va_arg(opinion.args, std::ptrdiff_t), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(429): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<unsigned short>' requested here
+                    return printInteger(va_arg(opinion.args, unsigned short), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(431): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<unsigned char>' requested here
+                    return printInteger(va_arg(opinion.args, unsigned char), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(442): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<long>' requested here
+                    return printInteger(va_arg(opinion.args, long), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(444): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<long long>' requested here
+                    return printInteger(va_arg(opinion.args, long long), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(450): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<short>' requested here
+                    return printInteger(va_arg(opinion.args, short), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+ExLib/Source/ExLib_PrintStream.cpp(131): warning: unsequenced modification and access to 'output' [-Wunsequenced]
+                output += output += write(signStr, signWidth);
+                       ~~        ^
+ExLib/Source/ExLib_PrintStream.cpp(452): note: in instantiation of function template specialization 'ExLib::PrintStream::printInteger<char>' requested here
+                    return printInteger(va_arg(opinion.args, char), base, opinion.width, align, fill, displaySign, spaceForSign, extraSign, uppercase);
+                           ^
+15 warnings and 6 errors generated.
+compiling ExLib_PrintStream.cpp...
+compiling ExLib_Exception.cpp...
+ExLib/Source/ExLib_GPIO.cpp(1): warning: In file included from...
+./ExLib/Include\ExLib_GPIO.hpp(3): warning: In file included from...
+./ExLib/Include/ExLib_Printable.hpp(3): warning: In file included from...
+./ExLib/Include/ExLib_PrintStream.hpp(159): error: missing default argument on parameter 'width'
+    std::size_t printFloat(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                           ^
+./ExLib/Include/ExLib_PrintStream.hpp(162): error: missing default argument on parameter 'width'
+    std::size_t printFloatSci(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                              ^
+./ExLib/Include/ExLib_PrintStream.hpp(165): error: missing default argument on parameter 'width'
+    std::size_t printFloatAuto(Floating floating, std::int8_t prexxxx = 6, std::uint8_t base = 10, std::int8_t width, Align align = Align::Right, Fill fill = Fill::Space, bool displaySign = false, bool spaceForSign = false, bool prefix = false, bool upperCase = false);
+                                                                                                               ^
+./ExLib/Include/ExLib_PrintStream.hpp(189): error: expected ';' after return statement
+    inline std::size_t print(Integer integer, std::uint8_t base = 10) { return printInteger((integer, base)) }
+                                                                                                            ^
+                                                                                                            ;
+4 errors generated.
+compiling ExLib_GPIO.cpp...
+".\Objects\STM32F10x_test.axf" - 14 Error(s), 16 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/CHALLENGER/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/Device/ARM/ARMCM3/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
