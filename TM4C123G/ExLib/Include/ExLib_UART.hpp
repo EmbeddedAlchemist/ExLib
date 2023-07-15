@@ -1,12 +1,13 @@
 #pragma once
 
+#include <stddef.h>
+#include <stdint.h>
+
 #include "ExLib_BufferFIFO.hpp"
 #include "ExLib_GPIO.hpp"
 #include "ExLib_PrintStream.hpp"
 #include "ExLib_ScanStream.hpp"
 
-#include <stddef.h>
-#include <stdint.h>
 
 namespace ExLib {
 
@@ -42,7 +43,7 @@ enum class UART_WordLength : std::uint8_t {
 
 };
 
-class UART : public PrintStream, ScanStream {
+class UART : public PrintStream , public ScanStream {
   private:
     static UART *UARTObjects[8];
     static void UART0InterruptHandler(void);
@@ -97,8 +98,10 @@ class UART : public PrintStream, ScanStream {
     void end();
 
     virtual bool write(char ch);
-    //virtual std::size_t write(const char *dataToWrite, std::size_t length);
     virtual bool read(char &ch);
+    virtual std::size_t avaliableForRead(void);
+
+    using ReadStream::read;
 
     operator UART_Periph();
 };

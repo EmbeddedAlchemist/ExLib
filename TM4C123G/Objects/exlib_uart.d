@@ -1,13 +1,14 @@
 ./objects/exlib_uart.o: ExLib\Source\ExLib_UART.cpp \
-  ExLib\Include\ExLib_UART.hpp ExLib\Include\ExLib_BufferFIFO.hpp \
+  ExLib\Include\ExLib_BufferFIFO.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ExLib\Include\ExLib_UART.hpp \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ExLib\Include\ExLib_GPIO.hpp ExLib\Include\ExLib_CallbackFunction.hpp \
   ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_PrintStream.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__verbose_abort \

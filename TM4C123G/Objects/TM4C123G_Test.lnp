@@ -36,7 +36,6 @@
 ".\objects\exlib_exti.o"
 ".\objects\exlib_gpio.o"
 ".\objects\exlib_main.o"
-".\objects\exlib_bufferfifo.o"
 ".\objects\exlib_printstream.o"
 ".\objects\exlib_uart.o"
 ".\objects\exlib_units.o"
@@ -46,6 +45,7 @@
 ".\objects\exlib_writestream.o"
 ".\objects\exlib_readstreambuffered.o"
 ".\objects\exlib_readstream.o"
+".\objects\exlib_bufferfifo.o"
 ".\objects\main.o"
 --strict --scatter ".\Objects\TM4C123G_Test.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

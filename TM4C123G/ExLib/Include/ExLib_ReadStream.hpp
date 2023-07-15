@@ -3,6 +3,7 @@
 #include <stddef.h>
 
 namespace ExLib {
+
 class ReadStream {
   public:
     /**
@@ -12,16 +13,7 @@ class ReadStream {
      * @return false 读取失败
      */
     virtual bool read(char &) = 0;
-    inline char read(void) {
-        char c;
-        read(c);
-        return c;
-    }
-    inline char read(bool &readState){
-        char c;
-        readState = read(c);
-        return c;
-    }
+    char read(void);
 
     /**
      * @brief 写入字节序列
@@ -47,7 +39,6 @@ class ReadStream {
      * @return true 已经可以写入
      * @return false 此时不能写入
      */
-    inline virtual bool avaliableForRead(void) { return true; }
-    
+    virtual std::size_t avaliableForRead(void);
 };
 } // namespace ExLib

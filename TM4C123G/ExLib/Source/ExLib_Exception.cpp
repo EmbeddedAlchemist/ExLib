@@ -47,7 +47,7 @@ void UsageFault_Handler(void) {
 }
 
 std::uint32_t ExLib_CoreDump_Buffer[16];
-//extern void ExLib_CoreDump();
+// extern void ExLib_CoreDump();
 }
 
 namespace ExLib {
@@ -55,7 +55,8 @@ namespace ExLib {
 const char *ExLib_Exception::lastExceptionMessage = nullptr;
 
 void ExLib_Exception::raiseException(const char *message) {
-    //ExLib_CoreDump();
+    // ExLib_CoreDump();
+    volatile int i = 0;
     ExLib_Exception::lastExceptionMessage = message;
     raiseHardFault();
 }

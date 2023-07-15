@@ -1848,10 +1848,10 @@ SysCtlDelay(uint32_t ui32Count)
  void
 SysCtlDelay(register uint32_t ui32Count)
 {
-    __ASM("subs    r0, #1");
-    __ASM("bne     SysCtlDelay");
-    __ASM("bx      lr");
-	//while(ui32Count--);
+//    __ASM("subs    r0, #1");
+//    __ASM("bne     SysCtlDelay");
+//    __ASM("bx      lr");
+	while(ui32Count--);
 }
 #endif
 //

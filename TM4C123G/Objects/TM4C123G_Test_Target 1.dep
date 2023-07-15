@@ -1,6 +1,6 @@
 Dependencies for Project 'TM4C123G_Test', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\ExLib\Source\DeviceSupport\adc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/adc.o -MD)
+F (.\ExLib\Source\DeviceSupport\adc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/adc.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_adc.h)(0x6464B46F)
@@ -11,7 +11,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\adc.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\aes.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/aes.o -MD)
+F (.\ExLib\Source\DeviceSupport\aes.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/aes.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (ExLib\Source\DeviceSupport\inc\hw_aes.h)(0x6464B46F)
@@ -23,7 +23,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\aes.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\can.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/can.o -MD)
+F (.\ExLib\Source\DeviceSupport\can.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/can.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_can.h)(0x6464B46F)
@@ -35,7 +35,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\can.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\comp.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/comp.o -MD)
+F (.\ExLib\Source\DeviceSupport\comp.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/comp.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_comp.h)(0x6464B46F)
@@ -45,12 +45,12 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\comp.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\cpu.c)(0x64A19B5D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/cpu.o -MD)
+F (.\ExLib\Source\DeviceSupport\cpu.c)(0x64A19B5D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/cpu.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\driverlib\cpu.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\cmsis_compiler.h)(0x626F4ADE)
 I (ExLib\Source\DeviceSupport\driverlib\cmsis_armclang.h)(0x626F4ADE)
-F (.\ExLib\Source\DeviceSupport\crc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/crc.o -MD)
+F (.\ExLib\Source\DeviceSupport\crc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/crc.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ccm.h)(0x6464B46F)
@@ -58,7 +58,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_memmap.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\crc.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\des.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/des.o -MD)
+F (.\ExLib\Source\DeviceSupport\des.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/des.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_des.h)(0x6464B46F)
@@ -68,7 +68,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\des.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\eeprom.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/eeprom.o -MD)
+F (.\ExLib\Source\DeviceSupport\eeprom.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/eeprom.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_eeprom.h)(0x6464B46F)
@@ -81,7 +81,7 @@ I (ExLib\Source\DeviceSupport\driverlib\flash.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\eeprom.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\emac.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/emac.o -MD)
+F (.\ExLib\Source\DeviceSupport\emac.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/emac.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -93,7 +93,7 @@ I (ExLib\Source\DeviceSupport\driverlib\emac.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sw_crc.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\epi.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/epi.o -MD)
+F (.\ExLib\Source\DeviceSupport\epi.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/epi.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_epi.h)(0x6464B46F)
@@ -104,7 +104,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\epi.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\flash.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/flash.o -MD)
+F (.\ExLib\Source\DeviceSupport\flash.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/flash.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_flash.h)(0x6464B46F)
@@ -114,12 +114,12 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\flash.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\fpu.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/fpu.o -MD)
+F (.\ExLib\Source\DeviceSupport\fpu.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/fpu.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_nvic.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\fpu.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\gpio.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/gpio.o -MD)
+F (.\ExLib\Source\DeviceSupport\gpio.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/gpio.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_gpio.h)(0x6464B46F)
@@ -130,7 +130,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\gpio.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\hibernate.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/hibernate.o -MD)
+F (.\ExLib\Source\DeviceSupport\hibernate.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/hibernate.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x63884908)
@@ -142,7 +142,7 @@ I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\hibernate.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
-F (.\ExLib\Source\DeviceSupport\i2c.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/i2c.o -MD)
+F (.\ExLib\Source\DeviceSupport\i2c.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/i2c.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_i2c.h)(0x6464B46F)
@@ -153,7 +153,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\i2c.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\interrupt.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/interrupt.o -MD)
+F (.\ExLib\Source\DeviceSupport\interrupt.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/interrupt.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -162,7 +162,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\cpu.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\lcd.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/lcd.o -MD)
+F (.\ExLib\Source\DeviceSupport\lcd.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/lcd.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (ExLib\Source\DeviceSupport\inc\hw_memmap.h)(0x6464B46F)
@@ -173,7 +173,7 @@ I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\lcd.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\mpu.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/mpu.o -MD)
+F (.\ExLib\Source\DeviceSupport\mpu.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/mpu.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -182,7 +182,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\mpu.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\onewire.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/onewire.o -MD)
+F (.\ExLib\Source\DeviceSupport\onewire.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/onewire.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -194,7 +194,7 @@ I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\onewire.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
-F (.\ExLib\Source\DeviceSupport\pwm.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/pwm.o -MD)
+F (.\ExLib\Source\DeviceSupport\pwm.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/pwm.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -205,7 +205,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\pwm.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\qei.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/qei.o -MD)
+F (.\ExLib\Source\DeviceSupport\qei.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/qei.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -216,7 +216,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\qei.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\shamd5.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/shamd5.o -MD)
+F (.\ExLib\Source\DeviceSupport\shamd5.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/shamd5.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -227,7 +227,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\shamd5.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\ssi.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/ssi.o -MD)
+F (.\ExLib\Source\DeviceSupport\ssi.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/ssi.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -238,10 +238,10 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\ssi.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\sw_crc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sw_crc.o -MD)
+F (.\ExLib\Source\DeviceSupport\sw_crc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sw_crc.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\driverlib\sw_crc.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\sysctl.c)(0x64A19EBA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sysctl.o -MD)
+F (.\ExLib\Source\DeviceSupport\sysctl.c)(0x64B17E05)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sysctl.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -255,7 +255,7 @@ I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\cmsis_compiler.h)(0x626F4ADE)
 I (ExLib\Source\DeviceSupport\driverlib\cmsis_armclang.h)(0x626F4ADE)
-F (.\ExLib\Source\DeviceSupport\sysexc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sysexc.o -MD)
+F (.\ExLib\Source\DeviceSupport\sysexc.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/sysexc.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -264,7 +264,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_sysexc.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\systick.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/systick.o -MD)
+F (.\ExLib\Source\DeviceSupport\systick.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/systick.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -273,7 +273,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\systick.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\timer.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/timer.o -MD)
+F (.\ExLib\Source\DeviceSupport\timer.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/timer.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -284,7 +284,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\timer.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\uart.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/uart.o -MD)
+F (.\ExLib\Source\DeviceSupport\uart.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/uart.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -295,7 +295,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_uart.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\uart.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\udma.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/udma.o -MD)
+F (.\ExLib\Source\DeviceSupport\udma.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/udma.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
@@ -304,7 +304,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_udma.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\usb.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/usb.o -MD)
+F (.\ExLib\Source\DeviceSupport\usb.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/usb.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -317,8 +317,8 @@ I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\startup\startup_rvmdk.S)(0x6464B46F)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION=538 -DTM4C123GH6PM-o ./objects/startup_rvmdk.o)
-F (.\ExLib\Source\DeviceSupport\watchdog.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/watchdog.o -MD)
+F (.\ExLib\Source\DeviceSupport\startup\startup_rvmdk.S)(0x64B23DF3)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION=538 -DTM4C123GH6PM-o ./objects/startup_rvmdk.o)
+F (.\ExLib\Source\DeviceSupport\watchdog.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -ffunction-sections -w -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/watchdog.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
@@ -328,7 +328,7 @@ I (ExLib\Source\DeviceSupport\inc\hw_watchdog.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
-F (.\ExLib\Source\ExLib_Exception.cpp)(0x649325A5)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_exception.o -MD)
+F (.\ExLib\Source\ExLib_Exception.cpp)(0x64B235EC)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_exception.o -MD)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -400,7 +400,7 @@ I (ExLib\Source\DeviceSupport\driverlib\uart.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
-F (.\ExLib\Source\ExLib_EXTI.cpp)(0x64A147D6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_exti.o -MD)
+F (.\ExLib\Source\ExLib_EXTI.cpp)(0x64A147D6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_exti.o -MD)
 I (ExLib\Include\ExLib_EXTI.hpp)(0x649D849F)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
@@ -612,7 +612,7 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
-F (.\ExLib\Source\ExLib_GPIO.cpp)(0x64AB7D4A)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_gpio.o -MD)
+F (.\ExLib\Source\ExLib_GPIO.cpp)(0x64AB7D4A)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_gpio.o -MD)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
 I (ExLib\Include\ExLib_Printable.hpp)(0x64A1665C)
@@ -825,7 +825,7 @@ I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_EXTI.hpp)(0x649D849F)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-F (.\ExLib\Source\ExLib_Main.cpp)(0x64A1A4C6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_main.o -MD)
+F (.\ExLib\Source\ExLib_Main.cpp)(0x64B17CBC)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_main.o -MD)
 I (ExLib\Include\ExLib_Main.hpp)(0x648ACF9C)
 I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
@@ -897,12 +897,7 @@ I (ExLib\Source\DeviceSupport\driverlib\uart.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
-F (.\ExLib\Source\ExLib_BufferFIFO.cpp)(0x64ACED7F)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_bufferfifo.o -MD)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-F (.\ExLib\Source\ExLib_PrintStream.cpp)(0x64A51C20)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_printstream.o -MD)
+F (.\ExLib\Source\ExLib_PrintStream.cpp)(0x64A51C20)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_printstream.o -MD)
 I (ExLib\Include\ExLib_PrintStream.hpp)(0x64A24873)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
@@ -1046,19 +1041,19 @@ I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\ctype.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x63884908)
 I (ExLib\Source\Util_FormattedPrint.hpp)(0x64A666E6)
-F (.\ExLib\Source\ExLib_UART.cpp)(0x64ACF236)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_uart.o -MD)
-I (ExLib\Include\ExLib_UART.hpp)(0x64ACEFB0)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
+F (.\ExLib\Source\ExLib_UART.cpp)(0x64B2D44D)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_uart.o -MD)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (ExLib\Include\ExLib_UART.hpp)(0x64B2D44D)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
 I (ExLib\Include\ExLib_Printable.hpp)(0x64A1665C)
 I (ExLib\Include\ExLib_PrintStream.hpp)(0x64A24873)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\type_traits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -1193,7 +1188,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 I (ExLib\Include\ExLib_ScanStream.hpp)(0x64A68144)
 I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64ACF1A4)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
 I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
 I (ExLib\Source\DeviceSupport\inc\asmdefs.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\inc\hw_adc.h)(0x6464B46F)
@@ -1263,8 +1258,8 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-I (ExLib\Source\Util_UART.hpp)(0x64A957DD)
-F (.\ExLib\Source\ExLib_Units.cpp)(0x64ACF335)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_units.o -MD)
+I (ExLib\Source\Util_UART.hpp)(0x64B21EBA)
+F (.\ExLib\Source\ExLib_Units.cpp)(0x64ACF335)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_units.o -MD)
 I (ExLib\Include\ExLib_Units.hpp)(0x64ACB716)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -1404,7 +1399,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\result_of.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\type_identity.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x63884906)
-F (.\ExLib\Source\Util_I2C.cpp)(0x64AC18C6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_i2c.o -MD)
+F (.\ExLib\Source\Util_I2C.cpp)(0x64AC18C6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_i2c.o -MD)
 I (ExLib\Source\Util_I2C.hpp)(0x64AC1798)
 I (ExLib\Include\ExLib_I2C.hpp)(0x64ACB716)
 I (ExLib\Include\ExLib_PrintStream.hpp)(0x64A24873)
@@ -1549,8 +1544,8 @@ I (ExLib\Include\ExLib_Printable.hpp)(0x64A1665C)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 I (ExLib\Include\ExLib_ScanStream.hpp)(0x64A68144)
 I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64ACF1A4)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
 I (ExLib\Include\ExLib_Units.hpp)(0x64ACB716)
@@ -1622,20 +1617,20 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
-F (.\ExLib\Source\Util_UART.cpp)(0x64ACECB6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_uart.o -MD)
-I (ExLib\Source\Util_UART.hpp)(0x64A957DD)
-I (ExLib\Include\ExLib_UART.hpp)(0x64ACEFB0)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
+F (.\ExLib\Source\Util_UART.cpp)(0x64B21EBA)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_uart.o -MD)
+I (ExLib\Source\Util_UART.hpp)(0x64B21EBA)
+I (ExLib\Include\ExLib_UART.hpp)(0x64B2D44D)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
 I (ExLib\Include\ExLib_Printable.hpp)(0x64A1665C)
 I (ExLib\Include\ExLib_PrintStream.hpp)(0x64A24873)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\type_traits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -1770,7 +1765,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 I (ExLib\Include\ExLib_ScanStream.hpp)(0x64A68144)
 I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64ACF1A4)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
 I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
 I (ExLib\Source\DeviceSupport\inc\asmdefs.h)(0x6464B46F)
 I (ExLib\Source\DeviceSupport\inc\hw_adc.h)(0x6464B46F)
@@ -1840,7 +1835,7 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-F (.\ExLib\Source\Util_GPIO.cpp)(0x64AA7E90)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_gpio.o -MD)
+F (.\ExLib\Source\Util_GPIO.cpp)(0x64AA7E90)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_gpio.o -MD)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
@@ -2052,24 +2047,29 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x6493257B)
-F (.\ExLib\Source\ExLib_WriteStream.cpp)(0x64958BA0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_writestream.o -MD)
+F (.\ExLib\Source\ExLib_WriteStream.cpp)(0x64958BA0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_writestream.o -MD)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-F (.\ExLib\Source\ExLib_ReadStreamBuffered.cpp)(0x64ACF1A4)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_readstreambuffered.o -MD)
+F (.\ExLib\Source\ExLib_ReadStreamBuffered.cpp)(0x64B173A0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_readstreambuffered.o -MD)
 I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64ACF1A4)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
-F (.\ExLib\Source\ExLib_ReadStream.cpp)(0x64ACEF2D)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_readstream.o -MD)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
+F (.\ExLib\Source\ExLib_ReadStream.cpp)(0x64B2D167)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_readstream.o -MD)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-F (.\User\main.cpp)(0x64ACB8E3)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O1 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/main.o -MD)
+F (.\ExLib\Source\ExLib_BufferFIFO.cpp)(0x64B2CDA9)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_bufferfifo.o -MD)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+F (.\User\main.cpp)(0x64B2D2FE)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -ffunction-sections -I ./ExLib/Include-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/main.o -MD)
 I (ExLib\Include\ExLib.hpp)(0x64ACEC15)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64AB7D4A)
 I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
@@ -2213,11 +2213,11 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\result_of.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\type_identity.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
-I (ExLib\Include\ExLib_UART.hpp)(0x64ACEFB0)
-I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64ACF284)
+I (ExLib\Include\ExLib_UART.hpp)(0x64B2D44D)
+I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (ExLib\Include\ExLib_ScanStream.hpp)(0x64A68144)
 I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64ACF1A4)
-I (ExLib\Include\ExLib_ReadStream.hpp)(0x64ACEF2D)
+I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D44D)
 I (ExLib\Include\ExLib_Units.hpp)(0x64ACB716)
 I (ExLib\Include\ExLib_Delay.hpp)(0x64AA0F4B)
 I (ExLib\Include\ExLib_Main.hpp)(0x648ACF9C)

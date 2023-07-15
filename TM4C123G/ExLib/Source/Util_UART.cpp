@@ -105,50 +105,38 @@ void configUARTState(std::uintptr_t periph, bool isEnable) {
     }
 }
 
-GPIO_Pin getUARTDefaultRxPin(std::uintptr_t periph) {
-    switch (periph) {
-        case UART0_BASE:
-            return GPIO_Pin::PA0;
-        case UART1_BASE:
-            return GPIO_Pin::PB0;
-        case UART2_BASE:
-            return GPIO_Pin::PD6;
-        case UART3_BASE:
-            return GPIO_Pin::PC6;
-        case UART4_BASE:
-            return GPIO_Pin::PC4;
-        case UART5_BASE:
-            return GPIO_Pin::PE4;
-        case UART6_BASE:
-            return GPIO_Pin::PD4;
-        case UART7_BASE:
-            return GPIO_Pin::PE0;
-        default:
-            return (GPIO_Pin)0;
+GPIO_Pin getUARTDefaultRxPin(UART_Periph periph) {
+    static const GPIO_Pin defaultRx[] = {
+        PA0,
+        PB0,
+        PD6,
+        PC6,
+        PC4,
+        PE4,
+        PD4,
+        PE0
+    };
+    if((std::size_t)periph >= sizeof(defaultRx)/sizeof(defaultRx[0])){
+        ExLib_Exception::raiseException("Bad UART_Periph");
     }
+    return defaultRx[(std::size_t)periph];
 }
 
-GPIO_Pin getUARTDefaultTxPin(std::uintptr_t periph) {
-    switch (periph) {
-        case UART0_BASE:
-            return GPIO_Pin::PA1;
-        case UART1_BASE:
-            return GPIO_Pin::PB1;
-        case UART2_BASE:
-            return GPIO_Pin::PD7;
-        case UART3_BASE:
-            return GPIO_Pin::PC7;
-        case UART4_BASE:
-            return GPIO_Pin::PC5;
-        case UART5_BASE:
-            return GPIO_Pin::PE5;
-        case UART6_BASE:
-            return GPIO_Pin::PD5;
-        case UART7_BASE:
-            return GPIO_Pin::PE1;
-        default:
-            return (GPIO_Pin)0;
+GPIO_Pin getUARTDefaultTxPin(UART_Periph periph) {
+        static const GPIO_Pin defaultTx[] = {
+        PA1,
+        PB1,
+        PD7,
+        PC7,
+        PC5,
+        PE5,
+        PD5,
+        PE1
+    };
+    if((std::size_t)periph >= sizeof(defaultTx)/sizeof(defaultTx[0])){
+        ExLib_Exception::raiseException("Bad UART_Periph");
     }
+    return defaultTx[(std::size_t)periph];
 }
 
 bool isLegalUARTPin(std::uintptr_t periph, GPIO_Pin pinRx, GPIO_Pin pinTx) {

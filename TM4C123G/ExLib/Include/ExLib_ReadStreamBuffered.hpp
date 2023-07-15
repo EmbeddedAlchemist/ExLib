@@ -11,7 +11,6 @@ class ReadStreamBuffered : public ReadStream {
     public:
       ReadStreamBuffered(void) = delete;
       ReadStreamBuffered(BufferFIFO<char> &buffer);
-      virtual bool read(char &ch);
       bool peek(char &ch);
       
 
