@@ -162,9 +162,8 @@ GPIO类中提供了函数`mode` `read` `write` ，可以完成基本的模式设
 
 - 参数说明
 
-  - pinName
+  - pinName 该参数用于指定一个目标GPIO引脚
 
-    该参数用于指定一个目标GPIO引脚
 
 #### GPIO(GPIO_Pin pinName, GPIO_Mode modeName) (构造函数)
 
@@ -174,13 +173,10 @@ GPIO类中提供了函数`mode` `read` `write` ，可以完成基本的模式设
 
 - 参数说明
 
-  - pinName
+  - pinName 该参数用于指定一个目标GPIO引脚
 
-    该参数用于指定一个目标GPIO引脚
+  - modeName 该参数用于指定一个目标GPIO模式
 
-  - modeName
-
-    该参数用于指定一个目标GPIO模式
 
 #### void write(bool level)
 
@@ -190,9 +186,8 @@ GPIO类中提供了函数`mode` `read` `write` ，可以完成基本的模式设
 
 - 参数说明
 
-  - level
+  - level 待设置的GPIO电平，`false`为低电平，`true`为高电平。
 
-    待设置的GPIO电平，`false`为低电平，`true`为高电平。
 
 #### bool read(void)
 
@@ -212,9 +207,8 @@ GPIO类中提供了函数`mode` `read` `write` ，可以完成基本的模式设
 
 - 参数说明
 
-  - modeName
+  - modeName 指定一个GPIO模式
 
-    指定一个GPIO模式
 
 
 
@@ -339,13 +333,10 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - UARTName
+  - UARTName 指定一个UART外设
 
-    指定一个UART外设
+  - buffer 默认`nullptr` 指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
 
-  - buffer 默认`nullptr`
-
-    指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
 
 #### UART(UART_Periph UARTName, GPIO_Pin pinRx, GPIO_Pin pinTx, BufferFIFO\<char\> *buffer)(构造函数)
 
@@ -355,21 +346,13 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - UARTName
+  - UARTName 指定一个UART外设
 
-    指定一个UART外设
+  - pinRx 指定的Rx引脚
 
-  - pinRx
+  - pinTx 指定的Tx引脚
 
-    指定的Rx引脚
-
-  - pinTx
-
-    指定的Tx引脚
-
-  - buffer 默认`nullptr`
-
-    指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
+  - buffer 默认`nullptr` 指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
 
 - 备注
 
@@ -385,21 +368,14 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - baudrate 默认为`115200`
+  - baudrate 默认为`115200` 指定波特率
 
-    指定波特率
+  - wordLength 默认为`Bits8` 指定字长
 
-  - wordLength 默认为`Bits8`
+  - stopBits 默认为`Bits1` 指定停止位
 
-    指定字长
+  - parity 默认为`None` 指定奇偶校验位
 
-  - stopBits 默认为`Bits1`
-
-    指定停止位
-
-  - parity 默认为`None`
-
-    指定奇偶校验位
 
 #### void end(void)
 
@@ -415,13 +391,9 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - pinRx
+  - pinRx rx引脚
 
-    rx引脚
-
-  - pinTx
-
-    tx引脚
+  - pinTx tx引脚
 
 - 备注
 
@@ -438,9 +410,7 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - ch
-
-    待写入的字符
+  - ch 待写入的字符
 
 - 返回
 
@@ -454,9 +424,7 @@ UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供�
 
 - 参数说明
 
-  - ch
-
-    接收读取字符的变量的引用
+  - ch 接收读取字符的变量的引用
 
 - 返回
 
@@ -526,3 +494,104 @@ int usr_main(){
 }
 ~~~
 
+
+
+## PWM
+
+### 概述
+
+此章节所述的PWM均为PWM抽象类。此章节旨在说明这些类之间的关系，实际使用部分不再复述。
+
+PWM模块抽象了PWM生成器`PWM_Generator`和PWM通道`PWM_Channel`。
+
+### PWM_Generator
+
+PWM_Generator是一个PWM生成器的抽象类，本身没有实现PWM的任何功能，但提供了相关的接口以便同一不同PWM实现方法之间的调用。
+
+#### setCycle(TimeInteval cycle)
+
+- 函数说明
+
+  设置该PWM生成器下所有通道的周期
+
+- 参数说明
+
+  - cycle 周期长度
+
+- 备注
+
+  有关TimeInteval的定义参阅Units(单位)章节
+
+### PWM_Channel
+
+PWM_Generator是PWM通道的类，需要借助一个PWM_Generator来完成实例化。
+
+####  PWM_Channel(PWM_Generator &generator, std::uint32_t channel, GPIO_Pin pinName) (构造函数)
+
+- 函数说明
+
+  这是PWM_Channel的构造方法，需要指定该通道使用的PWM生成器，该生成器所对应的通道序号和该通道对应的GPIO引脚。
+
+- 参数说明
+
+  - generator 要使用的PWM生成器
+  - channel 该生成器所对应的通道序号
+  - pinName 要使用的GPIO引脚
+
+- 备注
+
+  PWM_Channel只保存了PWM_Generator的引用。请保证所使用的PWM_Generator对象在PWM_Channel使用期间没有被销毁。
+
+#### void setDuty(Precent duty)
+
+- 函数说明
+
+  设置该通道的占空比
+
+- 参数说明
+
+  - duty 指定该通道的占空比
+
+- 备注
+
+  有关Precent 的定义参阅Units(单位)章节
+
+## Units
+
+### 概述
+
+在Units部分定义了单位相关的符号。这些符号使程序更具语义性，减少对变量含义的误解。
+
+### TimeInterval
+
+TimeInterval定义了一段时间间隔。您可以使用文本运算符(推荐的方法)`_us` (微秒)`_ms`(毫秒) `_s`(秒)或显式地调用其构造函数来生成一个TimeInterval.
+
+#### 文本运算符
+
+这是推荐的构造TimeInterval的方法。例如
+
+~~~cpp
+//delay函数的参数是TimeInterval，下面以delay为例展示如何使用文本运算符构造TimeInterval
+delay(30_us);//延时30微秒
+delay(5_ms);//延时5毫秒
+delay(1_s);//延时1秒
+~~~
+
+#### TimeInterval(std::uint32_t us) (构造函数)
+
+如果不方便使用文本运算符，可以**显式地**调用其构造函数来构造TimeInterval
+
+- 函数说明
+
+  TimeInterval的构造函数
+
+- 参数说明
+
+  - us 时间间隔，以微秒位单位
+
+~~~cpp
+//使用构造函数法重写文本运算符的程序
+delay(TimeInterval(30));//延时30微秒
+delay(TimeInterval(5000));//延时5毫秒
+delay(TimeInterval(1000000));//延时1秒
+~~~
