@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ExLib_CallbackFunction.hpp"
-#include "ExLib_Printable.hpp"
+#include "ExLib_PrintStream.hpp"
 #include <stdint.h>
 namespace ExLib {
 
@@ -187,13 +187,13 @@ enum class GPIO_State {
     Raising = Rising
 };
 
-class GPIO : protected Printable {
+class GPIO : public Printable {
   private:
     const std::uintptr_t port;
     const std::uint8_t pin;
 
   protected:
-    virtual size_t printTo(PrintStream &stream);
+    virtual std::size_t printTo(PrintStream &stream);
 
   public:
     GPIO(void) = delete;

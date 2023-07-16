@@ -46,6 +46,10 @@
 ".\objects\exlib_readstreambuffered.o"
 ".\objects\exlib_readstream.o"
 ".\objects\exlib_bufferfifo.o"
+".\objects\exlib_hardwarepwm.o"
+".\objects\exlib_pwm.o"
+".\objects\util_hardwarepwm.o"
+".\objects\exlib_system.o"
 ".\objects\main.o"
 --strict --scatter ".\Objects\TM4C123G_Test.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

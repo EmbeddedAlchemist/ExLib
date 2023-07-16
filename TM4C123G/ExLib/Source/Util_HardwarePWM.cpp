@@ -1,7 +1,7 @@
 #include "Util_HardwarePWM.hpp"
-#include "Util_GPIO.hpp"
 #include "DeviceSupport/DeviceSupport.hpp"
 #include "ExLib_Exception.hpp"
+#include "Util_GPIO.hpp"
 
 namespace ExLib {
 std::uintptr_t getHWPWMModuleByName(HardwarePWM_Periph hwPWMName) {
@@ -158,6 +158,7 @@ std::uint32_t getHWPWMPinMuxConfig(HardwarePWM_Periph hwPWMName, GPIO_Pin pinNam
             else if (pinName == PF3)
                 return 0x00050C05;
     }
+    return 0;
 }
 
 void configHWPWMPin(HardwarePWM_Periph hwPWMName, GPIO_Pin pinName) {
@@ -196,5 +197,6 @@ HardwarePWM_Periph getHWPWMNameByModuleAndGenerator(std::uintptr_t module, std::
             }
         } break;
     }
+    return (HardwarePWM_Periph)0xFF;
 }
 } // namespace ExLib

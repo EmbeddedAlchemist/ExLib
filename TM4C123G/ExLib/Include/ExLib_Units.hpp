@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include <limits>
 
 namespace ExLib {
 
@@ -49,6 +50,12 @@ struct Precent {
 
 Precent operator"" _pct(long double pct);
 Precent operator"" _pct(unsigned long long pct);
+
+template <typename Number>
+Number Precent::compute(Number number) {
+    std::int64_t result = number; // 扩展到64位以免溢出
+    return result * pct / std::numeric_limits<std::uint32_t>::max();
+}
 
 
 

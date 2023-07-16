@@ -95,11 +95,9 @@ class UART : public PrintStream , public ScanStream {
      * @brief 失能UART外设
      *
      */
-    void end();
+    void end(void);
 
     virtual bool write(char ch);
-    virtual bool read(char &ch);
-    virtual std::size_t avaliableForRead(void);
 
     using ReadStream::read;
 

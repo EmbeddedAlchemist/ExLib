@@ -113,13 +113,9 @@ bool UART::write(char ch) {
     return true;
 }
 
-bool UART::read(char &ch) {
-    return rxBuffer.read(ch);
-}
-
-std::size_t UART::avaliableForRead(void) {
-    return rxBuffer.avaliable();
-}
+// bool UART::read(char &ch) {
+//     return rxBuffer.read(ch);
+// }
 
 UART::operator UART_Periph() {
     return getUARTNameByPeriph(periph);

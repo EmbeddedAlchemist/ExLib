@@ -19,7 +19,7 @@
 1. 克隆该仓库，此目录下的ExLib目录包含全部ExLib的源码。
 2. 将`ExLib/Include`添加到includePath。
 3. 将`ExLib/Source`中的.cpp文件加入工程源代码。
-4. 将`ExLib/Source/DeviceSupport`中的.c/.cpp文件加入工程源代码。这是平台固件库，可以为这些文件关闭警告。
+4. 将`ExLib/Source/DeviceSupport`中的.c/.cpp文件加入工程源代码。这是平台固件库，可以为这·些文件关闭警告。
 5. 将`ExLib/Source/FreeRTOS`中的.c/.cpp文件加入工程源代码。
 6. 请开始你的表演
 
@@ -40,7 +40,7 @@ UART Serial(UART_Periph::UART0);
 
 int usr_main(){
     Serial.begin(115200);
-    Serial.print("Hello World!");
+    Serial.println("Hello World!");
     while(true){}
 }
 ~~~
@@ -53,7 +53,6 @@ int usr_main(){
 #include <stdbool.h>
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
-#include "driverlib/debug.h"
 #include "driverlib/fpu.h"
 #include "driverlib/gpio.h"
 #include "driverlib/pin_map.h"
@@ -92,13 +91,42 @@ int main(void){
 
 ## GPIO
 
+### 概述
+
+GPIO类为基本输入输出操作和外部中断捕获提供了接口。
+
+枚举类`GPIO_Pin` `GPIO_Mode` `GPIO_State` 分别枚举了GPIO引脚、GPIO模式和GPIO状态。
+
+GPIO类中提供了函数`mode` `read` `write` ，可以完成基本的模式设置、输入和输出；同时提供了与之对应的无对象版本函数`pinMode` `pinRead` `pinWrite`，允许你在不生成对象的情况下直接使用引脚名操作GPIO。
+
+函数`attachInterrupt` `detachInterrupt` 可以在该GPIO引脚上附加外部中断。
+
 ### 定义说明
 
 #### GPIO_Pin (enum  class)
 
-该枚举类枚举了所有的GPIO引脚
+该枚举类枚举了所有的GPIO引脚。
 
+#### GPIO_Mode (enum class)
 
+该枚举类枚举了所有的GPIO模式。
+
+- `Input_Hiz` `Input` 高阻/浮空输入
+- `Input_PullUp` 上拉输入
+- `Input_PullDown` 下拉输入
+- `Output_PushPull` `Output` 推挽输出
+- `Output_OpenDrain` 开漏输出
+- `Analog` 模拟输入
+
+#### GPIO_State (enum class)
+
+该枚举类枚举了所有GPIO状态。
+
+- `Low` 低电平
+- `High` 高电平
+- `Falling` 下降沿
+- `Rising` `Raising` 上升沿
+- `Changing` 跳变沿
 
 ### 函数说明
 
@@ -130,8 +158,7 @@ int main(void){
 
     该参数用于指定一个目标GPIO模式
 
-
-#### write(bool level)
+#### void write(bool level)
 
 - 函数说明
 
@@ -142,6 +169,30 @@ int main(void){
   - level
 
     待设置的GPIO电平，`false`为低电平，`true`为高电平。
+
+#### bool read(void)
+
+- 函数说明
+
+  获取GPIO上的电平
+
+- 返回
+
+  `false`为低电平，`true`为高电平
+
+#### void mode(GPIO_Mode modeName)
+
+- 函数说明
+
+  设置GPIO的模式
+
+- 参数说明
+
+  - modeName
+
+    指定一个GPIO模式
+
+
 
 ### 示例
 
@@ -176,6 +227,7 @@ int usr_main(){
 
 ~~~cpp
 //该例程通过串口0打印PF0(K1)的电平。
+//当K1为高电平时，串口打印"HIGH"，反之打印"LOW"
 //main.cpp
 
 #include "ExLib.hpp"
@@ -188,13 +240,14 @@ int usr_main(){
 	Serial.begin(115200);
     K1.mode(GPIO_Mode::Input);
     while(true){
-		Serial.println(K1.read());
+		Serial.println(K1);
     }
 }
 ~~~
 
 ~~~cpp
-//该例程捕获PF4上的下降沿中断
+//该例程捕获PF4(K2)上的下降沿中断
+//当K2被按下时，callback函数被调用，串口打印"Falling edge on PF4"
 //main.cpp
 
 #include "ExLib.hpp"
@@ -211,6 +264,241 @@ int usr_main(){
 	Serial.begin(115200);
     K2.attachInterrupt(GPIO_State::Falling, new CallbackFunction(callback));
     while(true){}
+}
+~~~
+
+~~~Cpp
+//该例程是GPIO无对象版本函数的演示
+//若不想为GPIO生成对象，可使用无对象版本的函数。
+//main.cpp
+
+#include "ExLib.hpp"
+using namespace ExLib;
+
+constexpr GPIO_Pin LED_R_PIN = GPIO_Pin::PF1; //C++中定义常量的方式，近似等价于#define
+
+int usr_main(){
+    //使用无对象函数操作GPIO必须先调用pinMode设置模式，否则GPIO时钟可能不会打开
+	GPIO::pinMode(LED_R_PIN, GPIO_Mode::Output);
+    GPIO::pinWrite(LED_R_Pin, true); //将LED_R_Pin设为高电平
+    while(true){}
+}
+~~~
+
+## UART
+
+### 概述
+
+UART类实现了UART通信相关功能，包括写入和带缓冲的读取。
+
+UART类还实现了了PrintStream和ScanStream，为格式化输入输出提供了强大支持。
+
+### 定义说明
+
+### 函数说明
+
+#### print, println, printf, << 等格式化输出方法
+
+这些函数继承自PrintStream类。请参阅PrintStream类章节。
+
+#### praseXXX, scanf, >> 等格式化输入方法
+
+这些函数继承自ScanStream类。请参阅ScanStream类章节。
+
+
+
+#### UART(UART_Periph UARTName, BufferFIFO\<char\> *buffer) (构造函数)
+
+- 函数说明
+
+  这是UART类的构造函数之一，使用默认的Tx和Rx引脚
+
+- 参数说明
+
+  - UARTName
+
+    指定一个UART外设
+
+  - buffer 默认`nullptr`
+
+    指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
+
+#### UART(UART_Periph UARTName, GPIO_Pin pinRx, GPIO_Pin pinTx, BufferFIFO\<char\> *buffer)(构造函数)
+
+- 函数说明
+
+  这是UART类的构造函数之一，使用指定的的Tx和Rx引脚
+
+- 参数说明
+
+  - UARTName
+
+    指定一个UART外设
+
+  - pinRx
+
+    指定的Rx引脚
+
+  - pinTx
+
+    指定的Tx引脚
+
+  - buffer 默认`nullptr`
+
+    指向接收缓冲区的指针。若为`nullptr`，则在构造时生成一个64字节的缓冲区，否则使用指定的缓冲区。
+
+- 备注
+
+  这等价于在begin之前调用setPins。注意事项请参阅setPins函数。
+
+#### void begin(std::uint32_t baudrate, UART_WordLength wordLength, UART_StopBits stopBits, UART_Parity parity) 
+
+
+
+- 函数说明
+
+  该函数使用指定的参数开始UART通信。
+
+- 参数说明
+
+  - baudrate 默认为`115200`
+
+    指定波特率
+
+  - wordLength 默认为`Bits8`
+
+    指定字长
+
+  - stopBits 默认为`Bits1`
+
+    指定停止位
+
+  - parity 默认为`None`
+
+    指定奇偶校验位
+
+#### void end(void)
+
+- 函数说明
+
+  结束UART通信。
+
+#### void setPins(GPIO_Pin pinRx, GPIO_Pin pinTx);
+
+- 函数说明
+
+  指定UART通信时使用的引脚。
+
+- 参数说明
+
+  - pinRx
+
+    rx引脚
+
+  - pinTx
+
+    tx引脚
+
+- 备注
+
+  1. 该函数需要在begin之前调用才能生效。
+  2. 引脚重映射受到硬件限制，若指定了不合法的引脚，将引发`Illigal UART pin`异常。
+
+
+
+#### bool write(char ch)
+
+- 函数说明
+
+  向UART写一字节。该函数实现了WriteStream的write方法
+
+- 参数说明
+
+  - ch
+
+    待写入的字符
+
+- 返回
+
+  是否写入成功。恒为`true`。
+
+#### bool read(char &ch);
+
+- 函数说明
+
+  从UART缓冲区。该函数继承自ReadStreamBuffered类。
+
+- 参数说明
+
+  - ch
+
+    接收读取字符的变量的引用
+
+- 返回
+
+  是否读取成功。若缓冲区有可读取字符，返回`true`，否则返回`false`。
+
+#### std::size_t avaliableForRead(void);
+
+参阅ReadStreamBuffered章节
+
+- 函数说明
+
+  返回缓冲区中可读的字符数目
+
+- 返回
+
+  缓冲区中可读的字符数目
+
+
+
+#### std::size_t avaliableForWrite(void);
+
+- 函数说明
+
+  返回可写入的字符数目
+
+- 返回
+
+  恒为1.
+
+- 备注
+
+  永远可写
+
+#### void onReceive(CallbackFunction &callback)
+
+- 函数说明
+
+  注册接收中断回调函数
+
+- 参数说明
+
+  - callback
+
+    传入一个回调函数对象引用
+
+- 备注
+
+  1. 该方法只会保存回调函数对象的引用，请确保在串口使用期间该回调函数对象不被销毁。
+  2. 对于TM4C123系列，ExLib在该系列芯片上启用了硬件FIFO，所以只有FIFO将满或接收超时时才会调用该回调函数，而非每接收到一个字符就调用回调函数。
+
+### 示例
+
+~~~cpp
+//该示例使用串口0输出0到100的所有整数
+//main.cpp
+
+#include "ExLib.hpp"
+using namespace ExLib;
+
+UART Serial(UART_Periph::UART0);
+
+int usr_main(){
+    Serial.begin(115200);
+    for(int i = 0; i <= 100; i++){
+        Serial.println(i)
+    }
 }
 ~~~
 

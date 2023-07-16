@@ -22,11 +22,6 @@ TimeInterval operator""_us(unsigned long long us) {
     return TimeInterval(us);
 }
 
-template <typename Number>
-Number Precent::compute(Number number) {
-    std::int64_t result = number; // 扩展到64位以免溢出
-    return result * pct / std::numeric_limits<std::uint32_t>::max();
-}
 
 Precent operator"" _pct(long double pct) {
 	return 0;

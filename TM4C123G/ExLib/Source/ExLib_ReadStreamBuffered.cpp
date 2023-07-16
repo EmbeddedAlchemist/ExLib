@@ -10,4 +10,7 @@ bool ReadStreamBuffered::read(char &ch) {
 bool ReadStreamBuffered::peek(char &ch) {
     return false;
 }
+std::size_t ReadStreamBuffered::avaliableForRead(void) {
+    return buffer.avaliable();
+}
 } // namespace ExLib

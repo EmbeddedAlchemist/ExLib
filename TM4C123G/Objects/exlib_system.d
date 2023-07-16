@@ -1,6 +1,5 @@
-./objects/exlib_exti.o: ExLib\Source\ExLib_EXTI.cpp \
-  ExLib\Include\ExLib_EXTI.hpp ExLib\Include\ExLib_CallbackFunction.hpp \
-  ExLib\Include\ExLib_GPIO.hpp ExLib\Include\ExLib_PrintStream.hpp \
+./objects/exlib_system.o: ExLib\Source\ExLib_System.cpp \
+  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_PrintStream.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \

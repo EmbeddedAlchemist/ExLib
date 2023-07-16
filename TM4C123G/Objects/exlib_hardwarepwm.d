@@ -1,12 +1,13 @@
-./objects/exlib_exti.o: ExLib\Source\ExLib_EXTI.cpp \
-  ExLib\Include\ExLib_EXTI.hpp ExLib\Include\ExLib_CallbackFunction.hpp \
-  ExLib\Include\ExLib_GPIO.hpp ExLib\Include\ExLib_PrintStream.hpp \
+./objects/exlib_hardwarepwm.o: ExLib\Source\ExLib_HardwarePWM.cpp \
+  ExLib\Include\ExLib_HardwarePWM.hpp ExLib\Include\ExLib_PWM.hpp \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ExLib\Include\ExLib_GPIO.hpp ExLib\Include\ExLib_CallbackFunction.hpp \
+  ExLib\Include\ExLib_PrintStream.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__verbose_abort \
@@ -138,7 +139,9 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\result_of.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
-  ExLib\Include\ExLib_WriteStream.hpp \
+  ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_Units.hpp \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
   ExLib\Source\DeviceSupport\DeviceSupport.hpp \
   ExLib\Source\DeviceSupport\inc\asmdefs.h \
   ExLib\Source\DeviceSupport\inc\hw_adc.h \
@@ -206,4 +209,4 @@
   ExLib\Source\DeviceSupport\driverlib\udma.h \
   ExLib\Source\DeviceSupport\driverlib\usb.h \
   ExLib\Source\DeviceSupport\driverlib\watchdog.h \
-  ExLib\Include\ExLib_Exception.hpp
+  ExLib\Source\Util_HardwarePWM.hpp ExLib\Include\ExLib_Exception.hpp

@@ -1,16 +1,16 @@
 #include "ExLib_Main.hpp"
+#include "ExLib_System.hpp"
 #include "DeviceSupport/DeviceSupport.hpp"
 
-
 namespace ExLib {
-    void ExLib_Init(void){
-        //DeviceSupport::NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
-    }
+void ExLib_Init(void) {
+    System::init();
+}
 } // namespace ExLib
 
 extern "C" {
 int main() {
-	DeviceSupport::SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL | SYSCTL_XTAL_16MHZ | SYSCTL_OSC_MAIN);
+    ExLib::ExLib_Init();
     while (1) {
         ExLib::usr_main();
     }

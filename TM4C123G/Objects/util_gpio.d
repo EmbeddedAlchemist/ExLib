@@ -1,7 +1,7 @@
 ./objects/util_gpio.o: ExLib\Source\Util_GPIO.cpp \
   ExLib\Source\Util_GPIO.hpp ExLib\Include\ExLib_GPIO.hpp \
   ExLib\Include\ExLib_CallbackFunction.hpp \
-  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_PrintStream.hpp \
+  ExLib\Include\ExLib_PrintStream.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \

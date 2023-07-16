@@ -693,6 +693,26 @@
               <FileType>8</FileType>
               <FilePath>.\ExLib\Source\ExLib_BufferFIFO.cpp</FilePath>
             </File>
+            <File>
+              <FileName>ExLib_HardwarePWM.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\ExLib_HardwarePWM.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ExLib_PWM.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\ExLib_PWM.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Util_HardwarePWM.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\Util_HardwarePWM.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ExLib_System.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\ExLib_System.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -137,7 +137,7 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\result_of.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
-  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_WriteStream.hpp \
+  ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_Printable.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\ctype.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\ctype.h \
   ExLib\Source\Util_FormattedPrint.hpp
