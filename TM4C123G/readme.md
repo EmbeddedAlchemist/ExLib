@@ -83,6 +83,30 @@ int main(void){
 
 
 
+## 典型的main.cpp模板
+
+你可以使用以下模板来作为main.cpp的初始内容。
+
+~~~cpp
+//main.cpp Tamplate
+
+#include "ExLib.hpp"
+using namespace ExLib;
+
+UART Serial(UART_Periph::UART0);			//构造UART0对象
+
+int usr_main(){
+    Serial.begin(115200);					//初始化UART0
+    System::setDebugStream(Serial);  		//将UART0设置为调试信息的输出流，日志和错误信息会通过串口0打印。
+    //setup and initialize soneting here	
+    //...
+    while(true){
+        //main loop, do something here
+        //...
+    }
+}
+~~~
+
 
 
 
@@ -497,7 +521,7 @@ UART Serial(UART_Periph::UART0);
 int usr_main(){
     Serial.begin(115200);
     for(int i = 0; i <= 100; i++){
-        Serial.println(i)
+        Serial.println(i);
     }
 }
 ~~~
