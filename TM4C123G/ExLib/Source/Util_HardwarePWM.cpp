@@ -33,7 +33,9 @@ void enableHWPWMClock(HardwarePWM_Periph hwPWMName) {
     if ((std::size_t)hwPWMName / 4 >= sizeof(sysCtlPeriph) / sizeof(sysCtlPeriph[0])) {
         ExLib_Exception::raiseException("Bad HardwarePWM_Periph");
     }
-    DeviceSupport::SysCtlPeripheralEnable(sysCtlPeriph[(std::size_t)hwPWMName]);
+    DeviceSupport::SysCtlPeripheralEnable(sysCtlPeriph[(std::size_t)hwPWMName / 4]);
+    while (DeviceSupport::SysCtlPeripheralReady(sysCtlPeriph[(std::size_t)hwPWMName / 4]) == false) {
+    }
 }
 
 bool isLegalHWPWMPin(std::uintptr_t module, std::uint32_t generator, std::uint32_t channel, GPIO_Pin pinName) {
@@ -94,7 +96,7 @@ std::uint32_t getHWPWMOutputBitByNameAndChannel(HardwarePWM_Periph hwPWMName, st
         {PWM_OUT_4_BIT, PWM_OUT_5_BIT},
         {PWM_OUT_6_BIT, PWM_OUT_7_BIT},
     };
-    return outputBit[(std::size_t)hwPWMName % 4][(std::size_t)hwPWMName % 2];
+    return outputBit[(std::size_t)hwPWMName % 4][(std::size_t)channel % 2];
 }
 
 std::uint32_t getHWPWMOutputByNameAndChannel(HardwarePWM_Periph hwPWMName, std::uint32_t channel) {
@@ -104,7 +106,7 @@ std::uint32_t getHWPWMOutputByNameAndChannel(HardwarePWM_Periph hwPWMName, std::
         {PWM_OUT_4, PWM_OUT_5},
         {PWM_OUT_6, PWM_OUT_7},
     };
-    return output[(std::size_t)hwPWMName % 4][(std::size_t)hwPWMName % 2];
+    return output[(std::size_t)hwPWMName % 4][(std::size_t)channel % 2];
 }
 
 std::uint32_t getHWPWMPinMuxConfig(HardwarePWM_Periph hwPWMName, GPIO_Pin pinName) {

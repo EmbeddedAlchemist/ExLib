@@ -34,7 +34,7 @@ void ExLib_Exception::raiseException(const char *message) {
 }
 void ExLib_Exception::raiseHardFault() {
 	if(System::debugStream!=nullptr){
-		System::debugStream->println("Rainsing Hard Fault...");
+		System::debugStream->println("Raising Hard Fault...");
 	}
     *(volatile std::uint32_t *)0xFFFFFFFF = *(volatile std::uint32_t *)0xFFFFFFFF;
 }

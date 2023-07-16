@@ -142,32 +142,9 @@
   ExLib\Include\ExLib_BufferFIFO.hpp ExLib\Include\ExLib_ScanStream.hpp \
   ExLib\Include\ExLib_ReadStreamBuffered.hpp \
   ExLib\Include\ExLib_ReadStream.hpp ExLib\Include\ExLib_PWM.hpp \
-  ExLib\Include\ExLib_Units.hpp \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
-  ExLib\Include\ExLib_HardwarePWM.hpp ExLib\Include\ExLib_System.hpp \
-  ExLib\Include\ExLib_Delay.hpp ExLib\Include\ExLib_Printable.hpp \
-  ExLib\Include\ExLib_Main.hpp ExLib\Include\ExLib_FreeRTOS.hpp \
-  ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
-  ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
-  ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \
-  ExLib\Include\..\Source\FreeRTOS\projdefs.h \
-  ExLib\Include\..\Source\FreeRTOS\portable.h \
-  ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h \
-  ExLib\Include\..\Source\FreeRTOS\portmacro.h \
-  ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h \
-  ExLib\Include\..\Source\FreeRTOS\queue.h \
-  ExLib\Include\..\Source\FreeRTOS\task.h \
-  ExLib\Include\..\Source\FreeRTOS\list.h \
-  ExLib\Include\..\Source\FreeRTOS\atomic.h \
-  ExLib\Include\..\Source\FreeRTOS\croutine.h \
-  ExLib\Include\..\Source\FreeRTOS\event_groups.h \
-  ExLib\Include\..\Source\FreeRTOS\timers.h \
-  ExLib\Include\..\Source\FreeRTOS\message_buffer.h \
-  ExLib\Include\..\Source\FreeRTOS\stream_buffer.h \
-  ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h \
-  ExLib\Include\..\Source\FreeRTOS\semphr.h \
-  ExLib\Include\..\Source\FreeRTOS\stack_macros.h \
+  ExLib\Include\ExLib_Units.hpp ExLib\Include\ExLib_HardwarePWM.hpp \
+  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_Delay.hpp \
+  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_Main.hpp \
   ExLib\Include\ExLib_DeviceSupport.hpp \
   ExLib\Include\..\Source\DeviceSupport\DeviceSupport.hpp \
   ExLib\Include\..\Source\DeviceSupport\inc\asmdefs.h \
@@ -235,4 +212,25 @@
   ExLib\Include\..\Source\DeviceSupport\driverlib\uart.h \
   ExLib\Include\..\Source\DeviceSupport\driverlib\udma.h \
   ExLib\Include\..\Source\DeviceSupport\driverlib\usb.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\watchdog.h
+  ExLib\Include\..\Source\DeviceSupport\driverlib\watchdog.h \
+  ExLib\Include\ExLib_FreeRTOS.hpp \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \
+  ExLib\Include\..\Source\FreeRTOS\projdefs.h \
+  ExLib\Include\..\Source\FreeRTOS\portable.h \
+  ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h \
+  ExLib\Include\..\Source\FreeRTOS\portmacro.h \
+  ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h \
+  ExLib\Include\..\Source\FreeRTOS\queue.h \
+  ExLib\Include\..\Source\FreeRTOS\task.h \
+  ExLib\Include\..\Source\FreeRTOS\list.h \
+  ExLib\Include\..\Source\FreeRTOS\atomic.h \
+  ExLib\Include\..\Source\FreeRTOS\croutine.h \
+  ExLib\Include\..\Source\FreeRTOS\event_groups.h \
+  ExLib\Include\..\Source\FreeRTOS\timers.h \
+  ExLib\Include\..\Source\FreeRTOS\message_buffer.h \
+  ExLib\Include\..\Source\FreeRTOS\stream_buffer.h \
+  ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h \
+  ExLib\Include\..\Source\FreeRTOS\semphr.h \
+  ExLib\Include\..\Source\FreeRTOS\stack_macros.h

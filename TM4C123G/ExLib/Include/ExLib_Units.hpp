@@ -1,7 +1,6 @@
 #pragma once
 
 #include <stdint.h>
-#include <limits>
 
 namespace ExLib {
 
@@ -28,14 +27,12 @@ TimeInterval operator"" _us(unsigned long long us);
  * 
  */
 struct Precent {
-  private:
-    std::uint32_t pct;
-
   public:
+    std::uint32_t pct;
     Precent operator+(Precent);
     Precent operator-(Precent);
+    Precent() = default;
     Precent(float pct);
-    Precent(void) = delete;
 
     /**
      * @brief 计算一个数值与该百分数的乘积
@@ -54,7 +51,7 @@ Precent operator"" _pct(unsigned long long pct);
 template <typename Number>
 Number Precent::compute(Number number) {
     std::int64_t result = number; // 扩展到64位以免溢出
-    return result * pct / std::numeric_limits<std::uint32_t>::max();
+    return result * pct / 0xFFFFFFFF;
 }
 
 

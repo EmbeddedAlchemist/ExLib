@@ -141,8 +141,6 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
   ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_Units.hpp \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
   ExLib\Source\DeviceSupport\DeviceSupport.hpp \
   ExLib\Source\DeviceSupport\inc\asmdefs.h \
   ExLib\Source\DeviceSupport\inc\hw_adc.h \

@@ -152,50 +152,66 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>17</LineNumber>
+          <LineNumber>33</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>11154</Address>
+          <Address>6694</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\User\main.cpp</Filename>
+          <Filename>.\ExLib\Source\ExLib_HardwarePWM.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\TM4C123G_Test\User/main.cpp\17</Expression>
+          <Expression>\\TM4C123G_Test\ExLib/Source/ExLib_HardwarePWM.cpp\33</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>33</LineNumber>
+          <LineNumber>28</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
+          <Address>6624</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\ExLib\Source\ExLib_Exception.cpp</Filename>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\ExLib\Source\ExLib_HardwarePWM.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\TM4C123G_Test\ExLib/Source/ExLib_HardwarePWM.cpp\28</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>35</LineNumber>
+          <LineNumber>21</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
+          <Address>6552</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
+          <BreakIfRCount>1</BreakIfRCount>
           <Filename>.\ExLib\Source\ExLib_HardwarePWM.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\TM4C123G_Test\ExLib/Source/ExLib_HardwarePWM.cpp\21</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>7</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>6456</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\ExLib\Source\ExLib_HardwarePWM.cpp</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\TM4C123G_Test\ExLib/Source/ExLib_HardwarePWM.cpp\7</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>

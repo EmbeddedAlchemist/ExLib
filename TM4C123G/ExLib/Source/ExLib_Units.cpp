@@ -22,13 +22,34 @@ TimeInterval operator""_us(unsigned long long us) {
     return TimeInterval(us);
 }
 
-
 Precent operator"" _pct(long double pct) {
-	return 0;
+    struct Precent ret;
+    unsigned long long t;
+    if (pct <= 0)
+        t = 0;
+    else if (pct >= 100)
+        t = std::numeric_limits<std::uint32_t>::max();
+    else {
+        t = std::numeric_limits<std::uint32_t>::max();
+        t = t * pct / 100;
+    }
+    ret.pct = t;
+    return ret;
 }
 
 Precent operator"" _pct(unsigned long long pct) {
-	return 0;
+    struct Precent ret;
+    unsigned long long t;
+    if (pct <= 0)
+        t = 0;
+    else if (pct >= 100)
+        t = std::numeric_limits<std::uint32_t>::max();
+    else {
+        t = std::numeric_limits<std::uint32_t>::max();
+        t = t * pct / 100;
+    }
+    ret.pct = t;
+    return ret;
 }
 
 Precent::Precent(float _pct) {
