@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <type_traits>
+#include <limits>
+#include <math.h>
 
 // #include "ExLib_Printable.hpp"
 #include "ExLib_WriteStream.hpp"
@@ -47,6 +49,12 @@ class PrintStream : public WriteStream {
     template <typename Integer>
     std::size_t getIntegerDigits(Integer integer, std::uint8_t base);
 
+    template <typename Floating>
+    std::size_t printFloat(Floating floating, std::uint8_t tailingDigits);
+
+    template <typename Floating>
+    std::size_t getFloatIntegerDigits(Floating floating);
+
     char getNumberCharInBase(std::uint8_t number, std::uint8_t base);
 
   public:
@@ -57,7 +65,7 @@ class PrintStream : public WriteStream {
     inline std::size_t print(Integer integer, std::uint8_t base = 10) { return printInteger(integer, base); }
 
     template <typename Floating, typename std::enable_if<std::is_floating_point<Floating>::value, int>::type = 0>
-    inline std::size_t print(Floating floating, std::uint8_t tailingDigits = 2) { return 0; }
+    inline std::size_t print(Floating floating, std::uint8_t tailingDigits = 2) { return printFloat(floating, tailingDigits); }
 
     std::size_t print(Printable &printable) { return printable.printTo(*this); }
 
@@ -101,6 +109,65 @@ std::size_t PrintStream::getIntegerDigits(Integer integer, std::uint8_t base) {
         digits++;
     }
     return digits;
+}
+
+template <typename Floating>
+inline std::size_t PrintStream::printFloat(Floating number, std::uint8_t digits) {
+    size_t n = 0;
+    if (std::isnan(number))
+        return print("nan");
+    if (std::isinf(number))
+        return print("inf");
+    if (number > std::numeric_limits<Floating>::max())
+        return print("ovf"); // constant determined empirically
+    if (number < std::numeric_limits<Floating>::min())
+        return print("ovf"); // constant determined empirically
+
+    // Handle negative numbers
+    if (number < 0.0) {
+        n += write('-');
+        number = -number;
+    }
+
+    Floating rounding = 0.5;
+    for (uint8_t i = 0; i < digits; ++i)
+        rounding /= 10.0;
+
+    number += rounding;
+
+    unsigned long int_part = (unsigned long)number;
+    Floating remainder = number - (Floating)int_part;
+    n += print(int_part);
+
+    if (digits > 0) {
+        n += write('.');
+    }
+
+    // Extract digits from the remainder one at a time
+    while (digits-- > 0) {
+        remainder *= 10.0;
+        unsigned int toPrint = (unsigned int)(remainder);
+        n += write(getNumberCharInBase(toPrint, 10));
+        remainder -= toPrint;
+    }
+
+    return n;
+}
+
+template <typename Floating>
+inline std::size_t PrintStream::getFloatIntegerDigits(Floating floating) {
+    std::size_t len = 0;
+    if (floating < 0) {
+        len++;
+        floating = -floating;
+    } else if (floating == 0) {
+        return 1;
+    }
+    while (floating > 0) {
+        floating /= 10;
+        len++;
+    }
+    return len;
 }
 
 template <typename Interger>

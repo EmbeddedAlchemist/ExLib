@@ -61,7 +61,7 @@ UART::UART(UART_Periph UARTName, GPIO_Pin pinRx, GPIO_Pin pinTx, BufferFIFO<char
       onReceviceCallback(nullptr),
       ScanStream::ScanStream(*(buffer = (buffer == nullptr) ? new BufferFIFO<char>(64, BufferFIFO_WriteMode::Overwrite) : buffer)) {
     if (UARTObjects[(std::size_t)UARTName] != nullptr) {
-        ExLib_Exception::raiseException("Only generate one object for an UART peripheral at same time");
+        Exception::raiseException("Only generate one object for an UART peripheral at same time");
         return;
     }
     UARTObjects[(std::size_t)UARTName] = this;
@@ -74,7 +74,7 @@ UART::~UART() {
 
 void UART::setPins(GPIO_Pin _pinRx, GPIO_Pin _pinTx) {
     if (!isLegalUARTPin(periph, _pinRx, _pinTx)) {
-        ExLib_Exception::raiseException("Illegal UART pin specified");
+        Exception::raiseException("Illegal UART pin specified");
         return;
     }
     pinRx = _pinRx;

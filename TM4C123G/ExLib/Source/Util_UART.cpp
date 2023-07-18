@@ -19,7 +19,7 @@ std::uintptr_t getUARTPeriphByName(UART_Periph uartName) {
         UART7_BASE,
     };
     if((std::size_t)uartName >= sizeof(uartPeriph)/sizeof(uartPeriph[0])){
-        ExLib_Exception::raiseException("Bad UART_Periph");
+        Exception::raiseException("Bad UART_Periph");
     }
     return uartPeriph[(std::size_t)uartName];
 }
@@ -35,7 +35,7 @@ std::uint32_t getUARTWordLengthByName(UART_WordLength wordLengthName) {
         case UART_WordLength::Bits8:
             return UART_CONFIG_WLEN_8;
         default:
-            ExLib_Exception::raiseException("Bad UART_WordLength");
+            Exception::raiseException("Bad UART_WordLength");
             return 0;
     }
 }
@@ -46,7 +46,7 @@ std::uint32_t getUARTStopBitsByName(UART_StopBits stopBitsName) {
         UART_CONFIG_STOP_TWO,
     };
     if((std::size_t)stopBitsName >= sizeof(stopbits)/sizeof(stopbits[0])){
-        ExLib_Exception::raiseException("Bad UART_StopBits");
+        Exception::raiseException("Bad UART_StopBits");
     }
     return stopbits[(std::size_t)stopBitsName];
 }
@@ -60,7 +60,7 @@ std::uint32_t getUARTParityByName(UART_Parity parityName) {
         UART_CONFIG_PAR_ONE,
     };
     if((std::size_t)parityName >= sizeof(parity)/sizeof(parity[0])) {
-        ExLib_Exception::raiseException("Bad UART_Parity");
+        Exception::raiseException("Bad UART_Parity");
     }
     return parity[(std::size_t)parityName];
 }
@@ -117,7 +117,7 @@ GPIO_Pin getUARTDefaultRxPin(UART_Periph periph) {
         PE0
     };
     if((std::size_t)periph >= sizeof(defaultRx)/sizeof(defaultRx[0])){
-        ExLib_Exception::raiseException("Bad UART_Periph");
+        Exception::raiseException("Bad UART_Periph");
     }
     return defaultRx[(std::size_t)periph];
 }
@@ -134,7 +134,7 @@ GPIO_Pin getUARTDefaultTxPin(UART_Periph periph) {
         PE1
     };
     if((std::size_t)periph >= sizeof(defaultTx)/sizeof(defaultTx[0])){
-        ExLib_Exception::raiseException("Bad UART_Periph");
+        Exception::raiseException("Bad UART_Periph");
     }
     return defaultTx[(std::size_t)periph];
 }
@@ -270,7 +270,7 @@ UART_Periph getUARTNameByPeriph(std::uintptr_t periph) {
         case UART7_BASE:
             return UART_Periph::UART7;
         default:
-            ExLib_Exception::raiseException("Bad UART_BASE");
+            Exception::raiseException("Bad UART_BASE");
             return (UART_Periph)0;
     }
 }
@@ -286,7 +286,7 @@ std::uint32_t getUARTIntByName(UART_Periph uartName) {
         INT_UART7,
     };
     if((std::size_t)uartName > sizeof(intName)/sizeof(intName[0])){
-        ExLib_Exception::raiseException("Bad UART_Periph");
+        Exception::raiseException("Bad UART_Periph");
     }
     return intName[(std::size_t)uartName];
 }

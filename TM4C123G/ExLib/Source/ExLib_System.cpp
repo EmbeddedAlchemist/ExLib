@@ -10,14 +10,14 @@ void System::init(void) {
     // 设置系统时钟到80MHz
     DeviceSupport::SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_XTAL_16MHZ | SYSCTL_OSC_MAIN);
     // 注册HardFault回调
-    DeviceSupport::IntRegister(3, ExLib_Exception::hardFaultHandler); 
+    DeviceSupport::IntRegister(3, Exception::hardFaultHandler); 
 }
 
 void System::setDebugStream(PrintStream &dbgStream) {
     System::debugStream = &dbgStream;
     if (debugStream != nullptr) {
         printExLibLOGO();
-        debugStream->println("Debug stream has been set.");
+        debugStream->println("[NOTICE] Debug stream has been set to this.");
     }
 }
 
@@ -32,6 +32,10 @@ void System::printExLibLOGO(void) {
                            "\\____/_/\\_\\_____/_|_.__/ \n"
                            "\n");
     }
+}
+
+std::uint32_t System::getSystemClockSpeed(void) {
+    return DeviceSupport::SysCtlClockGet();
 }
 
 } // namespace ExLib

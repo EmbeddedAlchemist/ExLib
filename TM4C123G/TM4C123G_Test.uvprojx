@@ -713,6 +713,11 @@
               <FileType>8</FileType>
               <FilePath>.\ExLib\Source\ExLib_System.cpp</FilePath>
             </File>
+            <File>
+              <FileName>ExLib_I2C.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\ExLib_I2C.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

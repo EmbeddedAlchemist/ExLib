@@ -138,82 +138,21 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\result_of.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\promote.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_UART.hpp \
   ExLib\Include\ExLib_BufferFIFO.hpp ExLib\Include\ExLib_ScanStream.hpp \
   ExLib\Include\ExLib_ReadStreamBuffered.hpp \
   ExLib\Include\ExLib_ReadStream.hpp ExLib\Include\ExLib_PWM.hpp \
   ExLib\Include\ExLib_Units.hpp ExLib\Include\ExLib_HardwarePWM.hpp \
-  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_Delay.hpp \
-  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_Main.hpp \
-  ExLib\Include\ExLib_DeviceSupport.hpp \
-  ExLib\Include\..\Source\DeviceSupport\DeviceSupport.hpp \
-  ExLib\Include\..\Source\DeviceSupport\inc\asmdefs.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_adc.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_aes.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_can.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_ccm.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_comp.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_des.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_eeprom.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_emac.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_epi.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_fan.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_flash.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_gpio.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_hibernate.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_i2c.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_ints.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_lcd.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_memmap.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_nvic.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_onewire.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_pwm.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_qei.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_shamd5.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_ssi.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_sysctl.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_sysexc.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_timer.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_types.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_uart.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_udma.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_usb.h \
-  ExLib\Include\..\Source\DeviceSupport\inc\hw_watchdog.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\adc.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\aes.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\can.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\comp.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\cpu.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\crc.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\debug.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\eeprom.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\emac.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\epi.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\flash.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\fpu.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\gpio.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\hibernate.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\i2c.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\interrupt.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\mpu.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\onewire.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\pin_map.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\pwm.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\qei.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\rom_map.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\rtos_bindings.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\shamd5.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\ssi.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\sw_crc.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\sysctl.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\sysexc.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\systick.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\timer.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\uart.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\udma.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\usb.h \
-  ExLib\Include\..\Source\DeviceSupport\driverlib\watchdog.h \
-  ExLib\Include\ExLib_FreeRTOS.hpp \
+  ExLib\Include\ExLib_I2C.hpp ExLib\Include\ExLib_System.hpp \
+  ExLib\Include\ExLib_Delay.hpp ExLib\Include\ExLib_Printable.hpp \
+  ExLib\Include\ExLib_Main.hpp ExLib\Include\ExLib_FreeRTOS.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \

@@ -10,7 +10,7 @@ std::uintptr_t getHWPWMModuleByName(HardwarePWM_Periph hwPWMName) {
         PWM1_BASE,
     };
     if ((std::size_t)hwPWMName / 4 >= sizeof(module) / sizeof(module[0])) {
-        ExLib_Exception::raiseException("Bad HardwarePWM_Periph");
+        Exception::raiseException("Bad HardwarePWM_Periph");
     }
     return module[(std::size_t)hwPWMName / 4];
 }
@@ -22,7 +22,7 @@ std::uintptr_t getHWPWMGeneratorByName(HardwarePWM_Periph hwPWMName) {
         PWM_GEN_3,
     };
     if ((std::size_t)hwPWMName % 4 >= sizeof(generator) / sizeof(generator[0])) {
-        ExLib_Exception::raiseException("Bad HardwarePWM_Periph");
+        Exception::raiseException("Bad HardwarePWM_Periph");
     }
     return generator[(std::size_t)hwPWMName % 4];
 }
@@ -31,7 +31,7 @@ void enableHWPWMClock(HardwarePWM_Periph hwPWMName) {
         SYSCTL_PERIPH_PWM0,
         SYSCTL_PERIPH_PWM1};
     if ((std::size_t)hwPWMName / 4 >= sizeof(sysCtlPeriph) / sizeof(sysCtlPeriph[0])) {
-        ExLib_Exception::raiseException("Bad HardwarePWM_Periph");
+        Exception::raiseException("Bad HardwarePWM_Periph");
     }
     DeviceSupport::SysCtlPeripheralEnable(sysCtlPeriph[(std::size_t)hwPWMName / 4]);
     while (DeviceSupport::SysCtlPeripheralReady(sysCtlPeriph[(std::size_t)hwPWMName / 4]) == false) {

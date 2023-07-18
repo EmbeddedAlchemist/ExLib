@@ -10,31 +10,31 @@ std::uint32_t ExLib_CoreDump_Buffer[16];
 
 namespace ExLib {
 
-const char *ExLib_Exception::lastExceptionMessage = nullptr;
+const char *Exception::lastExceptionMessage = nullptr;
 
-void ExLib_Exception::hardFaultHandler() {
+void Exception::hardFaultHandler() {
     if (System::debugStream != nullptr) {
-        System::debugStream->print("Hard Fault Raised.");
+        System::debugStream->print("[FATAL ERROR] Hard Fault Raised.");
     }
 		while(true){}
 }
 
-void ExLib_Exception::raiseException(const char *message) {
+void Exception::raiseException(const char *message) {
     // ExLib_CoreDump();
     volatile int i = 0;
-    ExLib_Exception::lastExceptionMessage = message;
+    Exception::lastExceptionMessage = message;
     if (System::debugStream != nullptr) {
         System::printExLibLOGO();
-        System::debugStream->print("Exception Raised. Message: ");
+        System::debugStream->print("[FATAL ERROR] Exception Raised. Message: ");
         System::debugStream->println(message);
     }
     raiseHardFault();
     while (true)
         ;
 }
-void ExLib_Exception::raiseHardFault() {
+void Exception::raiseHardFault() {
 	if(System::debugStream!=nullptr){
-		System::debugStream->println("Raising Hard Fault...");
+		System::debugStream->println("[NOTICE] Raising Hard Fault...");
 	}
     *(volatile std::uint32_t *)0xFFFFFFFF = *(volatile std::uint32_t *)0xFFFFFFFF;
 }

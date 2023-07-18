@@ -60,6 +60,7 @@ Number Precent::compute(Number number) {
 struct Frequency{
   public:
     std::uint32_t hz;
+    Frequency(std::uint32_t hz);
 };
 
 Frequency operator"" _Hz(unsigned long long hz);

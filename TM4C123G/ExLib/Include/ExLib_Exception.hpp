@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 namespace ExLib {	
-class ExLib_Exception {
+class Exception {
   private:
     friend class System;
     static void hardFaultHandler();

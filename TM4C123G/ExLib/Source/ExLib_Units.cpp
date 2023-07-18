@@ -52,6 +52,22 @@ Precent operator"" _pct(unsigned long long pct) {
     return ret;
 }
 
+Frequency::Frequency(std::uint32_t hz)
+    : hz(hz) {
+}
+
+Frequency operator""_Hz(unsigned long long hz) {
+    return Frequency(hz);
+}
+
+Frequency operator""_kHz(unsigned long long kHz) {
+    return Frequency(kHz * 1000);
+}
+
+Frequency operator""_MHz(unsigned long long MHz) {
+    return Frequency(MHz * 1000000);
+}
+
 Precent::Precent(float _pct) {
     pct = (float)std::numeric_limits<std::uint32_t>::max() * _pct;
 }

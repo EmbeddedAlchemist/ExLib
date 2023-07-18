@@ -11,7 +11,7 @@ GPIO_Pin getQuadraticEncoderDefaultAPin(QuadraticEncoder_Periph periphName) {
         PC5,
     };
     if ((std::size_t)periphName >= sizeof(defaultA) / sizeof(defaultA[0])) {
-        ExLib_Exception::raiseException("Bad QuadraticEncoder_Periph");
+        Exception::raiseException("Bad QuadraticEncoder_Periph");
     }
     return defaultA[(std::size_t)periphName];
 }
@@ -22,7 +22,7 @@ GPIO_Pin getQuadraticEncoderDefaultBPin(QuadraticEncoder_Periph periphName) {
         PC6,
     };
     if ((std::size_t)periphName >= sizeof(defaultB) / sizeof(defaultB[0])) {
-        ExLib_Exception::raiseException("Bad QuadraticEncoder_Periph");
+        Exception::raiseException("Bad QuadraticEncoder_Periph");
     }
     return defaultB[(std::size_t)periphName];
 }
@@ -33,7 +33,7 @@ std::uintptr_t getQuadraticEncoderPeriphByName(QuadraticEncoder_Periph periphNam
         QEI1_BASE,
     };
     if ((std::size_t)periphName >= sizeof(periph) / sizeof(periph[0])) {
-        ExLib_Exception::raiseException("Bad QuadraticEncoder_Periph");
+        Exception::raiseException("Bad QuadraticEncoder_Periph");
     }
     return periph[(std::size_t)periphName];
 }
@@ -66,7 +66,7 @@ void configQuadraticEncoderClock(QuadraticEncoder_Periph periphName, bool isEnab
         SYSCTL_PERIPH_QEI1,
     };
     if ((std::size_t)periphName >= sizeof(sysCtlPeriph) / sizeof(sysCtlPeriph[0])) {
-        ExLib_Exception::raiseException("Bad QuadraticEncoder_Periph");
+        Exception::raiseException("Bad QuadraticEncoder_Periph");
     }
     if (isEnable) {
         DeviceSupport::SysCtlPeripheralEnable(sysCtlPeriph[(std::size_t)periphName]);

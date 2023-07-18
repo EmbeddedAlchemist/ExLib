@@ -41,7 +41,7 @@ std::uintptr_t getGPIOPortByName(GPIO_Pin pinName) {
         GPIO_PORTT_BASE,
     };
     if ((std::uint8_t)pinName / 8 >= sizeof(port) / sizeof(port[0])) {
-        ExLib_Exception::raiseException("Bad GPIO port");
+        Exception::raiseException("Bad GPIO port");
     }
     return port[(std::uint8_t)pinName / 8];
 }
@@ -104,7 +104,7 @@ GPIO_Pin getGPIONameByPortAndPin(std::uintptr_t port, std::uint16_t pin) {
             pinBase = 17 * 8;
             break;
         default:
-            ExLib_Exception::raiseException("Bad GPIO port");
+            Exception::raiseException("Bad GPIO port");
     }
     switch (pin) {
         case GPIO_PIN_0:
@@ -132,7 +132,7 @@ GPIO_Pin getGPIONameByPortAndPin(std::uintptr_t port, std::uint16_t pin) {
             pinOffset = 7;
             break;
         default:
-            ExLib_Exception::raiseException("Bad GPIO pin");
+            Exception::raiseException("Bad GPIO pin");
     }
     return (GPIO_Pin)(pinBase + pinOffset);
 }
@@ -195,7 +195,7 @@ void enableGPIOClock(std::uintptr_t port) {
             SysctrlPeriph = SYSCTL_PERIPH_GPIOT;
             break;
         default:
-            ExLib_Exception::raiseException("Bad GPIO port");
+            Exception::raiseException("Bad GPIO port");
             return;
     }
     DeviceSupport::SysCtlPeripheralEnable(SysctrlPeriph);
@@ -223,7 +223,7 @@ void configGPIOMode(std::uintptr_t port, std::uint8_t pin, GPIO_Mode modeName) {
     };
     if ((std::size_t)modeName >= sizeof(direction) / sizeof(direction[0]) &&
         (std::size_t)modeName >= sizeof(mode) / sizeof(mode[0])) {
-        ExLib_Exception::raiseException("Bad GPIO_Mode");
+        Exception::raiseException("Bad GPIO_Mode");
     }
     DeviceSupport::GPIODirModeSet(port, pin, direction[(std::size_t)modeName]);
     DeviceSupport::GPIOPadConfigSet(port, pin, driveStrength, mode[(std::size_t)modeName]);

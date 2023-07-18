@@ -5,6 +5,7 @@
 #include "ExLib_UART.hpp"
 #include "ExLib_PWM.hpp"
 #include "ExLib_HardwarePWM.hpp"
+#include "ExLib_I2C.hpp"
 //#include "ExLib_QuadraticEncoder.hpp"
 
 

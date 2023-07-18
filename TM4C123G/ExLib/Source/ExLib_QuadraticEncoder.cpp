@@ -18,7 +18,7 @@ QuadraticEncoder::QuadraticEncoder(QuadraticEncoder_Periph encoderName, GPIO_Pin
 }
 void QuadraticEncoder::setPins(GPIO_Pin _pinA, GPIO_Pin _pinB) {
     if (isLegalQuadraticEncoderPin(periph, pinA, pinB) == false) {
-        ExLib_Exception::raiseException("Illegal QuadraticRncoder pin");
+        Exception::raiseException("Illegal QuadraticRncoder pin");
     }
     pinA = _pinA;
     pinB = _pinB;

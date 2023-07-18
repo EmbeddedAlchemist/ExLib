@@ -29,6 +29,10 @@ class I2C : public WriteStream, ReadStream {
     GPIO_Pin pinSCL, pinSDA;
     std::uintptr_t periph;
 
+    std::uint8_t slaveAddr;
+    bool slaveAddrIsNotSend;
+    I2C_Direction direction;
+
   public:
     virtual bool write(char ch);
     virtual bool read(char &ch);
@@ -38,13 +42,15 @@ class I2C : public WriteStream, ReadStream {
     void begin(Frequency freq = 100_kHz, std::uint8_t selfAddr = 0x00);
     void end();
 
-    bool startTransmission(std::uint8_t addr, I2C_Direction direction);
+    void beginTransmission(std::uint8_t addr);
     void endTransmission();
 
     I2C(void) = delete;
     I2C(I2C_Periph I2CName);
     I2C(I2C_Periph I2CName, GPIO_Pin pinSCL, GPIO_Pin pinSDA);
 
+    
+    operator I2C_Periph();
 };
 
 class I2C_Device {
