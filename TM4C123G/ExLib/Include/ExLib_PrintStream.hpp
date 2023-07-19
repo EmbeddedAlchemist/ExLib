@@ -1,11 +1,11 @@
 #pragma once
 
+#include <limits>
+#include <math.h>
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <type_traits>
-#include <limits>
-#include <math.h>
 
 // #include "ExLib_Printable.hpp"
 #include "ExLib_WriteStream.hpp"
@@ -179,6 +179,10 @@ std::size_t PrintStream::printInteger(Interger integer, std::uint8_t base) {
         if (write('-') == false)
             return 0;
         charsWritten++;
+    }
+    if (integer == 0) {
+        charsWritten += write('0');
+        return charsWritten;
     }
     for (std::size_t i = len; i > 0; i--) {
         buffer[i - 1] = getNumberCharInBase(integer % base, base);

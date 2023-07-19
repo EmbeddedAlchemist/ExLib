@@ -2,16 +2,17 @@
 
 #include "ExLib_CallbackFunction.hpp"
 
-namespace ExLib{
+namespace ExLib {
 
-    class Capturer{
-    };
+class Capturer {
+  public:
+    void registerCaptureChannel();
+};
 
-    class Capture_Channel{
-        private:
-          CallbackFunction &callback;
+class Capture_Channel {
+  private:
+    CallbackFunction &callback;
 
-        public:
-
-    };
-}
+  public:
+};
+} // namespace ExLib

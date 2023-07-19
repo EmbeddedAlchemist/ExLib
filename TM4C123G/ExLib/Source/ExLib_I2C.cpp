@@ -38,7 +38,7 @@ bool I2C::write(char ch) {
         /* code */
     }
 
-    return false;
+    return DeviceSupport::I2CMasterErr(periph) == I2C_MASTER_ERR_NONE;
 }
 
 bool I2C::read(char &ch) {
@@ -60,7 +60,7 @@ bool I2C::read(char &ch) {
     while (DeviceSupport::I2CMasterBusy(periph) != false) {
     }
     ch = DeviceSupport::I2CMasterDataGet(periph);
-    return false;
+    return DeviceSupport::I2CMasterErr(periph) == I2C_MASTER_ERR_NONE;
 }
 
 void I2C::setPins(GPIO_Pin scl, GPIO_Pin sda) {

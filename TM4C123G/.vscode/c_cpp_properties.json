@@ -4,6 +4,7 @@
             "name": "Target 1",
             "includePath": [
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Include",
+                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\u8g2",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux_compat",

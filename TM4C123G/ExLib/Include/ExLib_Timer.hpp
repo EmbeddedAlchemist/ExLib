@@ -1,9 +1,9 @@
 #pragma once
 
+#include "ExLib_CallbackFunction.hpp"
 #include "ExLib_Capture.hpp"
 #include "ExLib_PWM.hpp"
 #include "ExLib_Units.hpp"
-#include "ExLib_CallbackFunction.hpp"
 
 namespace ExLib {
 
@@ -51,12 +51,17 @@ enum class GeneralTimer_Periph {
 };
 
 class GeneralTimer : public Capturer, PWM_Generator {
+
   private:
     CallbackFunction *onOverflowCallback;
-    
+
+    std::uintptr_t periph;
+    std::uint32_t part;
+
+    void timerInterruptCallback();
 
   protected:
-    virtual void registerChannel(std::uint32_t channel, GPIO_Pin pinName);
+    virtual void registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName);
     virtual void setDuty(std::uint32_t channel, Precent duty);
 
   public:
@@ -65,10 +70,40 @@ class GeneralTimer : public Capturer, PWM_Generator {
     void onOverflow(CallbackFunction &callback);
 
     GeneralTimer(void) = delete;
-    GeneralTimer(GeneralTimer_Periph timerName);
+    GeneralTimer(GeneralTimer_Periph timerName, TimeInterval = 1_ms);
 
     void begin(void);
     void end(void);
+
+    operator GeneralTimer_Periph();
+
+  private:
+    static GeneralTimer *generalTimerObjects[24];
+
+    static void timer0AInterruptCallback(void);
+    static void timer0BInterruptCallback(void);
+    static void timer1AInterruptCallback(void);
+    static void timer1BInterruptCallback(void);
+    static void timer2AInterruptCallback(void);
+    static void timer2BInterruptCallback(void);
+    static void timer3AInterruptCallback(void);
+    static void timer3BInterruptCallback(void);
+    static void timer4AInterruptCallback(void);
+    static void timer4BInterruptCallback(void);
+    static void timer5AInterruptCallback(void);
+    static void timer5BInterruptCallback(void);
+    static void wtimer0AInterruptCallback(void);
+    static void wtimer0BInterruptCallback(void);
+    static void wtimer1AInterruptCallback(void);
+    static void wtimer1BInterruptCallback(void);
+    static void wtimer2AInterruptCallback(void);
+    static void wtimer2BInterruptCallback(void);
+    static void wtimer3AInterruptCallback(void);
+    static void wtimer3BInterruptCallback(void);
+    static void wtimer4AInterruptCallback(void);
+    static void wtimer4BInterruptCallback(void);
+    static void wtimer5AInterruptCallback(void);
+    static void wtimer5BInterruptCallback(void);
 };
 
 } // namespace ExLib

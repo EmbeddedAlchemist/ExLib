@@ -36,6 +36,7 @@ class I2C : public WriteStream, ReadStream {
   public:
     virtual bool write(char ch);
     virtual bool read(char &ch);
+    using WriteStream::write;
 
     void setPins(GPIO_Pin scl, GPIO_Pin sda);
 

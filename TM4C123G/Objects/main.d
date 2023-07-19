@@ -1,16 +1,12 @@
 ./objects/main.o: User\main.cpp ExLib\Include\ExLib.hpp \
   ExLib\Include\ExLib_GPIO.hpp ExLib\Include\ExLib_CallbackFunction.hpp \
   ExLib\Include\ExLib_PrintStream.hpp \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__verbose_abort \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__availability \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__functional\invoke.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\add_lvalue_reference.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\is_referenceable.h \
@@ -27,6 +23,8 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\remove_const.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\remove_volatile.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\version \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\conditional.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\decay.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\add_pointer.h \
@@ -138,21 +136,24 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\result_of.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\promote.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_UART.hpp \
   ExLib\Include\ExLib_BufferFIFO.hpp ExLib\Include\ExLib_ScanStream.hpp \
   ExLib\Include\ExLib_ReadStreamBuffered.hpp \
   ExLib\Include\ExLib_ReadStream.hpp ExLib\Include\ExLib_PWM.hpp \
   ExLib\Include\ExLib_Units.hpp ExLib\Include\ExLib_HardwarePWM.hpp \
-  ExLib\Include\ExLib_I2C.hpp ExLib\Include\ExLib_System.hpp \
-  ExLib\Include\ExLib_Delay.hpp ExLib\Include\ExLib_Printable.hpp \
-  ExLib\Include\ExLib_Main.hpp ExLib\Include\ExLib_FreeRTOS.hpp \
+  ExLib\Include\ExLib_I2C.hpp ExLib\Include\ExLib_QuadraticEncoder.hpp \
+  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_Delay.hpp \
+  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_Main.hpp \
+  ExLib\Include\ExLib_FreeRTOS.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \
@@ -172,4 +173,6 @@
   ExLib\Include\..\Source\FreeRTOS\stream_buffer.h \
   ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h \
   ExLib\Include\..\Source\FreeRTOS\semphr.h \
-  ExLib\Include\..\Source\FreeRTOS\stack_macros.h
+  ExLib\Include\..\Source\FreeRTOS\stack_macros.h u8g2\u8g2.h \
+  u8g2\u8x8.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\limits.h

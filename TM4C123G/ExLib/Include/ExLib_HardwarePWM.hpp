@@ -25,7 +25,7 @@ class HardwarePWM : public PWM_Generator {
     std::uintptr_t generator;
 
   protected:
-    virtual void registerChannel(std::uint32_t channel, GPIO_Pin pinName);
+    virtual void registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName);
     virtual void setDuty(std::uint32_t channel, Precent duty);
 
   public:

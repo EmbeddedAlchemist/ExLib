@@ -15,7 +15,7 @@ class PWM_Channel;
 class PWM_Generator {
     protected:
       friend class PWM_Channel;
-      virtual void registerChannel(std::uint32_t channel, GPIO_Pin pinName) = 0;
+      virtual void registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName) = 0;
       virtual void setDuty(std::uint32_t channel, Precent duty) = 0;
 
     public:

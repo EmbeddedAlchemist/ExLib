@@ -17,7 +17,7 @@ QuadraticEncoder::QuadraticEncoder(QuadraticEncoder_Periph encoderName, GPIO_Pin
     setPins(pinA, pinB);
 }
 void QuadraticEncoder::setPins(GPIO_Pin _pinA, GPIO_Pin _pinB) {
-    if (isLegalQuadraticEncoderPin(periph, pinA, pinB) == false) {
+    if (isLegalQuadraticEncoderPin(periph, _pinA, _pinB) == false) {
         Exception::raiseException("Illegal QuadraticRncoder pin");
     }
     pinA = _pinA;
@@ -27,8 +27,10 @@ void QuadraticEncoder::begin() {
     configQuadraticEncoderClock(*this, true);
     configQuadraticEncoderPin(periph, pinA, pinB);
     DeviceSupport::QEIConfigure(periph,
-                                QEI_CONFIG_CAPTURE_A_B | QEI_CONFIG_NO_RESET | QEI_CONFIG_QUADRATURE | QEI_CONFIG_NO_SWAP,
+                                QEI_CONFIG_CAPTURE_A | QEI_CONFIG_NO_RESET | QEI_CONFIG_QUADRATURE | QEI_CONFIG_NO_SWAP,
                                 std::numeric_limits<std::int32_t>::max());
+    DeviceSupport::QEIVelocityConfigure(periph, QEI_VELDIV_1, DeviceSupport::SysCtlClockGet() / 100);
+    DeviceSupport::QEIVelocityEnable(periph);
     DeviceSupport::QEIEnable(periph);
 }
 void QuadraticEncoder::end() {

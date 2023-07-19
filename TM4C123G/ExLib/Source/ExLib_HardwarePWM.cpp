@@ -4,7 +4,7 @@
 #include "Util_HardwarePWM.hpp"
 
 namespace ExLib {
-void HardwarePWM::registerChannel(std::uint32_t channel, GPIO_Pin pinName) {
+void HardwarePWM::registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName) {
     if (isLegalHWPWMPin(module, generator, channel, pinName) == false) {
         Exception::raiseException("Illegal HardwarePWM pin");
         return;
