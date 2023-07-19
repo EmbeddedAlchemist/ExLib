@@ -728,6 +728,16 @@
               <FileType>8</FileType>
               <FilePath>.\ExLib\Source\Util_QuadraticEncoder.cpp</FilePath>
             </File>
+            <File>
+              <FileName>ExLib_Timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\ExLib_Timer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Util_Timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\Source\Util_Timer.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

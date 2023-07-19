@@ -5,12 +5,10 @@
 namespace ExLib {
 std::uintptr_t getTimerPeriphByName(GeneralTimer_Periph timerName);
 std::uint32_t getTimerPartByName(GeneralTimer_Periph timerName);
-GeneralTimer_Periph getTimerNameByPeriph(std::uintptr_t periph);
+GeneralTimer_Periph getTimerNameByPeriphAndType(std::uintptr_t periph, GeneralTimer_Type type);
 bool is1632BitTimer(GeneralTimer_Periph timerName);
 bool is64BitTimer(GeneralTimer_Periph timerName);
-bool isHalfATimer(GeneralTimer_Periph timerName);
-bool isHalfBTimer(GeneralTimer_Periph timerName);
-bool isFullTimer(GeneralTimer_Periph timerName);
+GeneralTimer_Type getTimerTypeByName(GeneralTimer_Periph timerName);
 
 void configTimerClock(GeneralTimer_Periph timerName, bool isEnable);
 

@@ -53,6 +53,8 @@
 ".\objects\exlib_i2c.o"
 ".\objects\exlib_quadraticencoder.o"
 ".\objects\util_quadraticencoder.o"
+".\objects\exlib_timer.o"
+".\objects\util_timer.o"
 ".\objects\main.o"
 ".\objects\u8g2_bitmap.o"
 ".\objects\u8g2_box.o"

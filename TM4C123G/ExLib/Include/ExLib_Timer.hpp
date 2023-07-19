@@ -50,6 +50,12 @@ enum class GeneralTimer_Periph {
     WideTimer5B = 35,
 };
 
+enum class GeneralTimer_Type : std::uint8_t {
+    Completed = 0,
+    SplitedA = 1,
+    SplitedB = 2
+};
+
 class GeneralTimer : public Capturer, PWM_Generator {
 
   private:
@@ -57,8 +63,9 @@ class GeneralTimer : public Capturer, PWM_Generator {
 
     std::uintptr_t periph;
     std::uint32_t part;
+    GeneralTimer_Type type;
 
-    void timerInterruptCallback();
+    void interruptCallback();
 
   protected:
     virtual void registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName);
@@ -79,6 +86,8 @@ class GeneralTimer : public Capturer, PWM_Generator {
 
   private:
     static GeneralTimer *generalTimerObjects[24];
+
+    void (*getTimerInterruptHandlerByName(GeneralTimer_Periph timerName))(void);
 
     static void timer0AInterruptCallback(void);
     static void timer0BInterruptCallback(void);

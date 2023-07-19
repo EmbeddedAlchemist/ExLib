@@ -11,7 +11,7 @@ class Capturer {
 
 class Capture_Channel {
   private:
-    CallbackFunction &callback;
+    CallbackFunction *callback;
 
   public:
 };

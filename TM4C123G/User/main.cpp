@@ -12,8 +12,8 @@ using namespace ExLib;
 I2C I2C0(I2C_Periph::I2C0);
 
 UART Serial(UART_Periph::UART0);
-HardwarePWM PWMModule13(HardwarePWM_Periph::Module1Generator3, 100_us);
-HardwarePWM PWMModule12(HardwarePWM_Periph::Module1Generator2, 40_us);
+HardwarePWM PWMModule13(HardwarePWM_Periph::Module1Generator3);
+HardwarePWM PWMModule12(HardwarePWM_Periph::Module1Generator2);
 PWM_Channel pwmChannelB(PWMModule13, 0, PF2);
 PWM_Channel pwmChannelG(PWMModule13, 1, PF3);
 PWM_Channel pwmChannelR(PWMModule12, 1, PF1);
@@ -116,7 +116,6 @@ uint8_t my_u8x8_byte_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_p
     return 1;
 }
 
-
 u8g2_t u8g2;
 
 void drawLogo(void) {
@@ -150,6 +149,9 @@ void drawURL(void) {
 }
 
 
+void cb(void * unused){
+    Serial.println("Callback");
+}
 
 int ExLib::usr_main() {
 
@@ -159,28 +161,34 @@ int ExLib::usr_main() {
     Serial.print(System::getSystemClockSpeed());
     Serial.println("Hz.");
 
-   u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
-   u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
-   u8g2_SetPowerSave(&u8g2, 0); // wake up
-   u8g2_ClearBuffer(&u8g2);
-   drawLogo();
-   drawURL();
-   u8g2_SendBuffer(&u8g2);
+    u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
+    u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
+    u8g2_SetPowerSave(&u8g2, 0); // wake up
+    u8g2_ClearBuffer(&u8g2);
+    drawLogo();
+    drawURL();
+    u8g2_SendBuffer(&u8g2);
 
-    // QuadraticEncoder Encoder0(QuadraticEncoder_Periph::QuadraticEncoder0, PF0, PF1);
-    // Encoder0.begin();
+    GeneralTimer Timer0(GeneralTimer_Periph::Timer0);
+    Timer0.setCycle(1_s);
+    Timer0.onOverflow(*new CallbackFunction(cb));
+    Timer0.begin();
 
-
-    pwmChannelR.setDuty(100_pct);
-    // pwmChannelG.setDuty(1_pct);
-    // pwmChannelB.setDuty(1_pct);
+    float i = 0;
+    bool up = false;
     while (1) {
-        pwmChannelR.setDuty(100_pct);
-        _delay(1000000);
-        pwmChannelR.setDuty(50_pct);
-        _delay(1000000);
-        pwmChannelR.setDuty(0_pct);
-        _delay(1000000);
+        if (i >= 1)
+            up = false;
+        if (i <= 0)
+            up = true;
+        if (up)
+            i += 0.05;
+        else
+            i -= 0.05;
+        pwmChannelR.setDuty(i / 16);
+        pwmChannelG.setDuty(i / 16);
+        pwmChannelB.setDuty(i / 16);
+        _delay(200000);
     }
 
     return 0;

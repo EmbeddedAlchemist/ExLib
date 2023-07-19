@@ -35,9 +35,47 @@ std::uint32_t getTimerPartByName(GeneralTimer_Periph timerName) {
     return 0;
 }
 
-GeneralTimer_Periph getTimerNameByPeriph(std::uintptr_t periph) {
+GeneralTimer_Periph getTimerNameByPeriphAndType(std::uintptr_t periph, GeneralTimer_Type type) {
+    uint32_t base;
     switch (periph) {
+        case TIMER0_BASE:
+            base = 0 * 3;
+            break;
+        case TIMER1_BASE:
+            base = 1 * 3;
+            break;
+        case TIMER2_BASE:
+            base = 2 * 3;
+            break;
+        case TIMER3_BASE:
+            base = 3 * 3;
+            break;
+        case TIMER4_BASE:
+            base = 4 * 3;
+            break;
+        case TIMER5_BASE:
+            base = 5 * 3;
+            break;
+        case WTIMER0_BASE:
+            base = 6 * 3;
+            break;
+        case WTIMER1_BASE:
+            base = 7 * 3;
+            break;
+        case WTIMER2_BASE:
+            base = 8 * 3;
+            break;
+        case WTIMER3_BASE:
+            base = 9 * 3;
+            break;
+        case WTIMER4_BASE:
+            base = 10 * 3;
+            break;
+        case WTIMER5_BASE:
+            base = 11 * 3;
+            break;
     }
+    return (GeneralTimer_Periph)(base + (std::uint32_t)type);
 }
 
 bool is1632BitTimer(GeneralTimer_Periph timerName) {
@@ -81,49 +119,17 @@ bool is64BitTimer(GeneralTimer_Periph timerName) {
            timerName == GeneralTimer_Periph::WideTimer5;
 }
 
-bool isHalfATimer(GeneralTimer_Periph timerName) {
-    return timerName == GeneralTimer_Periph::Timer0A ||
-           timerName == GeneralTimer_Periph::Timer1A ||
-           timerName == GeneralTimer_Periph::Timer2A ||
-           timerName == GeneralTimer_Periph::Timer3A ||
-           timerName == GeneralTimer_Periph::Timer4A ||
-           timerName == GeneralTimer_Periph::Timer5A ||
-           timerName == GeneralTimer_Periph::WideTimer0A ||
-           timerName == GeneralTimer_Periph::WideTimer1A ||
-           timerName == GeneralTimer_Periph::WideTimer2A ||
-           timerName == GeneralTimer_Periph::WideTimer3A ||
-           timerName == GeneralTimer_Periph::WideTimer4A ||
-           timerName == GeneralTimer_Periph::WideTimer5A;
-}
+GeneralTimer_Type getTimerTypeByName(GeneralTimer_Periph timerName) {
+    std::uint32_t mod = (std::uint32_t)timerName % 3;
+    if (mod == 0)
+        return GeneralTimer_Type::Completed;
+    else if (mod == 1)
+        return GeneralTimer_Type::SplitedA;
+    else if (mod == 2)
+        return GeneralTimer_Type::SplitedB;
 
-bool isHalfBTimer(GeneralTimer_Periph timerName) {
-    return timerName == GeneralTimer_Periph::Timer0A ||
-           timerName == GeneralTimer_Periph::Timer1B ||
-           timerName == GeneralTimer_Periph::Timer2B ||
-           timerName == GeneralTimer_Periph::Timer3B ||
-           timerName == GeneralTimer_Periph::Timer4B ||
-           timerName == GeneralTimer_Periph::Timer5B ||
-           timerName == GeneralTimer_Periph::WideTimer0B ||
-           timerName == GeneralTimer_Periph::WideTimer1B ||
-           timerName == GeneralTimer_Periph::WideTimer2B ||
-           timerName == GeneralTimer_Periph::WideTimer3B ||
-           timerName == GeneralTimer_Periph::WideTimer4B ||
-           timerName == GeneralTimer_Periph::WideTimer5B;
-}
-
-bool isFullTimer(GeneralTimer_Periph timerName) {
-    return timerName == GeneralTimer_Periph::Timer0 ||
-           timerName == GeneralTimer_Periph::Timer1 ||
-           timerName == GeneralTimer_Periph::Timer2 ||
-           timerName == GeneralTimer_Periph::Timer3 ||
-           timerName == GeneralTimer_Periph::Timer4 ||
-           timerName == GeneralTimer_Periph::Timer5 ||
-           timerName == GeneralTimer_Periph::WideTimer0 ||
-           timerName == GeneralTimer_Periph::WideTimer1 ||
-           timerName == GeneralTimer_Periph::WideTimer2 ||
-           timerName == GeneralTimer_Periph::WideTimer3 ||
-           timerName == GeneralTimer_Periph::WideTimer4 ||
-           timerName == GeneralTimer_Periph::WideTimer5;
+    // 正常情况不可能运行到这
+    return (GeneralTimer_Type)0;
 }
 
 void configTimerClock(GeneralTimer_Periph timerName, bool isEnable) {
@@ -141,25 +147,27 @@ void configTimerClock(GeneralTimer_Periph timerName, bool isEnable) {
         SYSCTL_PERIPH_WTIMER4,
         SYSCTL_PERIPH_WTIMER5,
     };
+    std::uint32_t periph;
     if ((std::size_t)timerName / 3 >= sizeof(sysCtlPeriph) / sizeof(sysCtlPeriph[0])) {
         Exception::raiseException("Bad GenericTimer_Periph");
         return;
     }
+    periph = sysCtlPeriph[(std::size_t)timerName / 3];
     if (isEnable != false) {
-        DeviceSupport::SysCtlPeripheralEnable(sysCtlPeriph[(std::size_t)timerName / 3]);
-        while (DeviceSupport::SysCtlPeripheralReady(sysCtlPeriph[(std::size_t)timerName / 3])) {
+        DeviceSupport::SysCtlPeripheralEnable(periph);
+        while (DeviceSupport::SysCtlPeripheralReady(periph) == false) {
         }
     } else {
-        DeviceSupport::SysCtlPeripheralDisable(sysCtlPeriph[(std::size_t)timerName / 3]);
+        DeviceSupport::SysCtlPeripheralDisable(periph);
     }
 }
 
 std::size_t getTimerObjectsIndexByName(GeneralTimer_Periph timerName) {
     std::size_t div = (std::size_t)timerName / 3;
     std::size_t mod = (std::size_t)timerName % 3;
-    if(mod == 0 || mod ==1)
+    if (mod == 0 || mod == 1)
         return div * 2;
-    else if(mod == 2)
+    else if (mod == 2)
         return div * 2 + 1;
     return 0;
 }
@@ -181,11 +189,25 @@ std::uint32_t getTimerInterruptNumberByName(GeneralTimer_Periph timerName) {
         INT_WTIMER0A,
         INT_WTIMER0B,
         INT_WTIMER1A,
-        
+        INT_WTIMER1B,
+        INT_WTIMER2A,
+        INT_WTIMER2B,
+        INT_WTIMER3A,
+        INT_WTIMER3B,
+        INT_WTIMER4A,
+        INT_WTIMER4B,
+        INT_WTIMER5A,
+        INT_WTIMER5B,
     };
     std::size_t div = (std::size_t)timerName / 3;
     std::size_t mod = (std::size_t)timerName % 3;
+    if (mod == 0 || mod == 1)
+        return interruptNumber[div * 2];
+    else if (mod == 2)
+        return interruptNumber[div * 2 + 1];
 
+    // 正常运行不可能到这里
+    return 0;
 }
 
 } // namespace ExLib

@@ -7,6 +7,7 @@
 #include "ExLib_HardwarePWM.hpp"
 #include "ExLib_I2C.hpp"
 #include "ExLib_QuadraticEncoder.hpp"
+#include "ExLib_Timer.hpp"
 
 
 //Software Components
