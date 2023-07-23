@@ -9,7 +9,7 @@ namespace ExLib {
  * @brief 枚举了所有引脚名
  *
  */
-enum GPIO_Pin : std::uint8_t {
+enum class GPIO_Pin : std::uint8_t {
     PA0 = 0,
     PA1 = 1,
     PA2 = 2,
@@ -153,7 +153,9 @@ enum GPIO_Pin : std::uint8_t {
     PT4 = 140,
     PT5 = 141,
     PT6 = 142,
-    PT7 = 143
+    PT7 = 143,
+
+    NotAPin = 255
 
 };
 

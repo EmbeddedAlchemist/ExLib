@@ -2,7 +2,7 @@
 #include "ExLib_FreeRTOS.hpp"
 #include "u8g2.h"
 
-void _delay(int i) {
+void _delay(volatile int i) {
     while (i--)
         ;
 }
@@ -14,9 +14,9 @@ I2C I2C0(I2C_Periph::I2C0);
 UART Serial(UART_Periph::UART0);
 HardwarePWM PWMModule13(HardwarePWM_Periph::Module1Generator3);
 HardwarePWM PWMModule12(HardwarePWM_Periph::Module1Generator2);
-PWM_Channel pwmChannelB(PWMModule13, 0, PF2);
-PWM_Channel pwmChannelG(PWMModule13, 1, PF3);
-PWM_Channel pwmChannelR(PWMModule12, 1, PF1);
+PWM_Channel pwmChannelB(PWMModule13, 0, GPIO_Pin::PF2);
+PWM_Channel pwmChannelG(PWMModule13, 1, GPIO_Pin::PF3);
+PWM_Channel pwmChannelR(PWMModule12, 1, GPIO_Pin::PF1);
 
 uint8_t u8x8_gpio_and_delay_template(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr) {
     switch (msg) {
@@ -150,7 +150,12 @@ void drawURL(void) {
 
 
 void cb(void * unused){
-    Serial.println("Callback");
+    static int i = 0;
+    i++;
+    if(i == 1000){
+        Serial.println("int");
+        i = 0;
+    }
 }
 
 int ExLib::usr_main() {
@@ -169,26 +174,15 @@ int ExLib::usr_main() {
     drawURL();
     u8g2_SendBuffer(&u8g2);
 
-    GeneralTimer Timer0(GeneralTimer_Periph::Timer0);
-    Timer0.setCycle(1_s);
-    Timer0.onOverflow(*new CallbackFunction(cb));
+    GeneralTimer Timer0(GeneralTimer_Periph::Timer0A);
     Timer0.begin();
+    Timer0.setCycle(200_us);
+    //Timer0.onOverflow(*new CallbackFunction(cb));
+    ADC ADC0(ADC_Periph::ADC0);
+    ADC_Channel channel0(ADC0, GPIO_Pin::PE3);
 
-    float i = 0;
-    bool up = false;
     while (1) {
-        if (i >= 1)
-            up = false;
-        if (i <= 0)
-            up = true;
-        if (up)
-            i += 0.05;
-        else
-            i -= 0.05;
-        pwmChannelR.setDuty(i / 16);
-        pwmChannelG.setDuty(i / 16);
-        pwmChannelB.setDuty(i / 16);
-        _delay(200000);
+        Serial.println(channel0.read());
     }
 
     return 0;

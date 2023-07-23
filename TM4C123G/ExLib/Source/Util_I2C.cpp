@@ -2,6 +2,7 @@
 #include "DeviceSupport/DeviceSupport.hpp"
 #include "ExLib_Exception.hpp"
 #include "Util_GPIO.hpp"
+#include "Util_AllPinMuxConfig.hpp"
 
 namespace ExLib {
 
@@ -22,12 +23,12 @@ std::uintptr_t getI2CPeriphByName(I2C_Periph i2cName) {
 
 GPIO_Pin getI2CDefaultSCLPin(I2C_Periph i2cName) {
     static const GPIO_Pin defaultSCL[] = {
-        PB2,
-        PA6,
-        PE4,
-        PD0,
-        PG2,
-        PG6,
+        GPIO_Pin::PB2,
+        GPIO_Pin::PA6,
+        GPIO_Pin::PE4,
+        GPIO_Pin::PD0,
+        GPIO_Pin::PG2,
+        GPIO_Pin::PG6,
     };
     if ((std::size_t)i2cName >= sizeof(defaultSCL) / sizeof(defaultSCL[0])) {
         Exception::raiseException("Bad I2C_Periph");
@@ -37,12 +38,12 @@ GPIO_Pin getI2CDefaultSCLPin(I2C_Periph i2cName) {
 
 GPIO_Pin getI2CDefaultSDAPin(I2C_Periph i2cName) {
     static const GPIO_Pin defaultSDA[] = {
-        PB3,
-        PA7,
-        PE5,
-        PD1,
-        PG3,
-        PB7,
+        GPIO_Pin::PB3,
+        GPIO_Pin::PA7,
+        GPIO_Pin::PE5,
+        GPIO_Pin::PD1,
+        GPIO_Pin::PG3,
+        GPIO_Pin::PB7,
     };
     if ((std::size_t)i2cName >= sizeof(defaultSDA) / sizeof(defaultSDA[0])) {
         Exception::raiseException("Bad I2C_Periph");
@@ -52,31 +53,31 @@ GPIO_Pin getI2CDefaultSDAPin(I2C_Periph i2cName) {
 
 bool isLegalI2CPin(std::uintptr_t periph, GPIO_Pin pinSCL, GPIO_Pin pinSDA) {
     return (periph == I2C0_BASE &&
-            ((pinSCL == PB2) &&
-             (pinSDA == PB3))) ||
+            ((pinSCL == GPIO_Pin::PB2) &&
+             (pinSDA == GPIO_Pin::PB3))) ||
            (periph == I2C1_BASE &&
-            ((pinSCL == PA6 ||
-              pinSCL == PG4) &&
-             (pinSDA == PA7 ||
-              pinSDA == PG5))) ||
+            ((pinSCL == GPIO_Pin::PA6 ||
+              pinSCL == GPIO_Pin::PG4) &&
+             (pinSDA == GPIO_Pin::PA7 ||
+              pinSDA == GPIO_Pin::PG5))) ||
            (periph == I2C2_BASE &&
-            ((pinSCL == PE4 ||
-              pinSCL == PF6) &&
-             (pinSDA == PE5 ||
-              pinSDA == PF7))) ||
+            ((pinSCL == GPIO_Pin::PE4 ||
+              pinSCL == GPIO_Pin::PF6) &&
+             (pinSDA == GPIO_Pin::PE5 ||
+              pinSDA == GPIO_Pin::PF7))) ||
            (periph == I2C3_BASE &&
-            ((pinSCL == PD0 ||
-              pinSCL == PG0) &&
-             (pinSDA == PD1 ||
-              pinSDA == PG1))) ||
+            ((pinSCL == GPIO_Pin::PD0 ||
+              pinSCL == GPIO_Pin::PG0) &&
+             (pinSDA == GPIO_Pin::PD1 ||
+              pinSDA == GPIO_Pin::PG1))) ||
            (periph == I2C4_BASE &&
-            ((pinSCL == PG2) ||
-             (pinSDA == PG3))) ||
+            ((pinSCL == GPIO_Pin::PG2) ||
+             (pinSDA == GPIO_Pin::PG3))) ||
            (periph == I2C5_BASE &&
-            ((pinSCL == PB6 ||
-              pinSCL == PG6) &&
-             (pinSDA == PB7 ||
-              pinSDA == PG7)));
+            ((pinSCL == GPIO_Pin::PB6 ||
+              pinSCL == GPIO_Pin::PG6) &&
+             (pinSDA == GPIO_Pin::PB7 ||
+              pinSDA == GPIO_Pin::PG7)));
 }
 
 void configI2CClock(I2C_Periph i2cName, bool isEnable) {
@@ -124,51 +125,51 @@ I2C_Periph getI2CNameByPeriph(std::uintptr_t periph) {
 std::uint32_t getI2CPinMuxConfig(std::uintptr_t periph, GPIO_Pin pinName) {
     switch (periph) {
         case I2C0_BASE:
-            if (pinName == PB2)
-                return 0x00010803;
-            else if (pinName == PB3)
-                return 0x00010C03;
+            if (pinName == GPIO_Pin::PB2)
+                return GPIO_PB2_I2C0SCL;
+            else if (pinName ==GPIO_Pin:: PB3)
+                return GPIO_PB3_I2C0SDA;
         case I2C1_BASE:
-            if (pinName == PA6)
-                return 0x00001803;
-            else if (pinName == PA7)
-                return 0x00001C03;
-            else if (pinName == PG4)
-                return 0x00061003;
-            else if (pinName == PG5)
-                return 0x00061403;
+            if (pinName == GPIO_Pin::PA6)
+                return GPIO_PA6_I2C1SCL;
+            else if (pinName == GPIO_Pin::PA7)
+                return GPIO_PA7_I2C1SDA;
+            else if (pinName == GPIO_Pin::PG4)
+                return GPIO_PG4_I2C1SCL;
+            else if (pinName == GPIO_Pin::PG5)
+                return GPIO_PG5_I2C1SDA;
         case I2C2_BASE:
-            if (pinName == PE4)
-                return 0x00041003;
-            else if (pinName == PE5)
-                return 0x00041403;
-            else if (pinName == PF6)
-                return 0x00051803;
-            else if (pinName == PF7)
-                return 0x00051C03;
+            if (pinName == GPIO_Pin::PE4)
+                return GPIO_PE4_I2C2SCL;
+            else if (pinName == GPIO_Pin::PE5)
+                return GPIO_PE5_I2C2SDA;
+            else if (pinName == GPIO_Pin::PF6)
+                return GPIO_PF6_I2C2SCL;
+            else if (pinName == GPIO_Pin::PF7)
+                return GPIO_PF7_I2C2SDA;
         case I2C3_BASE:
-            if (pinName == PD0)
-                return 0x00030003;
-            else if (pinName == PD1)
-                return 0x00030403;
-            else if (pinName == PG0)
-                return 0x00060003;
-            else if (pinName == PG1)
-                return 0x00060403;
+            if (pinName == GPIO_Pin::PD0)
+                return GPIO_PD0_I2C3SCL;
+            else if (pinName == GPIO_Pin::PD1)
+                return GPIO_PD1_I2C3SDA;
+            else if (pinName == GPIO_Pin::PG0)
+                return GPIO_PG0_I2C3SCL;
+            else if (pinName == GPIO_Pin::PG1)
+                return GPIO_PG1_I2C3SDA;
         case I2C4_BASE:
-            if (pinName == PG2)
-                return 0x00060803;
-            else if (pinName == PG3)
-                return 0x00060C03;
+            if (pinName == GPIO_Pin::PG2)
+                return GPIO_PG2_I2C4SCL;
+            else if (pinName == GPIO_Pin::PG3)
+                return GPIO_PG3_I2C4SDA;
         case I2C5_BASE:
-            if (pinName == PB6)
-                return 0x00011803;
-            else if (pinName == PB7)
-                return 0x00011C03;
-            else if (pinName == PG6)
-                return 0x00061803;
-            else if (pinName == PG7)
-                return 0x00061C03;
+            if (pinName == GPIO_Pin::PB6)
+                return GPIO_PB6_I2C5SCL;
+            else if (pinName == GPIO_Pin::PB7)
+                return GPIO_PB7_I2C5SDA;
+            else if (pinName == GPIO_Pin::PG6)
+                return GPIO_PG6_I2C5SCL;
+            else if (pinName == GPIO_Pin::PG7)
+                return GPIO_PG7_I2C5SDA;
         default:
             return 0;
     }

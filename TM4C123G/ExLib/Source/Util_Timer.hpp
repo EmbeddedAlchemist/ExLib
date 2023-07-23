@@ -12,7 +12,7 @@ GeneralTimer_Type getTimerTypeByName(GeneralTimer_Periph timerName);
 
 void configTimerClock(GeneralTimer_Periph timerName, bool isEnable);
 
-bool isLegalTimerPin(std::uintptr_t periph, GPIO_Pin pin);
+bool isLegalTimerPin(std::uintptr_t periph, GeneralTimer_Type type, GPIO_Pin pin);
 void configTimerPin(std::uintptr_t periph, GPIO_Pin pin);
 
 std::size_t getTimerObjectsIndexByName(GeneralTimer_Periph timerName);

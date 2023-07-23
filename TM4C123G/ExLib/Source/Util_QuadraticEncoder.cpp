@@ -7,8 +7,8 @@ namespace ExLib {
 
 GPIO_Pin getQuadraticEncoderDefaultAPin(QuadraticEncoder_Periph periphName) {
     static const GPIO_Pin defaultA[] = {
-        PD6,
-        PC5,
+        GPIO_Pin::PD6,
+        GPIO_Pin::PC5,
     };
     if ((std::size_t)periphName >= sizeof(defaultA) / sizeof(defaultA[0])) {
         Exception::raiseException("Bad QuadraticEncoder_Periph");
@@ -18,8 +18,8 @@ GPIO_Pin getQuadraticEncoderDefaultAPin(QuadraticEncoder_Periph periphName) {
 
 GPIO_Pin getQuadraticEncoderDefaultBPin(QuadraticEncoder_Periph periphName) {
     static const GPIO_Pin defaultB[] = {
-        PD7,
-        PC6,
+        GPIO_Pin::PD7,
+        GPIO_Pin::PC6,
     };
     if ((std::size_t)periphName >= sizeof(defaultB) / sizeof(defaultB[0])) {
         Exception::raiseException("Bad QuadraticEncoder_Periph");
@@ -40,13 +40,13 @@ std::uintptr_t getQuadraticEncoderPeriphByName(QuadraticEncoder_Periph periphNam
 
 bool isLegalQuadraticEncoderPin(std::uintptr_t periph, GPIO_Pin pinNameA, GPIO_Pin pinNameB) {
     return (periph == QEI0_BASE &&
-            ((pinNameA == PD6 ||
-              pinNameA == PF0) &&
-             (pinNameB == PD7 ||
-              pinNameB == PF1))) ||
+            ((pinNameA == GPIO_Pin::PD6 ||
+              pinNameA == GPIO_Pin::PF0) &&
+             (pinNameB == GPIO_Pin::PD7 ||
+              pinNameB == GPIO_Pin::PF1))) ||
            (periph == QEI1_BASE &&
-            ((pinNameA == PC5) &&
-             (pinNameB == PC6)));
+            ((pinNameA == GPIO_Pin::PC5) &&
+             (pinNameB == GPIO_Pin::PC6)));
 }
 
 QuadraticEncoder_Periph getQuadraticEncoderNameByPeriph(std::uintptr_t periph) {
@@ -79,20 +79,20 @@ void configQuadraticEncoderClock(QuadraticEncoder_Periph periphName, bool isEnab
 std::uint32_t getQuadraticEncoderPinMuxConfig(std::uintptr_t periph, GPIO_Pin pin) {
     switch (periph) {
         case QEI0_BASE:
-            if (pin == PD6)
-                return 0x00031806;
-            else if (pin == PD7)
-                return 0x00031C06;
-            else if (pin == PF0)
-                return 0x00050006;
-            else if (pin == PF1)
-                return 0x00050406;
+            if (pin == GPIO_Pin::PD6)
+                return GPIO_PD6_PHA0;
+            else if (pin == GPIO_Pin::PD7)
+                return GPIO_PD7_PHB0;
+            else if (pin == GPIO_Pin::PF0)
+                return GPIO_PF0_PHA0;
+            else if (pin == GPIO_Pin::PF1)
+                return GPIO_PF1_PHB0;
             break;
         case QEI1_BASE:
-            if (pin == PC5)
-                return 0x00021406;
-            else if (pin == PC6)
-                return 0x00021806;
+            if (pin == GPIO_Pin::PC5)
+                return GPIO_PC5_PHA1;
+            else if (pin == GPIO_Pin::PC6)
+                return GPIO_PC6_PHB1;
             break;
     }
     return 0;

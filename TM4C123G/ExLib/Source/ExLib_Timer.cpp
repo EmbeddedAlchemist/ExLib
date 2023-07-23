@@ -14,10 +14,10 @@ void GeneralTimer::begin() {
         timerConfig = TIMER_CFG_PERIODIC;
     } else if (type == GeneralTimer_Type::SplitedA) {
         interruptType = TIMER_TIMA_TIMEOUT;
-        timerConfig = TIMER_CFG_A_PERIODIC;
+        timerConfig = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_PERIODIC;
     } else if (type == GeneralTimer_Type::SplitedB) {
         interruptType = TIMER_TIMB_TIMEOUT;
-        timerConfig = TIMER_CFG_B_PERIODIC;
+        timerConfig = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_B_PERIODIC;
     }
     DeviceSupport::TimerConfigure(periph, timerConfig);
     DeviceSupport::IntRegister(getTimerInterruptNumberByName(*this), getTimerInterruptHandlerByName(*this));
@@ -123,6 +123,7 @@ void GeneralTimer::registerPWMChannel(std::uint32_t channel, GPIO_Pin pinName) {
 }
 
 void GeneralTimer::setDuty(std::uint32_t channel, Precent duty) {
+    DeviceSupport::TimerPrescaleSet(periph, part, duty.compute(DeviceSupport::TimerLoadGet(periph, part)));
 }
 
 void GeneralTimer::setCycle(TimeInterval cycle) {

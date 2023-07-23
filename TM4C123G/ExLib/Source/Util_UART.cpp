@@ -2,6 +2,7 @@
 #include "DeviceSupport/DeviceSupport.hpp"
 #include "ExLib_Exception.hpp"
 #include "Util_GPIO.hpp"
+#include "Util_AllPinMuxConfig.hpp"
 
 #include "stddef.h"
 
@@ -107,14 +108,14 @@ void configUARTState(std::uintptr_t periph, bool isEnable) {
 
 GPIO_Pin getUARTDefaultRxPin(UART_Periph periph) {
     static const GPIO_Pin defaultRx[] = {
-        PA0,
-        PB0,
-        PD6,
-        PC6,
-        PC4,
-        PE4,
-        PD4,
-        PE0
+        GPIO_Pin::PA0,
+        GPIO_Pin::PB0,
+        GPIO_Pin::PD6,
+        GPIO_Pin::PC6,
+        GPIO_Pin::PC4,
+        GPIO_Pin::PE4,
+        GPIO_Pin::PD4,
+        GPIO_Pin::PE0
     };
     if((std::size_t)periph >= sizeof(defaultRx)/sizeof(defaultRx[0])){
         Exception::raiseException("Bad UART_Periph");
@@ -124,14 +125,14 @@ GPIO_Pin getUARTDefaultRxPin(UART_Periph periph) {
 
 GPIO_Pin getUARTDefaultTxPin(UART_Periph periph) {
         static const GPIO_Pin defaultTx[] = {
-        PA1,
-        PB1,
-        PD7,
-        PC7,
-        PC5,
-        PE5,
-        PD5,
-        PE1
+        GPIO_Pin::PA1,
+        GPIO_Pin::PB1,
+        GPIO_Pin::PD7,
+        GPIO_Pin::PC7,
+        GPIO_Pin::PC5,
+        GPIO_Pin::PE5,
+        GPIO_Pin::PD5,
+        GPIO_Pin::PE1
     };
     if((std::size_t)periph >= sizeof(defaultTx)/sizeof(defaultTx[0])){
         Exception::raiseException("Bad UART_Periph");
@@ -174,64 +175,64 @@ std::uint32_t getUARTPinMuxConfig(std::uintptr_t periph, GPIO_Pin pinName) {
     switch (periph) {
         case UART0_BASE:
             if (pinName == GPIO_Pin::PA0)
-                return 0x00000001;
+                return GPIO_PA0_U0RX;
             if (pinName == GPIO_Pin::PA1)
-                return 0x00000401;
+                return GPIO_PA1_U0TX;
         case UART1_BASE:
             if (pinName == GPIO_Pin::PB0)
-                return 0x00010001;
+                return GPIO_PB0_U1RX;
             if (pinName == GPIO_Pin::PB1)
-                return 0x00010401;
+                return GPIO_PB1_U1TX;
             if (pinName == GPIO_Pin::PC4)
-                return 0x00021002;
+                return GPIO_PC4_U1RX;
             if (pinName == GPIO_Pin::PC5)
-                return 0x00021402;
+                return GPIO_PC5_U1TX;
         case UART2_BASE:
             if (pinName == GPIO_Pin::PD6)
-                return 0x00031801;
+                return GPIO_PD6_U2RX;
             if (pinName == GPIO_Pin::PD7)
-                return 0x00031C01;
+                return GPIO_PD7_U2TX;
             if (pinName == GPIO_Pin::PG4)
-                return 0x00061001;
+                return GPIO_PG4_U2RX;
             if (pinName == GPIO_Pin::PG5)
-                return 0x00061401;
+                return GPIO_PG5_U2TX;
         case UART3_BASE:
             if (pinName == GPIO_Pin::PC6)
-                return 0x00021801;
+                return GPIO_PC6_U3RX;
             if (pinName == GPIO_Pin::PC7)
-                return 0x00021C01;
+                return GPIO_PC7_U3TX;
         case UART4_BASE:
             if (pinName == GPIO_Pin::PC4)
-                return 0x00021001;
+                return GPIO_PC4_U1RX;
             if (pinName == GPIO_Pin::PC5)
-                return 0x00021401;
+                return GPIO_PC5_U1TX;
         case UART5_BASE:
             if (pinName == GPIO_Pin::PE4)
-                return 0x00041001;
+                return GPIO_PE4_U5RX;
             if (pinName == GPIO_Pin::PE5)
-                return 0x00041401;
+                return GPIO_PE5_U5TX;
             if (pinName == GPIO_Pin::PJ2)
-                return 0x00080801;
+                return GPIO_PJ2_U5RX;
             if (pinName == GPIO_Pin::PJ3)
-                return 0x00080C01;
+                return GPIO_PJ3_U5TX;
         case UART6_BASE:
             if (pinName == GPIO_Pin::PD4)
-                return 0x00031001;
+                return GPIO_PD4_U6RX;
             if (pinName == GPIO_Pin::PD5)
-                return 0x00031401;
+                return GPIO_PD5_U6TX;
             if (pinName == GPIO_Pin::PJ4)
-                return 0x00081001;
+                return GPIO_PJ4_U6RX;
             if (pinName == GPIO_Pin::PJ5)
-                return 0x00081401;
+                return GPIO_PJ5_U6TX;
         case UART7_BASE:
             if (pinName == GPIO_Pin::PE0)
-                return 0x00040001;
+                return GPIO_PE0_U7RX;
             if (pinName == GPIO_Pin::PE1)
-                return 0x00040401;
+                return GPIO_PE1_U7TX;
             if (pinName == GPIO_Pin::PK4)
-                return 0x00091001;
+                return GPIO_PK4_U7RX;
             if (pinName == GPIO_Pin::PK5)
-                return 0x00091401;
+                return GPIO_PK5_U7TX;
     }
 		return 0;
 }

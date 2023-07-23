@@ -152,9 +152,9 @@
   ExLib\Include\ExLib_Units.hpp ExLib\Include\ExLib_HardwarePWM.hpp \
   ExLib\Include\ExLib_I2C.hpp ExLib\Include\ExLib_QuadraticEncoder.hpp \
   ExLib\Include\ExLib_Timer.hpp ExLib\Include\ExLib_Capture.hpp \
-  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_Delay.hpp \
-  ExLib\Include\ExLib_Printable.hpp ExLib\Include\ExLib_Main.hpp \
-  ExLib\Include\ExLib_FreeRTOS.hpp \
+  ExLib\Include\ExLib_ADC.hpp ExLib\Include\ExLib_System.hpp \
+  ExLib\Include\ExLib_Delay.hpp ExLib\Include\ExLib_Printable.hpp \
+  ExLib\Include\ExLib_Main.hpp ExLib\Include\ExLib_FreeRTOS.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
   ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \

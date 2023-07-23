@@ -44,49 +44,49 @@ bool isLegalHWPWMPin(std::uintptr_t module, std::uint32_t generator, std::uint32
         (module == PWM0_BASE &&
          (((generator == PWM_GEN_0 &&
             ((channel == 0 &&
-              (pinName == PB6)) ||
+              (pinName == GPIO_Pin::PB6)) ||
              (channel == 1 &&
-              (pinName == PB7)))) ||
+              (pinName == GPIO_Pin::PB7)))) ||
            (generator == PWM_GEN_1 &&
             ((channel == 0 &&
-              (pinName == PB4)) ||
+              (pinName == GPIO_Pin::PB4)) ||
              (channel == 1 &&
-              (pinName == PB5)))) ||
+              (pinName == GPIO_Pin::PB5)))) ||
            (generator == PWM_GEN_2 &&
             ((channel == 0 &&
-              (pinName == PE4)) ||
+              (pinName == GPIO_Pin::PE4)) ||
              (channel == 1 &&
-              (pinName == PE5)))) ||
+              (pinName == GPIO_Pin::PE5)))) ||
            (generator == PWM_GEN_3 &&
             ((channel == 0 &&
-              (pinName == PC4 ||
-               pinName == PD0)) ||
+              (pinName == GPIO_Pin::PC4 ||
+               pinName == GPIO_Pin::PD0)) ||
              (channel == 1 &&
-              (pinName == PC5 ||
-               pinName == PD1))))))) ||
+              (pinName == GPIO_Pin::PC5 ||
+               pinName == GPIO_Pin::PD1))))))) ||
         (module == PWM1_BASE &&
          ((generator == PWM_GEN_0 &&
            ((channel == 0 &&
-             (pinName == PD0)) ||
+             (pinName == GPIO_Pin::PD0)) ||
             (channel == 1 &&
-             (pinName == PD1)))) ||
+             (pinName == GPIO_Pin::PD1)))) ||
           (generator == PWM_GEN_1 &&
            ((channel == 0 &&
-             (pinName == PA6 ||
-              pinName == PD4)) ||
+             (pinName == GPIO_Pin::PA6 ||
+              pinName == GPIO_Pin::PD4)) ||
             (channel == 1 &&
-             (pinName == PA7 ||
-              pinName == PE5)))) ||
+             (pinName == GPIO_Pin::PA7 ||
+              pinName == GPIO_Pin::PE5)))) ||
           (generator == PWM_GEN_2 &&
            ((channel == 0 &&
-             (pinName == PF0)) ||
+             (pinName == GPIO_Pin::PF0)) ||
             (channel == 1 &&
-             (pinName == PF1)))) ||
+             (pinName == GPIO_Pin::PF1)))) ||
           (generator == PWM_GEN_3 &&
            ((channel == 0 &&
-             (pinName == PF2)) ||
+             (pinName == GPIO_Pin::PF2)) ||
             (channel == 1 &&
-             (pinName == PF3))))));
+             (pinName == GPIO_Pin::PF3))))));
 }
 
 std::uint32_t getHWPWMOutputBitByNameAndChannel(HardwarePWM_Periph hwPWMName, std::uint32_t channel) {
@@ -112,52 +112,52 @@ std::uint32_t getHWPWMOutputByNameAndChannel(HardwarePWM_Periph hwPWMName, std::
 std::uint32_t getHWPWMPinMuxConfig(HardwarePWM_Periph hwPWMName, GPIO_Pin pinName) {
     switch (hwPWMName) {
         case HardwarePWM_Periph::Module0Generator0:
-            if (pinName == PB6)
+            if (pinName == GPIO_Pin::PB6)
                 return 0x00011804;
-            else if (pinName == PB7)
+            else if (pinName == GPIO_Pin::PB7)
                 return 0x00011C04;
         case HardwarePWM_Periph::Module0Generator1:
-            if (pinName == PB4)
+            if (pinName == GPIO_Pin::PB4)
                 return 0x00011004;
-            else if (pinName == PB5)
+            else if (pinName == GPIO_Pin::PB5)
                 return 0x00011404;
         case HardwarePWM_Periph::Module0Generator2:
-            if (pinName == PE4)
+            if (pinName == GPIO_Pin::PE4)
                 return 0x00041004;
-            else if (pinName == PE5)
+            else if (pinName == GPIO_Pin::PE5)
                 return 0x00041404;
         case HardwarePWM_Periph::Module0Generator3:
-            if (pinName == PC4)
+            if (pinName == GPIO_Pin::PC4)
                 return 0x00021004;
-            else if (pinName == PC5)
+            else if (pinName == GPIO_Pin::PC5)
                 return 0x00021404;
-            else if (pinName == PD0)
+            else if (pinName == GPIO_Pin::PD0)
                 return 0x00030004;
-            else if (pinName == PD1)
+            else if (pinName == GPIO_Pin::PD1)
                 return 0x00030404;
         case HardwarePWM_Periph::Module1Generator0:
-            if (pinName == PD0)
+            if (pinName == GPIO_Pin::PD0)
                 return 0x00030005;
-            else if (pinName == PD1)
+            else if (pinName == GPIO_Pin::PD1)
                 return 0x00030405;
         case HardwarePWM_Periph::Module1Generator1:
-            if (pinName == PA6)
+            if (pinName == GPIO_Pin::PA6)
                 return 0x00001805;
-            else if (pinName == PA7)
+            else if (pinName == GPIO_Pin::PA7)
                 return 0x00001C05;
-            else if (pinName == PE4)
+            else if (pinName == GPIO_Pin::PE4)
                 return 0x00041005;
-            else if (pinName == PE5)
+            else if (pinName == GPIO_Pin::PE5)
                 return 0x00041405;
         case HardwarePWM_Periph::Module1Generator2:
-            if (pinName == PF0)
+            if (pinName == GPIO_Pin::PF0)
                 return 0x00050005;
-            else if (pinName == PF1)
+            else if (pinName == GPIO_Pin::PF1)
                 return 0x00050405;
         case HardwarePWM_Periph::Module1Generator3:
-            if (pinName == PF2)
+            if (pinName == GPIO_Pin::PF2)
                 return 0x00050805;
-            else if (pinName == PF3)
+            else if (pinName ==GPIO_Pin:: PF3)
                 return 0x00050C05;
     }
     return 0;

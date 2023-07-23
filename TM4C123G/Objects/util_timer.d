@@ -215,4 +215,5 @@
   ExLib\Source\DeviceSupport\driverlib\udma.h \
   ExLib\Source\DeviceSupport\driverlib\usb.h \
   ExLib\Source\DeviceSupport\driverlib\watchdog.h \
-  ExLib\Include\ExLib_Exception.hpp
+  ExLib\Include\ExLib_Exception.hpp \
+  ExLib\Source\Util_AllPinMuxConfig.hpp ExLib\Source\Util_GPIO.hpp

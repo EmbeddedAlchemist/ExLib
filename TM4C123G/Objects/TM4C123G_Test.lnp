@@ -55,6 +55,8 @@
 ".\objects\util_quadraticencoder.o"
 ".\objects\exlib_timer.o"
 ".\objects\util_timer.o"
+".\objects\exlib_adc.o"
+".\objects\util_adc.o"
 ".\objects\main.o"
 ".\objects\u8g2_bitmap.o"
 ".\objects\u8g2_box.o"
