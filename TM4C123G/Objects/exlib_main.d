@@ -1,9 +1,101 @@
 ./objects/exlib_main.o: ExLib\Source\ExLib_Main.cpp \
-  ExLib\Include\ExLib_Main.hpp ExLib\Include\ExLib_System.hpp \
-  ExLib\Include\ExLib_PrintStream.hpp \
+  ExLib\Include\ExLib_Main.hpp \
+  ExLib\Source\DeviceSupport\DeviceSupport.hpp \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ExLib\Source\DeviceSupport\inc\asmdefs.h \
+  ExLib\Source\DeviceSupport\inc\hw_adc.h \
+  ExLib\Source\DeviceSupport\inc\hw_aes.h \
+  ExLib\Source\DeviceSupport\inc\hw_can.h \
+  ExLib\Source\DeviceSupport\inc\hw_ccm.h \
+  ExLib\Source\DeviceSupport\inc\hw_comp.h \
+  ExLib\Source\DeviceSupport\inc\hw_des.h \
+  ExLib\Source\DeviceSupport\inc\hw_eeprom.h \
+  ExLib\Source\DeviceSupport\inc\hw_emac.h \
+  ExLib\Source\DeviceSupport\inc\hw_epi.h \
+  ExLib\Source\DeviceSupport\inc\hw_fan.h \
+  ExLib\Source\DeviceSupport\inc\hw_flash.h \
+  ExLib\Source\DeviceSupport\inc\hw_gpio.h \
+  ExLib\Source\DeviceSupport\inc\hw_hibernate.h \
+  ExLib\Source\DeviceSupport\inc\hw_i2c.h \
+  ExLib\Source\DeviceSupport\inc\hw_ints.h \
+  ExLib\Source\DeviceSupport\inc\hw_lcd.h \
+  ExLib\Source\DeviceSupport\inc\hw_memmap.h \
+  ExLib\Source\DeviceSupport\inc\hw_nvic.h \
+  ExLib\Source\DeviceSupport\inc\hw_onewire.h \
+  ExLib\Source\DeviceSupport\inc\hw_pwm.h \
+  ExLib\Source\DeviceSupport\inc\hw_qei.h \
+  ExLib\Source\DeviceSupport\inc\hw_shamd5.h \
+  ExLib\Source\DeviceSupport\inc\hw_ssi.h \
+  ExLib\Source\DeviceSupport\inc\hw_sysctl.h \
+  ExLib\Source\DeviceSupport\inc\hw_sysexc.h \
+  ExLib\Source\DeviceSupport\inc\hw_timer.h \
+  ExLib\Source\DeviceSupport\inc\hw_types.h \
+  ExLib\Source\DeviceSupport\inc\hw_uart.h \
+  ExLib\Source\DeviceSupport\inc\hw_udma.h \
+  ExLib\Source\DeviceSupport\inc\hw_usb.h \
+  ExLib\Source\DeviceSupport\inc\hw_watchdog.h \
+  ExLib\Source\DeviceSupport\driverlib\adc.h \
+  ExLib\Source\DeviceSupport\driverlib\aes.h \
+  ExLib\Source\DeviceSupport\driverlib\can.h \
+  ExLib\Source\DeviceSupport\driverlib\comp.h \
+  ExLib\Source\DeviceSupport\driverlib\cpu.h \
+  ExLib\Source\DeviceSupport\driverlib\crc.h \
+  ExLib\Source\DeviceSupport\driverlib\debug.h \
+  ExLib\Source\DeviceSupport\driverlib\eeprom.h \
+  ExLib\Source\DeviceSupport\driverlib\emac.h \
+  ExLib\Source\DeviceSupport\driverlib\epi.h \
+  ExLib\Source\DeviceSupport\driverlib\flash.h \
+  ExLib\Source\DeviceSupport\driverlib\fpu.h \
+  ExLib\Source\DeviceSupport\driverlib\gpio.h \
+  ExLib\Source\DeviceSupport\driverlib\hibernate.h \
+  ExLib\Source\DeviceSupport\driverlib\i2c.h \
+  ExLib\Source\DeviceSupport\driverlib\interrupt.h \
+  ExLib\Source\DeviceSupport\driverlib\mpu.h \
+  ExLib\Source\DeviceSupport\driverlib\onewire.h \
+  ExLib\Source\DeviceSupport\driverlib\pin_map.h \
+  ExLib\Source\DeviceSupport\driverlib\pwm.h \
+  ExLib\Source\DeviceSupport\driverlib\qei.h \
+  ExLib\Source\DeviceSupport\driverlib\rom_map.h \
+  ExLib\Source\DeviceSupport\driverlib\rtos_bindings.h \
+  ExLib\Source\DeviceSupport\driverlib\shamd5.h \
+  ExLib\Source\DeviceSupport\driverlib\ssi.h \
+  ExLib\Source\DeviceSupport\driverlib\sw_crc.h \
+  ExLib\Source\DeviceSupport\driverlib\sysctl.h \
+  ExLib\Source\DeviceSupport\driverlib\sysexc.h \
+  ExLib\Source\DeviceSupport\driverlib\systick.h \
+  ExLib\Source\DeviceSupport\driverlib\timer.h \
+  ExLib\Source\DeviceSupport\driverlib\uart.h \
+  ExLib\Source\DeviceSupport\driverlib\udma.h \
+  ExLib\Source\DeviceSupport\driverlib\usb.h \
+  ExLib\Source\DeviceSupport\driverlib\watchdog.h \
+  ExLib\Include\ExLib_Exception.hpp ExLib\Include\ExLib_FreeRTOS.hpp \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h \
+  ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h \
+  ExLib\Include\..\Source\FreeRTOS\projdefs.h \
+  ExLib\Include\..\Source\FreeRTOS\portable.h \
+  ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h \
+  ExLib\Include\..\Source\FreeRTOS\portmacro.h \
+  ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h \
+  ExLib\Include\..\Source\FreeRTOS\queue.h \
+  ExLib\Include\..\Source\FreeRTOS\task.h \
+  ExLib\Include\..\Source\FreeRTOS\list.h \
+  ExLib\Include\..\Source\FreeRTOS\atomic.h \
+  ExLib\Include\..\Source\FreeRTOS\croutine.h \
+  ExLib\Include\..\Source\FreeRTOS\event_groups.h \
+  ExLib\Include\..\Source\FreeRTOS\timers.h \
+  ExLib\Include\..\Source\FreeRTOS\message_buffer.h \
+  ExLib\Include\..\Source\FreeRTOS\stream_buffer.h \
+  ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h \
+  ExLib\Include\..\Source\FreeRTOS\semphr.h \
+  ExLib\Include\..\Source\FreeRTOS\stack_macros.h \
+  ExLib\Include\ExLib_System.hpp ExLib\Include\ExLib_PrintStream.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__verbose_abort \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__availability \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
@@ -23,8 +115,6 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\remove_const.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\remove_volatile.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\version \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\conditional.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\decay.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\add_pointer.h \
@@ -136,8 +226,6 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\result_of.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__type_traits\type_identity.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
@@ -146,70 +234,4 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ExLib\Include\ExLib_WriteStream.hpp \
-  ExLib\Source\DeviceSupport\DeviceSupport.hpp \
-  ExLib\Source\DeviceSupport\inc\asmdefs.h \
-  ExLib\Source\DeviceSupport\inc\hw_adc.h \
-  ExLib\Source\DeviceSupport\inc\hw_aes.h \
-  ExLib\Source\DeviceSupport\inc\hw_can.h \
-  ExLib\Source\DeviceSupport\inc\hw_ccm.h \
-  ExLib\Source\DeviceSupport\inc\hw_comp.h \
-  ExLib\Source\DeviceSupport\inc\hw_des.h \
-  ExLib\Source\DeviceSupport\inc\hw_eeprom.h \
-  ExLib\Source\DeviceSupport\inc\hw_emac.h \
-  ExLib\Source\DeviceSupport\inc\hw_epi.h \
-  ExLib\Source\DeviceSupport\inc\hw_fan.h \
-  ExLib\Source\DeviceSupport\inc\hw_flash.h \
-  ExLib\Source\DeviceSupport\inc\hw_gpio.h \
-  ExLib\Source\DeviceSupport\inc\hw_hibernate.h \
-  ExLib\Source\DeviceSupport\inc\hw_i2c.h \
-  ExLib\Source\DeviceSupport\inc\hw_ints.h \
-  ExLib\Source\DeviceSupport\inc\hw_lcd.h \
-  ExLib\Source\DeviceSupport\inc\hw_memmap.h \
-  ExLib\Source\DeviceSupport\inc\hw_nvic.h \
-  ExLib\Source\DeviceSupport\inc\hw_onewire.h \
-  ExLib\Source\DeviceSupport\inc\hw_pwm.h \
-  ExLib\Source\DeviceSupport\inc\hw_qei.h \
-  ExLib\Source\DeviceSupport\inc\hw_shamd5.h \
-  ExLib\Source\DeviceSupport\inc\hw_ssi.h \
-  ExLib\Source\DeviceSupport\inc\hw_sysctl.h \
-  ExLib\Source\DeviceSupport\inc\hw_sysexc.h \
-  ExLib\Source\DeviceSupport\inc\hw_timer.h \
-  ExLib\Source\DeviceSupport\inc\hw_types.h \
-  ExLib\Source\DeviceSupport\inc\hw_uart.h \
-  ExLib\Source\DeviceSupport\inc\hw_udma.h \
-  ExLib\Source\DeviceSupport\inc\hw_usb.h \
-  ExLib\Source\DeviceSupport\inc\hw_watchdog.h \
-  ExLib\Source\DeviceSupport\driverlib\adc.h \
-  ExLib\Source\DeviceSupport\driverlib\aes.h \
-  ExLib\Source\DeviceSupport\driverlib\can.h \
-  ExLib\Source\DeviceSupport\driverlib\comp.h \
-  ExLib\Source\DeviceSupport\driverlib\cpu.h \
-  ExLib\Source\DeviceSupport\driverlib\crc.h \
-  ExLib\Source\DeviceSupport\driverlib\debug.h \
-  ExLib\Source\DeviceSupport\driverlib\eeprom.h \
-  ExLib\Source\DeviceSupport\driverlib\emac.h \
-  ExLib\Source\DeviceSupport\driverlib\epi.h \
-  ExLib\Source\DeviceSupport\driverlib\flash.h \
-  ExLib\Source\DeviceSupport\driverlib\fpu.h \
-  ExLib\Source\DeviceSupport\driverlib\gpio.h \
-  ExLib\Source\DeviceSupport\driverlib\hibernate.h \
-  ExLib\Source\DeviceSupport\driverlib\i2c.h \
-  ExLib\Source\DeviceSupport\driverlib\interrupt.h \
-  ExLib\Source\DeviceSupport\driverlib\mpu.h \
-  ExLib\Source\DeviceSupport\driverlib\onewire.h \
-  ExLib\Source\DeviceSupport\driverlib\pin_map.h \
-  ExLib\Source\DeviceSupport\driverlib\pwm.h \
-  ExLib\Source\DeviceSupport\driverlib\qei.h \
-  ExLib\Source\DeviceSupport\driverlib\rom_map.h \
-  ExLib\Source\DeviceSupport\driverlib\rtos_bindings.h \
-  ExLib\Source\DeviceSupport\driverlib\shamd5.h \
-  ExLib\Source\DeviceSupport\driverlib\ssi.h \
-  ExLib\Source\DeviceSupport\driverlib\sw_crc.h \
-  ExLib\Source\DeviceSupport\driverlib\sysctl.h \
-  ExLib\Source\DeviceSupport\driverlib\sysexc.h \
-  ExLib\Source\DeviceSupport\driverlib\systick.h \
-  ExLib\Source\DeviceSupport\driverlib\timer.h \
-  ExLib\Source\DeviceSupport\driverlib\uart.h \
-  ExLib\Source\DeviceSupport\driverlib\udma.h \
-  ExLib\Source\DeviceSupport\driverlib\usb.h \
-  ExLib\Source\DeviceSupport\driverlib\watchdog.h
+  ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp

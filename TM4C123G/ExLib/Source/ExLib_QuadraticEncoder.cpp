@@ -28,7 +28,7 @@ void QuadraticEncoder::begin() {
     configQuadraticEncoderPin(periph, pinA, pinB);
     DeviceSupport::QEIConfigure(periph,
                                 QEI_CONFIG_CAPTURE_A_B | QEI_CONFIG_NO_RESET | QEI_CONFIG_QUADRATURE | QEI_CONFIG_NO_SWAP,
-                                std::numeric_limits<std::int32_t>::max());
+                                std::numeric_limits<std::uint32_t>::max());
     DeviceSupport::QEIVelocityConfigure(periph, QEI_VELDIV_1, DeviceSupport::SysCtlClockGet() / 100);
     DeviceSupport::QEIVelocityEnable(periph);
     DeviceSupport::QEIEnable(periph);

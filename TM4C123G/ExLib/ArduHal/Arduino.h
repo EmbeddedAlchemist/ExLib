@@ -1,3 +1,3 @@
 #pragma once
-//#include "Arduino.hpp"
-//using namespace Arduino;
+#include "ArduHAL.hpp"
+using namespace ArduHal;

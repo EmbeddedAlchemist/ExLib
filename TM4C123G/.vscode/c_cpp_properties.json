@@ -12,7 +12,8 @@
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\DeviceSupport",
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\DeviceSupport\\startup",
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source",
-                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\User"
+                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\User",
+                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\FreeRTOS"
             ],
             "defines": [
                 "PART_TM4C123GH6PM",

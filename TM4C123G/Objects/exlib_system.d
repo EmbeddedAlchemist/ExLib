@@ -212,4 +212,17 @@
   ExLib\Source\DeviceSupport\driverlib\udma.h \
   ExLib\Source\DeviceSupport\driverlib\usb.h \
   ExLib\Source\DeviceSupport\driverlib\watchdog.h \
-  ExLib\Include\ExLib_Exception.hpp
+  ExLib\Include\ExLib_Exception.hpp \
+  ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp \
+  ExLib\Source\FreeRTOS\FreeRTOS.h \
+  ExLib\Source\FreeRTOS\FreeRTOSConfig.h \
+  ExLib\Source\FreeRTOS\projdefs.h ExLib\Source\FreeRTOS\portable.h \
+  ExLib\Source\FreeRTOS\deprecated_definitions.h \
+  ExLib\Source\FreeRTOS\portmacro.h ExLib\Source\FreeRTOS\mpu_wrappers.h \
+  ExLib\Source\FreeRTOS\queue.h ExLib\Source\FreeRTOS\task.h \
+  ExLib\Source\FreeRTOS\list.h ExLib\Source\FreeRTOS\atomic.h \
+  ExLib\Source\FreeRTOS\croutine.h ExLib\Source\FreeRTOS\event_groups.h \
+  ExLib\Source\FreeRTOS\timers.h ExLib\Source\FreeRTOS\message_buffer.h \
+  ExLib\Source\FreeRTOS\stream_buffer.h \
+  ExLib\Source\FreeRTOS\mpu_prototypes.h ExLib\Source\FreeRTOS\semphr.h \
+  ExLib\Source\FreeRTOS\stack_macros.h

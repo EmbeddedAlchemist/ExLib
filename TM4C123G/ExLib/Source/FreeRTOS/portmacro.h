@@ -169,8 +169,6 @@
         #define portFORCE_INLINE    inline __attribute__( ( always_inline ) )
     #endif
 
-/*-----------------------------------------------------------*/
-
     portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void )
     {
         uint32_t ulCurrentInterrupt;

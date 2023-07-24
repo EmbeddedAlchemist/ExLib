@@ -317,7 +317,7 @@ I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
 I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
-F (.\ExLib\Source\DeviceSupport\startup\startup_rvmdk.S)(0x64B23DF3)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION=538 -DTM4C123GH6PM-o ./objects/startup_rvmdk.o)
+F (.\ExLib\Source\DeviceSupport\startup\startup_rvmdk.S)(0x64BE889D)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION=538 -DTM4C123GH6PM-o ./objects/startup_rvmdk.o)
 F (.\ExLib\Source\DeviceSupport\watchdog.c)(0x6464B468)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -w -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/watchdog.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
@@ -401,7 +401,7 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_System.hpp)(0x64B50E74)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -546,9 +546,9 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
 F (.\ExLib\Source\ExLib_EXTI.cpp)(0x64A147D6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_exti.o -MD)
 I (ExLib\Include\ExLib_EXTI.hpp)(0x649D849F)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -764,8 +764,8 @@ I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 F (.\ExLib\Source\ExLib_GPIO.cpp)(0x64AB7D4A)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_gpio.o -MD)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -981,13 +981,106 @@ I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_EXTI.hpp)(0x649D849F)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-F (.\ExLib\Source\ExLib_Main.cpp)(0x64B3982D)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_main.o -MD)
+F (.\ExLib\Source\ExLib_Main.cpp)(0x64BE85CA)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_main.o -MD)
 I (ExLib\Include\ExLib_Main.hpp)(0x648ACF9C)
+I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\DeviceSupport\inc\asmdefs.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_adc.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_aes.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_can.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_ccm.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_comp.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_des.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_eeprom.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_emac.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_epi.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_fan.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_flash.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_gpio.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_hibernate.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_i2c.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_lcd.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_memmap.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_nvic.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_onewire.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_pwm.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_qei.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_shamd5.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_ssi.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_sysexc.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_timer.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_uart.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_udma.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_usb.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\inc\hw_watchdog.h)(0x6464B46F)
+I (ExLib\Source\DeviceSupport\driverlib\adc.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\aes.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\can.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\comp.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\cpu.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\crc.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\eeprom.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\emac.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\epi.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\flash.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\fpu.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\gpio.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\hibernate.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\i2c.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\mpu.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\onewire.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\pin_map.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\pwm.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\qei.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\rom_map.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\rtos_bindings.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\shamd5.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\ssi.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\sw_crc.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
+I (ExLib\Source\DeviceSupport\driverlib\sysexc.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\systick.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\timer.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\uart.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
+I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
+I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
+I (ExLib\Include\ExLib_FreeRTOS.hpp)(0x64BE890D)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Include\..\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\queue.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\atomic.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\croutine.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\event_groups.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\message_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stream_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\semphr.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stack_macros.h)(0x64020E50)
 I (ExLib\Include\ExLib_System.hpp)(0x64B50E74)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__availability)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\type_traits)(0x63884908)
@@ -1007,8 +1100,6 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_cv.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_const.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_volatile.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\version)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\conditional.h)(0x63884904)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\decay.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\add_pointer.h)(0x63884906)
@@ -1120,8 +1211,6 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_pointer.h)(0x6388
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\result_of.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\type_identity.h)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x63884906)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\math.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63884908)
@@ -1130,75 +1219,9 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdlib.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
 I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
-I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
-I (ExLib\Source\DeviceSupport\inc\asmdefs.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_adc.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_aes.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_can.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_ccm.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_comp.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_des.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_eeprom.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_emac.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_epi.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_fan.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_flash.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_gpio.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_hibernate.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_i2c.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_ints.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_lcd.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_memmap.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_nvic.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_onewire.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_pwm.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_qei.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_shamd5.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_ssi.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_sysctl.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_sysexc.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_timer.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_types.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_uart.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_udma.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_usb.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\inc\hw_watchdog.h)(0x6464B46F)
-I (ExLib\Source\DeviceSupport\driverlib\adc.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\aes.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\can.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\comp.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\cpu.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\crc.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\debug.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\eeprom.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\emac.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\epi.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\flash.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\fpu.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\gpio.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\hibernate.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\i2c.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\interrupt.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\mpu.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\onewire.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\pin_map.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\pwm.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\qei.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\rom_map.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\rtos_bindings.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\shamd5.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\ssi.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\sw_crc.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\sysctl.h)(0x64A1A4C5)
-I (ExLib\Source\DeviceSupport\driverlib\sysexc.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\systick.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\timer.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\uart.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
-I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
+I (ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
 F (.\ExLib\Source\ExLib_PrintStream.cpp)(0x64B357E4)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_printstream.o -MD)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -1357,8 +1380,8 @@ I (ExLib\Include\ExLib_UART.hpp)(0x64B3929C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -1715,7 +1738,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x63884906)
 F (.\ExLib\Source\Util_I2C.cpp)(0x64BC035F)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_i2c.o -MD)
 I (ExLib\Source\Util_I2C.hpp)(0x64B51651)
 I (ExLib\Include\ExLib_I2C.hpp)(0x64B62892)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -1866,7 +1889,7 @@ I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64B3548E)
 I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D58C)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
 I (ExLib\Include\ExLib_Units.hpp)(0x64B561B5)
 I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
 I (ExLib\Source\DeviceSupport\inc\asmdefs.h)(0x6464B46F)
@@ -1948,8 +1971,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -2166,8 +2189,8 @@ I (ExLib\Source\Util_AllPinMuxConfig.hpp)(0x64B9110C)
 F (.\ExLib\Source\Util_GPIO.cpp)(0x64B50E74)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_gpio.o -MD)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -2410,8 +2433,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -2630,8 +2653,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -2783,8 +2806,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -2997,9 +3020,9 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-F (.\ExLib\Source\ExLib_System.cpp)(0x64B50E74)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_system.o -MD)
+F (.\ExLib\Source\ExLib_System.cpp)(0x64BE85B0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_system.o -MD)
 I (ExLib\Include\ExLib_System.hpp)(0x64B50E74)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -3213,9 +3236,29 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
+I (ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\queue.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\atomic.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\croutine.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\event_groups.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\message_buffer.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\stream_buffer.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_prototypes.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\semphr.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\stack_macros.h)(0x64020E50)
 F (.\ExLib\Source\ExLib_I2C.cpp)(0x64B67888)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_i2c.o -MD)
 I (ExLib\Include\ExLib_I2C.hpp)(0x64B62892)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -3366,7 +3409,7 @@ I (ExLib\Include\ExLib_ReadStreamBuffered.hpp)(0x64B3548E)
 I (ExLib\Include\ExLib_BufferFIFO.hpp)(0x64B2CE4F)
 I (ExLib\Include\ExLib_ReadStream.hpp)(0x64B2D58C)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
 I (ExLib\Include\ExLib_Units.hpp)(0x64B561B5)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\DeviceSupport\DeviceSupport.hpp)(0x64A95953)
@@ -3437,11 +3480,11 @@ I (ExLib\Source\DeviceSupport\driverlib\udma.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Source\Util_I2C.hpp)(0x64B51651)
-F (.\ExLib\Source\ExLib_QuadraticEncoder.cpp)(0x64B6A335)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_quadraticencoder.o -MD)
+F (.\ExLib\Source\ExLib_QuadraticEncoder.cpp)(0x64BD5BF8)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_quadraticencoder.o -MD)
 I (ExLib\Include\ExLib_QuadraticEncoder.hpp)(0x64ABF318)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -3656,12 +3699,12 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_QuadraticEncoder.hpp)(0x64ABF318)
-F (.\ExLib\Source\Util_QuadraticEncoder.cpp)(0x64BC035F)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_quadraticencoder.o -MD)
+F (.\ExLib\Source\Util_QuadraticEncoder.cpp)(0x64BD5BF8)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_quadraticencoder.o -MD)
 I (ExLib\Source\Util_QuadraticEncoder.hpp)(0x64ABF318)
 I (ExLib\Include\ExLib_QuadraticEncoder.hpp)(0x64ABF318)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -3878,14 +3921,14 @@ I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
 F (.\ExLib\Source\ExLib_Timer.cpp)(0x64B8FDBD)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_timer.o -MD)
 I (ExLib\Include\ExLib_Timer.hpp)(0x64B80B63)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
 I (ExLib\Include\ExLib_Capture.hpp)(0x64B80DF8)
 I (ExLib\Include\ExLib_PWM.hpp)(0x64B7516A)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -4101,14 +4144,14 @@ I (ExLib\Source\Util_Timer.hpp)(0x64B8FB3B)
 F (.\ExLib\Source\Util_Timer.cpp)(0x64BC12B4)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_timer.o -MD)
 I (ExLib\Source\Util_Timer.hpp)(0x64B8FB3B)
 I (ExLib\Include\ExLib_Timer.hpp)(0x64B80B63)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
 I (ExLib\Include\ExLib_Capture.hpp)(0x64B80DF8)
 I (ExLib\Include\ExLib_PWM.hpp)(0x64B7516A)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
@@ -4325,8 +4368,8 @@ I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
 F (.\ExLib\Source\ExLib_ADC.cpp)(0x64BC972A)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_adc.o -MD)
 I (ExLib\Include\ExLib_ADC.hpp)(0x64BC8A06)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -4541,12 +4584,12 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_ADC.hpp)(0x64BC8A3F)
-F (.\ExLib\Source\Util_ADC.cpp)(0x64BC93C0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_adc.o -MD)
+F (.\ExLib\Source\Util_ADC.cpp)(0x64BE302B)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_adc.o -MD)
 I (ExLib\Source\Util_ADC.hpp)(0x64BC8A3F)
 I (ExLib\Include\ExLib_ADC.hpp)(0x64BC8A06)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -4761,11 +4804,49 @@ I (ExLib\Source\DeviceSupport\driverlib\usb.h)(0x6464B468)
 I (ExLib\Source\DeviceSupport\driverlib\watchdog.h)(0x6464B468)
 I (ExLib\Include\ExLib_Exception.hpp)(0x64B50E74)
 I (ExLib\Source\Util_GPIO.hpp)(0x64AA7E90)
-F (.\User\main.cpp)(0x64BC9378)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/main.o -MD)
+F (.\ExLib\Source\ExLib_FreeRTOS.cpp)(0x64BE85B0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/exlib_freertos.o -MD)
+I (ExLib\Include\ExLib_FreeRTOS.hpp)(0x64BE890D)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Include\..\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\queue.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\atomic.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\croutine.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\event_groups.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\message_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stream_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\semphr.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stack_macros.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
+F (.\ExLib\Source\Util_FormattedPrint.cpp)(0x64A666E6)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_formattedprint.o -MD)
+I (ExLib\Source\Util_FormattedPrint.hpp)(0x64A666E6)
+I (ExLib\Include\ExLib_WriteStream.hpp)(0x64958BA2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+F (.\ExLib\Source\Util_SSI.cpp)(0x64B609FD)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/util_ssi.o -MD)
+F (.\User\main.cpp)(0x64BE8943)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/main.o -MD)
 I (ExLib\Include\ExLib.hpp)(0x64BC9231)
 I (ExLib\Include\ExLib_GPIO.hpp)(0x64B8FC67)
-I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64938D3E)
-I (ExLib\Include\ExLib_PrintStream.hpp)(0x64B68900)
+I (ExLib\Include\ExLib_CallbackFunction.hpp)(0x64BE752E)
+I (ExLib\Include\ExLib_PrintStream.hpp)(0x64BD5D15)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
@@ -4928,27 +5009,27 @@ I (ExLib\Include\ExLib_System.hpp)(0x64B50E74)
 I (ExLib\Include\ExLib_Delay.hpp)(0x64AA0F4B)
 I (ExLib\Include\ExLib_Printable.hpp)(0x64B35397)
 I (ExLib\Include\ExLib_Main.hpp)(0x648ACF9C)
-I (ExLib\Include\ExLib_FreeRTOS.hpp)(0x648C5CC4)
+I (ExLib\Include\ExLib_FreeRTOS.hpp)(0x64BE890D)
 I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSSupport.hpp)(0x648C643F)
-I (ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h)(0x648C4717)
-I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h)(0x6393914C)
-I (ExLib\Include\..\Source\FreeRTOS\projdefs.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\portable.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\portmacro.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\queue.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\task.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\list.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\atomic.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\croutine.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\event_groups.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\timers.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\message_buffer.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\stream_buffer.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\semphr.h)(0x639391C6)
-I (ExLib\Include\..\Source\FreeRTOS\stack_macros.h)(0x639391C6)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Include\..\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\queue.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\atomic.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\croutine.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\event_groups.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\message_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stream_buffer.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\mpu_prototypes.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\semphr.h)(0x64020E50)
+I (ExLib\Include\..\Source\FreeRTOS\stack_macros.h)(0x64020E50)
 I (u8g2\u8g2.h)(0x62A36F87)
 I (u8g2\u8x8.h)(0x62A36F8F)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits.h)(0x63884908)
@@ -5626,3 +5707,128 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
 I (C:\Keil_v5\ARM\ARMCLANG\include\limits.h)(0x63884908)
+F (.\ExLib\Source\FreeRTOS\croutine.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/croutine.o -MD)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\croutine.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\event_groups.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/event_groups.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\event_groups.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\list.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/list.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\port.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/port.o -MD)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\queue.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/queue.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\queue.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\stream_buffer.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/stream_buffer.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\stream_buffer.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\tasks.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/tasks.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\timers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\stack_macros.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\timers.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/timers.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\queue.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\timers.h)(0x64020E50)
+F (.\ExLib\Source\FreeRTOS\heap_3.c)(0x64020E50)(-xc --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Os -ffunction-sections -I ./ExLib/Include -I ./u8g2-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -DTM4C123GH6PM -DPART_TM4C123GH6PM-o ./objects/heap_3.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
+I (ExLib\Source\FreeRTOS\FreeRTOS.h)(0x64020E50)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
+I (ExLib\Source\FreeRTOS\FreeRTOSConfig.h)(0x64BE87AD)
+I (ExLib\Source\FreeRTOS\projdefs.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portable.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\deprecated_definitions.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\portmacro.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\mpu_wrappers.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\task.h)(0x64020E50)
+I (ExLib\Source\FreeRTOS\list.h)(0x64020E50)

@@ -107,6 +107,8 @@ void configQuadraticEncoderPin(std::uintptr_t periph, GPIO_Pin pinA, GPIO_Pin pi
     enableGPIOClock(pinBPort);
     DeviceSupport::GPIOPinConfigure(getQuadraticEncoderPinMuxConfig(periph, pinA));
     DeviceSupport::GPIOPinConfigure(getQuadraticEncoderPinMuxConfig(periph, pinB));
+    DeviceSupport::GPIOUnlockPin(pinAPort, pinAPin);
+    DeviceSupport::GPIOUnlockPin(pinBPort, pinBPin);
     DeviceSupport::GPIODirModeSet(pinAPort, pinAPin, GPIO_DIR_MODE_HW);
     DeviceSupport::GPIODirModeSet(pinBPort, pinBPin, GPIO_DIR_MODE_HW);
     DeviceSupport::GPIOPadConfigSet(pinAPort, pinAPin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);

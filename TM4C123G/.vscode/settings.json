@@ -16,6 +16,8 @@
         "limits": "cpp",
         "type_traits": "cpp",
         "xstddef": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "algorithm": "cpp",
+        "utility": "cpp"
     }
 }

@@ -166,23 +166,28 @@ int ExLib::usr_main() {
     Serial.print(System::getSystemClockSpeed());
     Serial.println("Hz.");
 
-    u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
-    u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
-    u8g2_SetPowerSave(&u8g2, 0); // wake up
-    u8g2_ClearBuffer(&u8g2);
-    drawLogo();
-    drawURL();
-    u8g2_SendBuffer(&u8g2);
+   u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
+   u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
+   u8g2_SetPowerSave(&u8g2, 0); // wake up
+   u8g2_ClearBuffer(&u8g2);
+   drawLogo();
+   drawURL();
+   u8g2_SendBuffer(&u8g2);
 
-    GeneralTimer Timer0(GeneralTimer_Periph::Timer0A);
-    Timer0.begin();
-    Timer0.setCycle(200_us);
-    //Timer0.onOverflow(*new CallbackFunction(cb));
-    ADC ADC0(ADC_Periph::ADC0);
-    ADC_Channel channel0(ADC0, GPIO_Pin::PE3);
+    // GeneralTimer Timer0(GeneralTimer_Periph::Timer0A);
+    // Timer0.begin();
+    // Timer0.setCycle(200_us);
+    // //Timer0.onOverflow(*new CallbackFunction(cb));
+    // ADC ADC0(ADC_Periph::ADC0);
+    // ADC_Channel channel0(ADC0, GPIO_Pin::PE3);
+    
+    QuadraticEncoder encoder0(QuadraticEncoder_Periph::QuadraticEncoder0, GPIO_Pin::PD6, GPIO_Pin::PD7);
+    encoder0.begin();
+    Serial.println("Begin!");
+
 
     while (1) {
-        Serial.println(channel0.read());
+        Serial.println(encoder0.getCounter());
     }
 
     return 0;

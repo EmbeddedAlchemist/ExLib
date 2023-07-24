@@ -179,6 +179,7 @@ std::size_t PrintStream::printInteger(Interger integer, std::uint8_t base) {
         if (write('-') == false)
             return 0;
         charsWritten++;
+        integer = -integer;
     }
     if (integer == 0) {
         charsWritten += write('0');
