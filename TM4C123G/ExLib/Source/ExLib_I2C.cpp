@@ -71,8 +71,7 @@ void I2C::setPins(GPIO_Pin scl, GPIO_Pin sda) {
     pinSDA = sda;
 }
 
-void I2C::begin(Frequency freq, std::uint8_t selfAddr) {
-    configI2CClock(*this, true);
+void I2C::setFrequency(Frequency freq) {
     if (freq.hz < (400_kHz).hz) {
         DeviceSupport::I2CMasterInitExpClk(periph, DeviceSupport::SysCtlClockGet(), false);
     } else if (freq.hz <= (400_kHz).hz && freq.hz < (1_MHz).hz) {
@@ -85,10 +84,19 @@ void I2C::begin(Frequency freq, std::uint8_t selfAddr) {
         DeviceSupport::I2CMasterInitExpClk(periph, DeviceSupport::SysCtlClockGet(), true);
         // TODO: a specific command is used to switch to the faster clocks after the initial communication with the slave is done at either 100 Kbps or 400 Kbps
     }
+}
+
+void I2C::begin(Frequency freq, std::uint8_t selfAddr) {
+    configI2CClock(*this, true);
+    setFrequency(freq);
     // DeviceSupport::I2CMasterSlaveAddrSet(periph, selfAddr, )
     configI2CPin(periph, pinSCL, pinSDA);
     // DeviceSupport::I2CSlaveEnable(periph);
     // DeviceSupport::I2CSlaveInit(periph, selfAddr);
+}
+
+void I2C::end() {
+    configI2CClock(*this, false);
 }
 
 /**
@@ -105,8 +113,8 @@ void I2C::beginTransmission(std::uint8_t addr) {
 }
 
 void I2C::endTransmission() {
-    if(slaveAddrIsNotSend==true){
-        //此时还没发送起始信号就尝试结束通信，什么也不做
+    if (slaveAddrIsNotSend == true) {
+        // 此时还没发送起始信号就尝试结束通信，什么也不做
         slaveAddrIsNotSend = false;
         return;
     }

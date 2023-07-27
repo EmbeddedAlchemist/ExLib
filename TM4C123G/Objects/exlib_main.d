@@ -233,5 +233,6 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  ExLib\Include\ExLib_WriteStream.hpp \
+  ExLib\Include\ExLib_WriteStream.hpp ExLib\Include\ExLib_Log.hpp \
+  ExLib\Include\ExLib_Units.hpp \
   ExLib\Source\FreeRTOS\FreeRTOSSupport.hpp

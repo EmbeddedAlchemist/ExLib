@@ -1,6 +1,5 @@
 /*
-  Printable.h - Interface class that allows printing of complex types
-  Copyright (c) 2011 Adrian McEwen.  All right reserved.
+  Copyright (c) 2016 Arduino LLC.  All right reserved.
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -9,18 +8,19 @@
 
   This library is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU Lesser General Public License for more details.
 
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef Printable_h
-#define Printable_h
+#pragma once
 
 #include <stdlib.h>
+
+namespace arduino {
 
 class Print;
 
@@ -36,5 +36,4 @@ class Printable
     virtual size_t printTo(Print& p) const = 0;
 };
 
-#endif
-
+}

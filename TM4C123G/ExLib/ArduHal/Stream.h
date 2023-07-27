@@ -19,8 +19,7 @@
   parsing functions based on TextFinder library by Michael Margolis
 */
 
-#ifndef Stream_h
-#define Stream_h
+#pragma once
 
 #include <inttypes.h>
 #include "Print.h"
@@ -28,12 +27,14 @@
 // compatibility macros for testing
 /*
 #define   getInt()            parseInt()
-#define   getInt(ignore)    parseInt(ignore)
+#define   getInt(ignore)      parseInt(ignore)
 #define   getFloat()          parseFloat()
-#define   getFloat(ignore)  parseFloat(ignore)
+#define   getFloat(ignore)    parseFloat(ignore)
 #define   getString( pre_string, post_string, buffer, length)
 readBytesBetween( pre_string, terminator, buffer, length)
 */
+
+namespace arduino {
 
 // This enumeration provides the lookahead options for parseInt(), parseFloat()
 // The rules set out here are used until either the first valid character is found
@@ -51,8 +52,8 @@ class Stream : public Print
   protected:
     unsigned long _timeout;      // number of milliseconds to wait for the next char before aborting timed read
     unsigned long _startMillis;  // used for timeout measurement
-    int timedRead();    // read stream with timeout
-    int timedPeek();    // peek stream with timeout
+    int timedRead();    // private method to read stream with timeout
+    int timedPeek();    // private method to peek stream with timeout
     int peekNextDigit(LookaheadMode lookahead, bool detectDecimal); // returns the next numeric digit in the stream or -1 if timeout
 
   public:
@@ -67,21 +68,21 @@ class Stream : public Print
   void setTimeout(unsigned long timeout);  // sets maximum milliseconds to wait for stream data, default is 1 second
   unsigned long getTimeout(void) { return _timeout; }
   
-  bool find(char *target);   // reads data from the stream until the target string is found
-  bool find(uint8_t *target) { return find ((char *)target); }
+  bool find(const char *target);   // reads data from the stream until the target string is found
+  bool find(const uint8_t *target) { return find ((const char *)target); }
   // returns true if target string is found, false if timed out (see setTimeout)
 
-  bool find(char *target, size_t length);   // reads data from the stream until the target string of given length is found
-  bool find(uint8_t *target, size_t length) { return find ((char *)target, length); }
+  bool find(const char *target, size_t length);   // reads data from the stream until the target string of given length is found
+  bool find(const uint8_t *target, size_t length) { return find ((const char *)target, length); }
   // returns true if target string is found, false if timed out
 
   bool find(char target) { return find (&target, 1); }
 
-  bool findUntil(char *target, char *terminator);   // as find but search ends if the terminator string is found
-  bool findUntil(uint8_t *target, char *terminator) { return findUntil((char *)target, terminator); }
+  bool findUntil(const char *target, const char *terminator);   // as find but search ends if the terminator string is found
+  bool findUntil(const uint8_t *target, const char *terminator) { return findUntil((const char *)target, terminator); }
 
-  bool findUntil(char *target, size_t targetLen, char *terminate, size_t termLen);   // as above but search ends if the terminate string is found
-  bool findUntil(uint8_t *target, size_t targetLen, char *terminate, size_t termLen) {return findUntil((char *)target, targetLen, terminate, termLen); }
+  bool findUntil(const char *target, size_t targetLen, const char *terminate, size_t termLen);   // as above but search ends if the terminate string is found
+  bool findUntil(const uint8_t *target, size_t targetLen, const char *terminate, size_t termLen) {return findUntil((const char *)target, targetLen, terminate, termLen); }
 
   long parseInt(LookaheadMode lookahead = SKIP_ALL, char ignore = NO_IGNORE_CHAR);
   // returns the first valid (long) integer value from the current position.
@@ -126,4 +127,7 @@ class Stream : public Print
 };
 
 #undef NO_IGNORE_CHAR
-#endif
+
+}
+
+using arduino::Stream;

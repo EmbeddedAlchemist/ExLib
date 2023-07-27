@@ -1365,6 +1365,61 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>ArduHAL</GroupName>
+          <Files>
+            <File>
+              <FileName>ArduHalConfig.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\ArduHalConfig.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>HardwareSerial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\HardwareSerial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IPAddress.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\IPAddress.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Wire.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\Wire.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Common.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\Common.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Print.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\Print.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Stream.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\Stream.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>String.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ExLib\ArduHal\String.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>dtostrf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ExLib\ArduHal\deprecated-avr-comp\avr\dtostrf.c</FilePath>
+            </File>
+            <File>
+              <FileName>itoa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ExLib\ArduHal\itoa.c</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

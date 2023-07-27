@@ -8,7 +8,7 @@ class Exception {
     static void hardFaultHandler();
   public:
     static const char *lastExceptionMessage;
-    static void raiseException(const char *message);
+    static void raiseException(const char *message, ...);
     static void raiseHardFault();
 };
 } // namespace ExLib

@@ -14,11 +14,11 @@ void mainTask(void *unusedParam) {
     }
 }
 
-Task mainTaskObj(mainTask);
+Task mainTaskObj(mainTask,nullptr, "MainTask", 1, 256);
 
 void ExLib_Init(void) {
     System::init();
-    mainTaskObj.begin("MainTask", 1, 256);
+    mainTaskObj.begin();
 }
 } // namespace ExLib
 

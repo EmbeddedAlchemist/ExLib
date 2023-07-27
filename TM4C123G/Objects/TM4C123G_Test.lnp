@@ -177,6 +177,16 @@
 ".\objects\tasks.o"
 ".\objects\timers.o"
 ".\objects\heap_3.o"
+".\objects\arduhalconfig.o"
+".\objects\hardwareserial.o"
+".\objects\ipaddress.o"
+".\objects\wire.o"
+".\objects\common.o"
+".\objects\print.o"
+".\objects\stream.o"
+".\objects\string.o"
+".\objects\dtostrf.o"
+".\objects\itoa.o"
 --strict --scatter ".\Objects\TM4C123G_Test.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

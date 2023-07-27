@@ -3,10 +3,16 @@
 #include "ExLib_Exception.hpp"
 #include "FreeRTOS/FreeRTOSSupport.hpp"
 
+static std::uint32_t powerOnMilliseconds = 0;
+
 extern "C" {
 extern void vPortSVCHandler(void);
 extern void xPortPendSVHandler(void);
 extern void xPortSysTickHandler(void);
+
+void vApplicationTickHook(void) {
+    powerOnMilliseconds++;
+}
 }
 
 namespace ExLib {
@@ -54,6 +60,32 @@ void System::printExLibLOGO(void) {
 
 std::uint32_t System::getSystemClockSpeed(void) {
     return DeviceSupport::SysCtlClockGet();
+}
+
+std::uint32_t System::getMilliseconds(void) {
+    return powerOnMilliseconds;
+}
+
+std::uint32_t System::getMicroseconds(void) {
+    return System::getMilliseconds() * 1000 + 1000 * DeviceSupport::SysTickValueGet() / DeviceSupport::SysTickPeriodGet();
+}
+
+static void busyDelayUs(volatile uint32_t us){
+    while(us--)
+        ;
+}
+
+
+void System::delay(TimeInterval interval) {
+    std::uint32_t usTime, msTime;
+    if(interval.us<1000){
+        busyDelayUs(interval.us);
+        return;
+    }
+    usTime = interval.us % 1000;
+    msTime = interval.us / 1000;
+    vTaskDelay(msTime / portTICK_PERIOD_MS);
+    busyDelayUs(usTime);
 }
 
 } // namespace ExLib

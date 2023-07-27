@@ -2,18 +2,24 @@
 #include "FreeRTOS/FreeRTOSSupport.hpp"
 
 namespace ExLib {
-Task::Task(void (*taskFunction)(void *), void *param)
-    : taskFunction(taskFunction), taskParam(param), taskHandler(nullptr) {
+Task::Task(void (*taskFunction)(void *), void *param, const char *taskName, std::uint32_t priority, std::size_t stackDepth)
+    : taskFunction(taskFunction),
+      taskParam(param),
+      taskName(taskName),
+      priority(priority),
+      stackDepth(stackDepth),
+      taskHandler(nullptr) {
 }
+
 
 Task::~Task() {
     end();
 }
 
-bool Task::begin(const char *name, std::uint32_t priority, std::size_t stackDepth) {
+bool Task::begin() {
     BaseType_t result;
-    result = xTaskCreate(taskFunction, name, stackDepth, taskParam, priority, (TaskHandle_t *)&taskHandler);
-    if(result!=pdPASS){
+    result = xTaskCreate(taskFunction, taskName, stackDepth, taskParam, priority, (TaskHandle_t *)&taskHandler);
+    if (result != pdPASS) {
         vTaskDelete((TaskHandle_t)taskHandler);
         taskHandler = nullptr;
         return false;
@@ -32,6 +38,11 @@ void Task::suspend() {
 
 void Task::resume() {
     vTaskResume((TaskHandle_t)taskHandler);
+}
+
+Task_State Task::getState() {
+    eTaskState state = eTaskGetState((TaskHandle_t)taskHandler);
+    return (Task_State)state;
 }
 
 } // namespace ExLib

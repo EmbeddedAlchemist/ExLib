@@ -39,6 +39,7 @@ class I2C : public WriteStream, ReadStream {
     using WriteStream::write;
 
     void setPins(GPIO_Pin scl, GPIO_Pin sda);
+    void setFrequency(Frequency freq);
 
     void begin(Frequency freq = 100_kHz, std::uint8_t selfAddr = 0x00);
     void end();

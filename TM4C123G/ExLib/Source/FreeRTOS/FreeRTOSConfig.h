@@ -49,7 +49,7 @@ extern uint32_t SysCtlClockGet(void);
 #define configTICK_RATE_HZ                    ((TickType_t)1000)
 #define configTOTAL_HEAP_SIZE                 ((size_t)(4096))
 #define configMINIMAL_STACK_SIZE              ((unsigned short)130)
-#define configCHECK_FOR_STACK_OVERFLOW        0
+#define configCHECK_FOR_STACK_OVERFLOW        2
 #define configMAX_PRIORITIES                  (5)
 #define configUSE_PREEMPTION                  1
 #define configIDLE_SHOULD_YIELD               1
@@ -66,8 +66,8 @@ extern uint32_t SysCtlClockGet(void);
 #define configUSE_COUNTING_SEMAPHORES         1
 #define configUSE_QUEUE_SETS                  1
 #define configUSE_IDLE_HOOK                   0
-#define configUSE_TICK_HOOK                   0
-#define configUSE_MALLOC_FAILED_HOOK          0
+#define configUSE_TICK_HOOK                   1
+#define configUSE_MALLOC_FAILED_HOOK          1
 #define configUSE_16_BIT_TICKS                0
 
 /* Set the following definitions to 1 to include the API function, or zero

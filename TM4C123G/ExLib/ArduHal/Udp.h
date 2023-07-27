@@ -32,11 +32,12 @@
  * bjoern@cs.stanford.edu 12/30/2008
  */
 
-#ifndef udp_h
-#define udp_h
+#pragma once
 
-#include <Stream.h>
-#include <IPAddress.h>
+#include "Stream.h"
+#include "IPAddress.h"
+
+namespace arduino {
 
 class UDP : public Stream {
 
@@ -47,10 +48,10 @@ public:
 
   // Sending UDP packets
   
-  // Start building up a packet to send to the remote host specific in ip and port
+  // Start building up a packet to send to the remote host specified in ip and port
   // Returns 1 if successful, 0 if there was a problem with the supplied IP address or port
   virtual int beginPacket(IPAddress ip, uint16_t port) =0;
-  // Start building up a packet to send to the remote host specific in host and port
+  // Start building up a packet to send to the remote host specified in host and port
   // Returns 1 if successful, 0 if there was a problem resolving the hostname or port
   virtual int beginPacket(const char *host, uint16_t port) =0;
   // Finish off this packet and send it
@@ -86,4 +87,6 @@ protected:
   uint8_t* rawIPAddress(IPAddress& addr) { return addr.raw_address(); };
 };
 
-#endif
+}
+
+using arduino::UDP;

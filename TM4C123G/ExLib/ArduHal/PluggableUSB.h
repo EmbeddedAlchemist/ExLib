@@ -22,12 +22,13 @@
 
 #include "USBAPI.h"
 #include <stdint.h>
+#include <stddef.h>
 
-#if defined(USBCON)
+namespace arduino {
 
 class PluggableUSBModule {
 public:
-  PluggableUSBModule(uint8_t numEps, uint8_t numIfs, uint8_t *epType) :
+  PluggableUSBModule(uint8_t numEps, uint8_t numIfs, unsigned int *epType) :
     numEndpoints(numEps), numInterfaces(numIfs), endpointType(epType)
   { }
 
@@ -42,7 +43,7 @@ protected:
 
   const uint8_t numEndpoints;
   const uint8_t numInterfaces;
-  const uint8_t *endpointType;
+  const unsigned int *endpointType;
 
   PluggableUSBModule *next = NULL;
 
@@ -62,13 +63,16 @@ private:
   uint8_t lastIf;
   uint8_t lastEp;
   PluggableUSBModule* rootNode;
+  uint8_t totalEP;
 };
+}
+
+// core need to define
+void* epBuffer(unsigned int n); // -> returns a pointer to the Nth element of the EP buffer structure
 
 // Replacement for global singleton.
 // This function prevents static-initialization-order-fiasco
 // https://isocpp.org/wiki/faq/ctors#static-init-order-on-first-use
-PluggableUSB_& PluggableUSB();
-
-#endif
+arduino::PluggableUSB_& PluggableUSB();
 
 #endif

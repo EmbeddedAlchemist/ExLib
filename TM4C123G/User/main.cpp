@@ -1,4 +1,5 @@
 #include "ExLib.hpp"
+#include "ExLib_DeviceSupport.hpp"
 #include "ExLib_FreeRTOS.hpp"
 #include "u8g2.h"
 
@@ -11,12 +12,27 @@ using namespace ExLib;
 
 I2C I2C0(I2C_Periph::I2C0);
 
-UART Serial(UART_Periph::UART0);
+static UART Serial(UART_Periph::UART0);
 HardwarePWM PWMModule13(HardwarePWM_Periph::Module1Generator3);
 HardwarePWM PWMModule12(HardwarePWM_Periph::Module1Generator2);
 PWM_Channel pwmChannelB(PWMModule13, 0, GPIO_Pin::PF2);
 PWM_Channel pwmChannelG(PWMModule13, 1, GPIO_Pin::PF3);
 PWM_Channel pwmChannelR(PWMModule12, 1, GPIO_Pin::PF1);
+
+void task1Func(void *unused) {
+    while (true) {
+        Serial.println("Task1");
+    }
+}
+
+void task2Func(void *unused) {
+    while (true) {
+        Serial.println("Task2");
+    }
+}
+
+Task task1(task1Func);
+Task task2(task2Func);
 
 uint8_t u8x8_gpio_and_delay_template(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr) {
     switch (msg) {
@@ -148,14 +164,18 @@ void drawURL(void) {
 #endif
 }
 
-
-void cb(void * unused){
+void cb(void *unused) {
     static int i = 0;
     i++;
-    if(i == 1000){
+    if (i == 1000) {
         Serial.println("int");
         i = 0;
     }
+}
+
+volatile int stackOverflowGenerator() {
+    volatile int i;
+    return stackOverflowGenerator() + i;
 }
 
 int ExLib::usr_main() {
@@ -166,13 +186,13 @@ int ExLib::usr_main() {
     Serial.print(System::getSystemClockSpeed());
     Serial.println("Hz.");
 
-   u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
-   u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
-   u8g2_SetPowerSave(&u8g2, 0); // wake up
-   u8g2_ClearBuffer(&u8g2);
-   drawLogo();
-   drawURL();
-   u8g2_SendBuffer(&u8g2);
+    u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, U8G2_R0, my_u8x8_byte_i2c, u8x8_gpio_and_delay_template);
+    u8g2_InitDisplay(&u8g2);     // send init sequence to the display, display is in sleep mode after this,
+    u8g2_SetPowerSave(&u8g2, 0); // wake up
+    u8g2_ClearBuffer(&u8g2);
+    drawLogo();
+    drawURL();
+    u8g2_SendBuffer(&u8g2);
 
     // GeneralTimer Timer0(GeneralTimer_Periph::Timer0A);
     // Timer0.begin();
@@ -180,14 +200,17 @@ int ExLib::usr_main() {
     // //Timer0.onOverflow(*new CallbackFunction(cb));
     // ADC ADC0(ADC_Periph::ADC0);
     // ADC_Channel channel0(ADC0, GPIO_Pin::PE3);
-    
+
     QuadraticEncoder encoder0(QuadraticEncoder_Periph::QuadraticEncoder0, GPIO_Pin::PD6, GPIO_Pin::PD7);
     encoder0.begin();
     Serial.println("Begin!");
-
-
+    // task1.begin();
+    // task2.begin();
+    std::uint32_t maxv = 0;
     while (1) {
-        Serial.println(encoder0.getCounter());
+        Serial.println(System::getMicroseconds());
+        //stackOverflowGenerator();
+
     }
 
     return 0;
