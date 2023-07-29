@@ -45,4 +45,8 @@ Task_State Task::getState() {
     return (Task_State)state;
 }
 
+void Task::deleteCurrent() {
+    vTaskDelete(NULL);
+}
+
 } // namespace ExLib

@@ -34,5 +34,7 @@ class Task {
     void suspend(void);
     void resume(void);
     Task_State getState();
+
+    static void deleteCurrent();
 };
 } // namespace ExLib

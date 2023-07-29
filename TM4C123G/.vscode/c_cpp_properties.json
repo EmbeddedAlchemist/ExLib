@@ -4,7 +4,7 @@
             "name": "Target 1",
             "includePath": [
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Include",
-                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\u8g2",
+                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\Hardware",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux",
                 "C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux_compat",
@@ -13,12 +13,11 @@
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\DeviceSupport\\startup",
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source",
                 "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\User",
-                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\FreeRTOS",
-                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\ArduHal",
-                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\ArduHal\\deprecated-avr-comp\\avr"
+                "c:\\Users\\CHALLENGER\\Documents\\KeXieData\\Library\\ExLib\\TM4C123G\\ExLib\\Source\\FreeRTOS"
             ],
             "defines": [
                 "PART_TM4C123GH6PM",
+                "ARDUINO",
                 "__alignof__(x)=",
                 "__asm(x)=",
                 "__asm__(x)=",

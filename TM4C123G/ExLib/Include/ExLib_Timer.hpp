@@ -64,6 +64,7 @@ class GeneralTimer : public Capturer, PWM_Generator {
     std::uintptr_t periph;
     std::uint32_t part;
     GeneralTimer_Type type;
+    std::uint32_t config;
 
     void interruptCallback();
 

@@ -430,6 +430,7 @@ void configTimerPin(std::uintptr_t periph, GPIO_Pin pinName) {
     std::uintptr_t port = getGPIOPortByName(pinName);
     std::uint8_t pin = getGPIOPinByName(pinName);
     enableGPIOClock(port);
+    DeviceSupport::GPIOUnlockPin(port, pin);
     DeviceSupport::GPIOPinConfigure(getTimerPinMuxConfig(periph, pinName));
     DeviceSupport::GPIODirModeSet(port, pin, GPIO_DIR_MODE_HW);
     DeviceSupport::GPIOPadConfigSet(port, pin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);

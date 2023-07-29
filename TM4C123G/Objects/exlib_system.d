@@ -226,4 +226,6 @@
   ExLib\Source\FreeRTOS\timers.h ExLib\Source\FreeRTOS\message_buffer.h \
   ExLib\Source\FreeRTOS\stream_buffer.h \
   ExLib\Source\FreeRTOS\mpu_prototypes.h ExLib\Source\FreeRTOS\semphr.h \
-  ExLib\Source\FreeRTOS\stack_macros.h
+  ExLib\Source\FreeRTOS\stack_macros.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h

@@ -244,6 +244,8 @@ void configUARTPin(std::uintptr_t periph, GPIO_Pin pinRx, GPIO_Pin pinTx) {
                  txPin = getGPIOPinByName(pinTx);
     enableGPIOClock(rxPort);
     enableGPIOClock(txPort);
+    DeviceSupport::GPIOUnlockPin(txPort, txPin);
+    DeviceSupport::GPIOUnlockPin(rxPort, rxPin);
     DeviceSupport::GPIOPinConfigure(getUARTPinMuxConfig(periph, pinRx));
     DeviceSupport::GPIOPinConfigure(getUARTPinMuxConfig(periph, pinTx));
     DeviceSupport::GPIODirModeSet(rxPort, rxPin, GPIO_DIR_MODE_HW);

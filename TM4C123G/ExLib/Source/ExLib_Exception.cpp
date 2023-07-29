@@ -1,6 +1,7 @@
 #include "ExLib_Exception.hpp"
 #include "DeviceSupport/DeviceSupport.hpp"
 #include "ExLib_System.hpp"
+#include <stdarg.h>
 
 extern "C" {
 
@@ -21,8 +22,8 @@ namespace ExLib {
 const char *Exception::lastExceptionMessage = nullptr;
 
 void Exception::hardFaultHandler() {
-    if (System::debugStream != nullptr) {
-        System::debugStream->print("[FATAL ERROR] Hard Fault Raised.");
+    if (System::_debugStream != nullptr) {
+        System::_debugStream->print("[FATAL ERROR] Hard Fault Raised.");
     }
     while (true) {
     }
@@ -30,21 +31,22 @@ void Exception::hardFaultHandler() {
 
 void Exception::raiseException(const char *message, ...) {
     // ExLib_CoreDump();
+    std::va_list args;
+    va_start(args, message);
     volatile int i = 0;
     Exception::lastExceptionMessage = message;
-    if (System::debugStream != nullptr) {
+    if (System::_debugStream != nullptr) {
         System::printExLibLOGO();
-        System::debugStream->print("[FATAL ERROR] Exception Raised. Message: ");
-        System::debugStream->print(message);
-        System::debugStream->println();
+        System::_debugStream->vprintf("[FATAL ERROR] Exception Raised. Message: %s", args);
     }
+    va_end(args);
     raiseHardFault();
     while (true)
         ;
 }
 void Exception::raiseHardFault() {
-    if (System::debugStream != nullptr) {
-        System::debugStream->println("[NOTICE] Raising Hard Fault...");
+    if (System::_debugStream != nullptr) {
+        System::_debugStream->println("[NOTICE] Raising Hard Fault...");
     }
     *(volatile std::uint32_t *)0xFFFFFFFF = *(volatile std::uint32_t *)0xFFFFFFFF;
 }

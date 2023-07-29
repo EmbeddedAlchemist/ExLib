@@ -182,6 +182,9 @@ void configI2CPin(std::uintptr_t periph, GPIO_Pin pinSCL, GPIO_Pin pinSDA) {
                   sdaPin = getGPIOPinByName(pinSDA);
     enableGPIOClock(sclPort);
     enableGPIOClock(sdaPort);
+    DeviceSupport::GPIOUnlockPin(sclPort, sclPin);
+    DeviceSupport::GPIOUnlockPin(sdaPort, sdaPin);
+    DeviceSupport::GPIOUnlockPin(sclPort, sclPin);
     DeviceSupport::GPIOPinConfigure(getI2CPinMuxConfig(periph, pinSCL));
     DeviceSupport::GPIOPinConfigure(getI2CPinMuxConfig(periph, pinSDA));
     DeviceSupport::GPIODirModeSet(sclPort, sclPin, GPIO_DIR_MODE_HW);

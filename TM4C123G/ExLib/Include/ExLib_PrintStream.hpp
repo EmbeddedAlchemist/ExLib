@@ -85,9 +85,19 @@ class PrintStream : public WriteStream {
 
     // C++ style implementation
 
-    template <typename Number, typename std::enable_if<std::is_arithmetic<Number>::value, bool>::type = false>
-    inline PrintStream &operator<<(Number number) {
-        print(number);
+    // template <typename Number, typename std::enable_if<std::is_arithmetic<Number>::value, bool>::type = false>
+    // inline PrintStream &operator<<(Number number) {
+    //     print(number);
+    //     return *this;
+    // }
+
+    // inline PrintStream &operator<<(const char *str) {
+    //     print(str);
+    //     return 
+    // }
+    template <typename Type>
+    inline PrintStream &operator<<(Type something){
+        print(something);
         return *this;
     }
 

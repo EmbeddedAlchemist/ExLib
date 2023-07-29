@@ -8,17 +8,20 @@ GeneralTimer *GeneralTimer::generalTimerObjects[24] = {nullptr};
 
 void GeneralTimer::begin() {
     std::uint32_t interruptType;
-    std::uint32_t timerConfig;
+    std::uint32_t timerConfig = 0;
     if (type == GeneralTimer_Type::Completed) {
         interruptType = TIMER_TIMA_TIMEOUT;
-        timerConfig = TIMER_CFG_PERIODIC;
+        config = TIMER_CFG_PERIODIC;
     } else if (type == GeneralTimer_Type::SplitedA) {
+        timerConfig = generalTimerObjects[getTimerObjectsIndexByName(*this) + 1] != nullptr ? generalTimerObjects[getTimerObjectsIndexByName(*this) + 1]->config : 0;
         interruptType = TIMER_TIMA_TIMEOUT;
-        timerConfig = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_PERIODIC;
+        config = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_PERIODIC;
     } else if (type == GeneralTimer_Type::SplitedB) {
+        timerConfig = generalTimerObjects[getTimerObjectsIndexByName(*this) - 1] != nullptr ? generalTimerObjects[getTimerObjectsIndexByName(*this) - 1]->config : 0;
         interruptType = TIMER_TIMB_TIMEOUT;
-        timerConfig = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_B_PERIODIC;
+        config = TIMER_CFG_SPLIT_PAIR | TIMER_CFG_B_PERIODIC;
     }
+    timerConfig |= config;
     DeviceSupport::TimerConfigure(periph, timerConfig);
     DeviceSupport::IntRegister(getTimerInterruptNumberByName(*this), getTimerInterruptHandlerByName(*this));
     DeviceSupport::IntEnable(getTimerInterruptNumberByName(*this));
@@ -71,7 +74,8 @@ void (*GeneralTimer::getTimerInterruptHandlerByName(GeneralTimer_Periph timerNam
 GeneralTimer::GeneralTimer(GeneralTimer_Periph timerName, TimeInterval cycle)
     : periph(getTimerPeriphByName(timerName)),
       part(getTimerPartByName(timerName)),
-      type(getTimerTypeByName(timerName)) {
+      type(getTimerTypeByName(timerName)),
+      config(0) {
     std::size_t objIndex = getTimerObjectsIndexByName(timerName);
     if (type == GeneralTimer_Type::Completed) {
         if (generalTimerObjects[objIndex] != nullptr) {

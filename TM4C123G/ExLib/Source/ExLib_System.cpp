@@ -2,6 +2,18 @@
 #include "DeviceSupport/DeviceSupport.hpp"
 #include "ExLib_Exception.hpp"
 #include "FreeRTOS/FreeRTOSSupport.hpp"
+#include <stdio.h>
+
+// 防止编译器报错
+// #ifndef __builtin_va_start
+// #define __builtin_va_start
+// #endif
+// #ifndef __builtin_va_copy
+// #define __builtin_va_copy
+// #endif
+// #ifndef __builtin_va_end
+// #define __builtin_va_end
+// #endif
 
 static std::uint32_t powerOnMilliseconds = 0;
 
@@ -22,7 +34,7 @@ constexpr auto InterruptNumber_SVCall = 11;
 constexpr auto InterruptNumber_PendSV = 14;
 constexpr auto InterruptNumber_Systick = 15;
 
-PrintStream *System::debugStream = nullptr;
+PrintStream *System::_debugStream = nullptr;
 
 void System::init(void) {
 
@@ -38,23 +50,23 @@ void System::init(void) {
 }
 
 void System::setDebugStream(PrintStream &dbgStream) {
-    System::debugStream = &dbgStream;
-    if (debugStream != nullptr) {
+    System::_debugStream = &dbgStream;
+    if (_debugStream != nullptr) {
         printExLibLOGO();
-        debugStream->println("[NOTICE] Debug stream has been set to this.");
+        log_i("Debug stream has been set to this.");
     }
 }
 
 void System::printExLibLOGO(void) {
-    if (debugStream != nullptr) {
-        debugStream->print("\n"
-                           " _____     _     _ _     \n"
-                           "|  ___|   | |   (_) |    \n"
-                           "| |____  _| |    _| |__  \n"
-                           "|  __\\ \\/ / |   | | '_ \\ \n"
-                           "| |___>  <| |___| | |_) |\n"
-                           "\\____/_/\\_\\_____/_|_.__/ \n"
-                           "\n");
+    if (_debugStream != nullptr) {
+        _debugStream->print("\n"
+                            " _____     _     _ _     \n"
+                            "|  ___|   | |   (_) |    \n"
+                            "| |____  _| |    _| |__  \n"
+                            "|  __\\ \\/ / |   | | '_ \\ \n"
+                            "| |___>  <| |___| | |_) |\n"
+                            "\\____/_/\\_\\_____/_|_.__/ \n"
+                            "\n");
     }
 }
 
@@ -70,15 +82,14 @@ std::uint32_t System::getMicroseconds(void) {
     return System::getMilliseconds() * 1000 + 1000 * DeviceSupport::SysTickValueGet() / DeviceSupport::SysTickPeriodGet();
 }
 
-static void busyDelayUs(volatile uint32_t us){
-    while(us--)
+static void busyDelayUs(volatile uint32_t us) {
+    while (us--)
         ;
 }
 
-
 void System::delay(TimeInterval interval) {
     std::uint32_t usTime, msTime;
-    if(interval.us<1000){
+    if (interval.us < 1000) {
         busyDelayUs(interval.us);
         return;
     }
@@ -86,6 +97,61 @@ void System::delay(TimeInterval interval) {
     msTime = interval.us / 1000;
     vTaskDelay(msTime / portTICK_PERIOD_MS);
     busyDelayUs(usTime);
+}
+
+void System::log_e(const char *fmt, ...) {
+    if (_debugStream != nullptr) {
+        _debugStream->print("[ERROR]   ");
+        std::va_list arg;
+        va_start(arg, fmt);
+        _debugStream->vprintf(fmt, arg);
+        va_end(arg);
+        _debugStream->println();
+    }
+}
+
+void System::log_w(const char *fmt, ...) {
+    if (_debugStream != nullptr) {
+        _debugStream->print("[WARNING] ");
+        std::va_list arg;
+        va_start(arg, fmt);
+        _debugStream->vprintf(fmt, arg);
+        va_end(arg);
+        _debugStream->println();
+    }
+}
+
+void System::log_i(const char *fmt, ...) {
+    if (_debugStream != nullptr) {
+        _debugStream->print("[INFO]    ");
+        std::va_list arg;
+        va_start(arg, fmt);
+        _debugStream->vprintf(fmt, arg);
+        va_end(arg);
+        _debugStream->println();
+    }
+}
+
+void System::log_d(const char *fmt, ...) {
+    if (_debugStream != nullptr) {
+        _debugStream->print("[DEBUG]   ");
+        std::va_list arg;
+        va_start(arg, fmt);
+        _debugStream->vprintf(fmt, arg);
+        va_end(arg);
+        _debugStream->println();
+    }
+}
+
+void System::log_v(const char *fmt, ...) {
+    if (_debugStream != nullptr) {
+        _debugStream->print("[VERBOSE] ");
+        std::va_list arg;
+        va_start(arg, fmt);
+        _debugStream->vprintf(fmt, arg);
+        va_end(arg);
+        _debugStream->println();
+    }
 }
 
 } // namespace ExLib
