@@ -1,11 +1,13 @@
 # ExLib
-用于快速构建可跨平台程序的嵌入式固件库
 
-这个固件库位不同硬件平台提供了尽可能相似的API，并保证这些API的效果尽可能相同，使得基于该固件库的程序可以轻易地在不同硬件平台上相互移植而不需要做出太大改动。
+ExLib is an embedded firmware library for rapidly building cross-platform programs.
 
-固件库基于C++构建，提供类Arduino的语法，但允许可选的更精细的控制。
+In order to make the code base on Exlib have ability to port to diffierent hardware platform without large changes, ExLib provice same APIs for different hardware platform, and try to make sure APIs work similarity .
 
-使用ExLib，通过UART0打印"Hello World!"：
+Exlib based on C++, provices Arduino-like grammar, but allow finer control.
+
+
+A example that print `Hello World!` with Exlib:
 
 ~~~Cpp
 #include <ExLib.hpp> //引入ExLib头文件
